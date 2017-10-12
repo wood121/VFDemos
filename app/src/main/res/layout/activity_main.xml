@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wood121.viewdemos.MainActivity">
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.wood121.viewdemos.views.BackgroudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="什么背景的字头"
+                android:textSize="22sp" />
+
+            <com.example.wood121.viewdemos.views.ShiningTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一闪一闪亮晶晶"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/bt_goodsTransformProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="二维码生成" />
+
+            <Button
+                android:id="@+id/bt_checkProcesss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="审核进度条" />
+
+            <Button
+                android:id="@+id/bt_bing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="饼状图..折线图" />
+
+            <Button
+                android:id="@+id/bt_zhe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="折线图" />
+
+            <Button
+                android:id="@+id/bt_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TopBar" />
+
+            <Button
+                android:id="@+id/bt_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecycleView" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

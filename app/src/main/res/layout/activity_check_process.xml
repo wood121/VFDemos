@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wood121.viewdemos.activitys.CheckProcessActivity">
+
+    <com.example.wood121.viewdemos.views.CheckProcessView
+        android:id="@+id/step1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="50dp"
+        app:cicleSize="big"
+        app:circleColor="#330000" />
+
+    <com.example.wood121.viewdemos.views.CheckProcessView
+        android:id="@+id/step2"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.example.wood121.viewdemos.views.CheckProcessView
+        android:id="@+id/step3"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.example.wood121.viewdemos.views.CheckProcessView
+        android:id="@+id/step4"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.example.wood121.viewdemos.views.CheckProcessView
+        android:id="@+id/step5"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+
+</LinearLayout>

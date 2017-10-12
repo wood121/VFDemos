@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ViewDemos</string>
+    <string name="title_activity_recycle">RecycleActivity</string>
+</resources>

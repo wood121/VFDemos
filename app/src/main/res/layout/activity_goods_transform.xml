@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wood121.viewdemos.activitys.GoodsTransformActivity">
+
+
+    <EditText
+        android:id="@+id/qrcode_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要生成二维码的文字" />
+
+    <Button
+        android:id="@+id/qrcode_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生产二维码" />
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/qrcode_iv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp" />
+
+</LinearLayout>

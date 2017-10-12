@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CheckProcessView">
+        <attr name="circleColor" format="color" />
+        <attr name="cicleSize" format="enum">
+            <enum name="small" value="10" />
+            <enum name="normal" value="22" />
+            <enum name="big" value="42" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TopBar">
+        <attr name="title_backgroud_color" format="reference|integer|color" />
+
+        <attr name="leftBtnVisible" format="boolean" />
+        <attr name="rightBtnVisible" format="boolean" />
+
+        <attr name="leftTextColor" format="color" />
+        <attr name="leftText" format="string" />
+        <attr name="leftTextDrawable" format="reference|integer" />
+
+        <attr name="midTextColor" format="color" />
+        <attr name="midText" format="string" />
+        <attr name="midTextDrawable" format="reference|integer" />
+
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextDrawable" format="reference|integer" />
+    </declare-styleable>
+</resources>
