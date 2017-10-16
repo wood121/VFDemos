@@ -21,7 +21,8 @@
         <activity android:name=".activitys.BingActivity" />
         <activity android:name=".activitys.ZheActivity" />
         <activity android:name=".activitys.TopbarActivity" />
-        <activity android:name=".activitys.RecActivity"/>
+        <activity android:name=".activitys.RecActivity" />
+        <activity android:name=".activitys.ArcViewActivity"></activity>
     </application>
 
 </manifest>

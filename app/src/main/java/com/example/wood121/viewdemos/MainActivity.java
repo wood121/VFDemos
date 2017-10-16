@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.wood121.viewdemos.activitys.ArcViewActivity;
 import com.example.wood121.viewdemos.activitys.BingActivity;
 import com.example.wood121.viewdemos.activitys.CheckProcessActivity;
 import com.example.wood121.viewdemos.activitys.GoodsTransformActivity;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     Button bt_topbar;
     @InjectView(R.id.bt_recycleView)
     Button bt_recycleView;
+    @InjectView(R.id.bt_viewDemo3)
+    Button bt_viewDemo3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.bt_goodsTransformProcess, R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
+    @OnClick({R.id.bt_goodsTransformProcess, R.id.bt_viewDemo3,R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_goodsTransformProcess:
@@ -62,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.bt_recycleView:
                 startActivity(new Intent(this, RecActivity.class));
+                break;
+            case R.id.bt_viewDemo3:
+                startActivity(new Intent(this, ArcViewActivity.class));
                 break;
         }
     }
