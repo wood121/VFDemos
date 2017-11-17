@@ -22,7 +22,17 @@
         <activity android:name=".activitys.ZheActivity" />
         <activity android:name=".activitys.TopbarActivity" />
         <activity android:name=".activitys.RecActivity" />
-        <activity android:name=".activitys.ArcViewActivity"></activity>
+        <activity android:name=".activitys.ArcViewActivity" />
+        <activity
+            android:name=".activitys.VideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_video"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activitys.IjkPlayerActivity"
+            android:label="@string/title_activity_ijk_player"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

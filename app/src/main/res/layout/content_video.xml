@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.activitys.ArcViewActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.wood121.viewdemos.activitys.VideoActivity"
+    tools:showIn="@layout/activity_video">
 
 
-    <!--<com.example.wood121.viewdemos.views.ArcPercentView-->
-    <!--android:id="@+id/arcPercentView"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content" />-->
-
-    <com.example.wood121.viewdemos.views.VolueView
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:id="@+id/videoplayer"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="200dp"/>
 </android.support.constraint.ConstraintLayout>

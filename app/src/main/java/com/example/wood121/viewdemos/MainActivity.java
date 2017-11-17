@@ -13,6 +13,7 @@ import com.example.wood121.viewdemos.activitys.CheckProcessActivity;
 import com.example.wood121.viewdemos.activitys.GoodsTransformActivity;
 import com.example.wood121.viewdemos.activitys.RecActivity;
 import com.example.wood121.viewdemos.activitys.TopbarActivity;
+import com.example.wood121.viewdemos.activitys.VideoActivity;
 import com.example.wood121.viewdemos.activitys.ZheActivity;
 
 import butterknife.ButterKnife;
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     Button bt_recycleView;
     @InjectView(R.id.bt_viewDemo3)
     Button bt_viewDemo3;
+    @InjectView(R.id.bt_videoDemo1)
+    Button bt_videoDemo1;
+    @InjectView(R.id.bt_ijkplayer)
+    Button bt_ijkplayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.bt_goodsTransformProcess, R.id.bt_viewDemo3,R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
+    @OnClick({R.id.bt_goodsTransformProcess,R.id.bt_ijkplayer,R.id.bt_videoDemo1, R.id.bt_viewDemo3,R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_goodsTransformProcess:
@@ -68,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.bt_viewDemo3:
                 startActivity(new Intent(this, ArcViewActivity.class));
+                break;
+            case R.id.bt_videoDemo1:
+                startActivity(new Intent(this, VideoActivity.class));
+                break;
+            case R.id.bt_ijkplayer:
+                startActivity(new Intent(this, VideoActivity.class));
                 break;
         }
     }

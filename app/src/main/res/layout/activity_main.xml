@@ -70,7 +70,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="viewDemo3" />
-
+            <Button
+                android:id="@+id/bt_videoDemo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VideoDemo1" />
+            <Button
+                android:id="@+id/bt_ijkplayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bilibili/ijkplayer" />
         </LinearLayout>
     </ScrollView>
 
