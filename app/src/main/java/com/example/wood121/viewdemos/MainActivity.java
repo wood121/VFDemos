@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.wood121.viewdemos.activitys.ArcViewActivity;
 import com.example.wood121.viewdemos.activitys.BingActivity;
+import com.example.wood121.viewdemos.activitys.BleAcitivty;
 import com.example.wood121.viewdemos.activitys.CheckProcessActivity;
 import com.example.wood121.viewdemos.activitys.GoodsTransformActivity;
 import com.example.wood121.viewdemos.activitys.RecActivity;
@@ -36,20 +37,21 @@ public class MainActivity extends AppCompatActivity {
     Button bt_recycleView;
     @InjectView(R.id.bt_viewDemo3)
     Button bt_viewDemo3;
-    @InjectView(R.id.bt_videoDemo1)
-    Button bt_videoDemo1;
+    @InjectView(R.id.bt_mediaplayer)
+    Button bt_mediaplayer;
     @InjectView(R.id.bt_ijkplayer)
     Button bt_ijkplayer;
+    @InjectView(R.id.bt_qx)
+    Button bt_qx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
-
     }
 
-    @OnClick({R.id.bt_goodsTransformProcess,R.id.bt_ijkplayer,R.id.bt_videoDemo1, R.id.bt_viewDemo3,R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
+    @OnClick({R.id.bt_goodsTransformProcess, R.id.bt_qx, R.id.bt_ijkplayer, R.id.bt_mediaplayer, R.id.bt_viewDemo3, R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_goodsTransformProcess:
@@ -74,11 +76,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_viewDemo3:
                 startActivity(new Intent(this, ArcViewActivity.class));
                 break;
-            case R.id.bt_videoDemo1:
+            case R.id.bt_mediaplayer:
                 startActivity(new Intent(this, VideoActivity.class));
                 break;
             case R.id.bt_ijkplayer:
                 startActivity(new Intent(this, VideoActivity.class));
+                break;
+            case R.id.bt_qx:
+                startActivity(new Intent(this, BleAcitivty.class));
                 break;
         }
     }

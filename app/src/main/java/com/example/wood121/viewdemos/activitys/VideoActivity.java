@@ -1,25 +1,39 @@
 package com.example.wood121.viewdemos.activitys;
 
+import android.graphics.PixelFormat;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
 
+import java.io.IOException;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import butterknife.OnClick;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 public class VideoActivity extends AppCompatActivity {
 
-    @InjectView(R.id.videoplayer)
-    JCVideoPlayerStandard videoplayer;
+    @InjectView(R.id.toolbar)
+    Toolbar toolbar;
+    @InjectView(R.id.surfaceView)
+    SurfaceView surfaceView;
+    @InjectView(R.id.progressBar)
+    ProgressBar progressBar;
+    @InjectView(R.id.numText)
+    TextView numText;
+    @InjectView(R.id.fab)
+    FloatingActionButton fab;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,34 +52,115 @@ public class VideoActivity extends AppCompatActivity {
             }
         });
 
-        videosDo();
-
+        setMediaData();    //MediaPlayer的使用
     }
 
-    @Override
-    public void onBackPressed() {
-        if(JCVideoPlayer.backPress()){
-            return;
+    /**
+     * 监听一开始的情况
+     */
+    private MediaPlayer.OnPreparedListener onPreparedListener= new MediaPlayer.OnPreparedListener(){
+
+        @Override
+        public void onPrepared(MediaPlayer mediaPlayer) {
+            progressBar.setVisibility(View.VISIBLE);
+            mediaPlayer.start();
+            mediaPlayer.setLooping(true);
         }
-        super.onBackPressed();
+    };
+    /**
+     * 需要实现播放跳转的监听
+     */
+    private MediaPlayer.OnSeekCompleteListener onSeekCompleteListener = new MediaPlayer.OnSeekCompleteListener(){
+
+        @Override
+        public void onSeekComplete(MediaPlayer mediaPlayer) {
+
+        }
+    };
+    /**
+     * 信息列表
+     */
+    private MediaPlayer.OnInfoListener onInfoListener = new MediaPlayer.OnInfoListener(){
+
+        @Override
+        public boolean onInfo(MediaPlayer mediaPlayer, int i, int i1) {
+            return false;
+        }
+    };
+    /**
+     * 完成的监听
+     */
+    private MediaPlayer.OnCompletionListener onCompletionListener = new MediaPlayer.OnCompletionListener() {
+
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+
+        }
+    };
+    /**
+     * 出现错误的情况
+     */
+    private MediaPlayer.OnErrorListener onErrorListener = new MediaPlayer.OnErrorListener(){
+
+        @Override
+        public boolean onError(MediaPlayer mediaPlayer, int i, int i1) {
+            return false;
+        }
+    };
+
+    private String uri = "";
+    private void setMediaData() {
+        //初始化播放器
+        initMediaPlayer();
+        try {
+            setListeners(); //设置监听
+            mediaPlayer.setDataSource(this, Uri.parse(uri));    //设置数据
+            mediaPlayer.prepareAsync();
+
+            SurfaceHolder surfaceHolder = surfaceView.getHolder();
+            surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_NORMAL);
+            surfaceHolder.setFormat(PixelFormat.RGBA_8888);
+            surfaceHolder.addCallback(new MyCallBack());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        JCVideoPlayer.releaseAllVideos();
+    private void initMediaPlayer() {
+        if(mediaPlayer != null){
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        mediaPlayer = new MediaPlayer();
     }
 
-    private void videosDo() {
-        videoplayer.setUp("http://2449.vod.myqcloud.com/2449_22ca37a6ea9011e5acaaf51d105342e3.f20.mp4", JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "嫂子闭眼睛");
-        String videoUrl = "http://p.qpic.cn/videoyun/0/2449_43b6f696980311e59ed467f22794e792_1/640";
-        Uri uri = Uri.parse(videoUrl);
-        videoplayer.thumbImageView.setImageURI(uri);
+    private void setListeners() {
+        mediaPlayer.setOnPreparedListener(onPreparedListener);
+        mediaPlayer.setOnSeekCompleteListener(onSeekCompleteListener);
+        mediaPlayer.setOnInfoListener(onInfoListener);
+        mediaPlayer.setOnCompletionListener(onCompletionListener);
+        mediaPlayer.setOnErrorListener(onErrorListener);
+    }
+
+    class MyCallBack  implements  SurfaceHolder.Callback{
+
+        @Override
+        public void surfaceCreated(SurfaceHolder surfaceHolder) {
+            mediaPlayer.setDisplay(surfaceHolder);  //关联mediaPlayer、viewHolder两个控件
+        }
+
+        @Override
+        public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
+
+        }
     }
 
 
-    @OnClick(R.id.videoplayer)
-    public void onViewClicked() {
-
-    }
 }
