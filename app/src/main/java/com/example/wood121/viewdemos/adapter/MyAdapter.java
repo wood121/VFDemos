@@ -95,7 +95,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public void setOnItemClickListener(onItemClickListener listener) {
         this.listener = listener;
-
     }
-
 }

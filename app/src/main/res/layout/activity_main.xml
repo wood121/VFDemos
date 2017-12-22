@@ -1,92 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:top="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.MainActivity">
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <com.example.wood121.viewdemos.widget.TopBar
+        android:id="@+id/tb_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="45dp"
+        top:leftBtnVisible="false"
+        top:midText="标题1"
+        top:rightBtnVisible="false"
+        top:title_backgroud_color="@color/green" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_divider"
+        android:layout_below="@+id/tb_view"
+        android:background="@color/white" />
 
-            <com.example.wood121.viewdemos.views.BackgroudTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="什么背景的字头"
-                android:textSize="22sp" />
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@+id/tab_rg_menu"
+        android:background="@color/white_gray" />
 
-            <com.example.wood121.viewdemos.views.ShiningTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="一闪一闪亮晶晶"
-                android:textSize="22sp" />
+    <RadioGroup
+        android:id="@+id/tab_rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/bt_goodsTransformProcess"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="二维码生成" />
+        <RadioButton
+            android:id="@+id/tab_rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_home_btn"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp"
+            android:text="APIView"
+            android:textColor="@color/tab_text_selector"
+            android:textSize="12sp" />
 
-            <Button
-                android:id="@+id/bt_checkProcesss"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="审核进度条" />
+        <RadioButton
+            android:id="@+id/tab_rb_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_shop_btn"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp"
+            android:text="FSdk"
+            android:textColor="@color/tab_text_selector"
+            android:textSize="12sp" />
 
-            <Button
-                android:id="@+id/bt_bing"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="饼状图..折线图" />
+        <RadioButton
+            android:id="@+id/tab_rb_neighbor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_nei_btn"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp"
+            android:text="MBase"
+            android:textColor="@color/tab_text_selector"
+            android:textSize="12sp" />
 
-            <Button
-                android:id="@+id/bt_zhe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="折线图" />
+        <RadioButton
+            android:id="@+id/tab_rb_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_user_btn"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp"
+            android:text="Mine"
+            android:textColor="@color/tab_text_selector"
+            android:textSize="12sp" />
+    </RadioGroup>
 
-            <Button
-                android:id="@+id/bt_topbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TopBar" />
-
-            <Button
-                android:id="@+id/bt_recycleView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RecycleView" />
-
-            <Button
-                android:id="@+id/bt_viewDemo3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="viewDemo3" />
-
-            <Button
-                android:id="@+id/bt_mediaplayer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="MediaPlayer" />
-
-            <Button
-                android:id="@+id/bt_ijkplayer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bilibili/ijkplayer" />
-
-            <Button
-                android:id="@+id/bt_qx"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="蓝牙权限" />
-        </LinearLayout>
-    </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

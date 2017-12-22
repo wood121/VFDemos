@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bt_goodsTransformProcess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="二维码生成"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_checkProcesss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="选择进度"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_bing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="折线图"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_zhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="折线图2"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="标题栏"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="物流运输"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_viewDemo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="物流运输"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_mediaplayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="物流运输"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_ijkplayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="物流运输"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/bt_qx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="物流运输"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:id="@+id/contact_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:text="物流运输"
+        android:textSize="@dimen/text_16" />
+
+</LinearLayout>

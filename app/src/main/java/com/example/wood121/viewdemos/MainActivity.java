@@ -2,88 +2,172 @@ package com.example.wood121.viewdemos;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.FrameLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
-import com.example.wood121.viewdemos.activitys.ArcViewActivity;
-import com.example.wood121.viewdemos.activitys.BingActivity;
-import com.example.wood121.viewdemos.activitys.BleAcitivty;
-import com.example.wood121.viewdemos.activitys.CheckProcessActivity;
-import com.example.wood121.viewdemos.activitys.GoodsTransformActivity;
-import com.example.wood121.viewdemos.activitys.RecActivity;
-import com.example.wood121.viewdemos.activitys.TopbarActivity;
-import com.example.wood121.viewdemos.activitys.VideoActivity;
-import com.example.wood121.viewdemos.activitys.ZheActivity;
+import com.example.wood121.viewdemos.fragment.APIViewFragment;
+import com.example.wood121.viewdemos.fragment.FrameSDKFragment;
+import com.example.wood121.viewdemos.fragment.MineFragment;
+import com.example.wood121.viewdemos.fragment.SDAFragment;
+import com.example.wood121.viewdemos.widget.TopBar;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.OnClick;
+import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
 
-    @InjectView(R.id.bt_goodsTransformProcess)
-    Button btGoodsTransformProcess;
-    @InjectView(R.id.bt_checkProcesss)
-    Button btCheckProcesss;
-    @InjectView(R.id.bt_bing)
-    Button btBing;
-    @InjectView(R.id.bt_zhe)
-    Button bt_zhe;
-    @InjectView(R.id.bt_topbar)
-    Button bt_topbar;
-    @InjectView(R.id.bt_recycleView)
-    Button bt_recycleView;
-    @InjectView(R.id.bt_viewDemo3)
-    Button bt_viewDemo3;
-    @InjectView(R.id.bt_mediaplayer)
-    Button bt_mediaplayer;
-    @InjectView(R.id.bt_ijkplayer)
-    Button bt_ijkplayer;
-    @InjectView(R.id.bt_qx)
-    Button bt_qx;
+public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.tb_view)
+    TopBar tbView;
+    @BindView(R.id.fragment_container)
+    FrameLayout fragmentContainer;
+    @BindView(R.id.view_divider)
+    View viewDivider;
+    @BindView(R.id.tab_rb_home)
+    RadioButton tabRbHome;
+    @BindView(R.id.tab_rb_shop)
+    RadioButton tabRbShop;
+    @BindView(R.id.tab_rb_neighbor)
+    RadioButton tabRbNeighbor;
+    @BindView(R.id.tab_rb_user)
+    RadioButton tabRbUser;
+    @BindView(R.id.tab_rg_menu)
+    RadioGroup tabRgMenu;
+
+    private ArrayList<Fragment> fragments;
+    private APIViewFragment apiViewFragment;
+    private FrameSDKFragment frameSDKFragment;
+    private MineFragment mineFragment;
+    private SDAFragment sdaFragment;
+    private FragmentManager supportFragmentManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+    protected int initPageLayoutId() {
+        return R.layout.activity_main;
     }
 
-    @OnClick({R.id.bt_goodsTransformProcess, R.id.bt_qx, R.id.bt_ijkplayer, R.id.bt_mediaplayer, R.id.bt_viewDemo3, R.id.bt_recycleView, R.id.bt_topbar, R.id.bt_zhe, R.id.bt_bing, R.id.bt_checkProcesss})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.bt_goodsTransformProcess:
-                startActivity(new Intent(this, GoodsTransformActivity.class));
-                Toast.makeText(this, "hha", Toast.LENGTH_SHORT).show();
+    @Override
+    protected void initPageViewListener() {
+        fragments = new ArrayList<>();
+        addFragments();
+        tabRbHome.setChecked(true);
+        slectFragment(0);
+        tbView.setTitle("APIView");
+
+        tabRgMenu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.tab_rb_home:
+                        tbView.setTitle("APIView");
+                        slectFragment(0);
+                        break;
+                    case R.id.tab_rb_shop:
+                        tbView.setTitle("FSDK");
+                        slectFragment(1);
+                        break;
+                    case R.id.tab_rb_neighbor:
+                        tbView.setTitle("SDA");
+                        slectFragment(2);
+                        break;
+                    case R.id.tab_rb_user:
+                        tbView.setTitle("Mine");
+                        slectFragment(3);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void initData(Bundle savedInstanceState) {
+        initFragments(savedInstanceState);
+    }
+
+    /**
+     * fragments的意外情况处理
+     *
+     * @param savedInstanceState
+     */
+    private void initFragments(Bundle savedInstanceState) {
+        supportFragmentManager = getSupportFragmentManager();
+        if (savedInstanceState != null) {
+            apiViewFragment = (APIViewFragment) supportFragmentManager.getFragment(savedInstanceState, "apiViewFragment");
+            frameSDKFragment = (FrameSDKFragment) supportFragmentManager.getFragment(savedInstanceState, "frameSDKFragment");
+            sdaFragment = (SDAFragment) supportFragmentManager.getFragment(savedInstanceState, "sdaFragment");
+            mineFragment = (MineFragment) supportFragmentManager.getFragment(savedInstanceState, "mineFragment");
+        } else {
+            apiViewFragment = APIViewFragment.newInstance();
+            frameSDKFragment = FrameSDKFragment.newInstance();
+            sdaFragment = SDAFragment.newInstance();
+            mineFragment = MineFragment.newInstance();
+        }
+    }
+
+    private void addFragments() {
+        fragments.add(apiViewFragment);
+        fragments.add(frameSDKFragment);
+        fragments.add(sdaFragment);
+        fragments.add(mineFragment);
+    }
+
+
+    private void slectFragment(int position) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager()
+                .beginTransaction();
+        for (int i = 0; i < fragments.size(); i++) {
+            Fragment fragment = fragments.get(i);
+            if (fragment != null) {
+                if (i == position) {// 显示fragment
+                    if (fragment.isAdded()) {
+                        fragmentTransaction.show(fragment);
+                    } else {
+                        fragmentTransaction.add(R.id.fragment_container, fragment);
+                    }
+                } else {// 隐藏fragment
+                    if (fragment.isAdded()) {
+                        fragmentTransaction.hide(fragment);
+                    }
+                }
+            }
+        }
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+//        supportFragmentManager.putFragment(outState, "apiViewFragment", apiViewFragment);
+//        supportFragmentManager.putFragment(outState, "frameSDKFragment", frameSDKFragment);
+//        supportFragmentManager.putFragment(outState, "mineFragment", mineFragment);
+//        supportFragmentManager.putFragment(outState, "sdaFragment", sdaFragment);
+    }
+
+    //处理好Activity中fragment跳出去，回来的数据
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (resultCode) {
+            case 0:
+                fragments.get(0).onActivityResult(requestCode, resultCode, data);
                 break;
-            case R.id.bt_checkProcesss:
-                startActivity(new Intent(this, CheckProcessActivity.class));
+            case 1:
+                fragments.get(1).onActivityResult(requestCode, resultCode, data);
                 break;
-            case R.id.bt_bing:
-                startActivity(new Intent(this, BingActivity.class));
+            case 2:
+                fragments.get(2).onActivityResult(requestCode, resultCode, data);
                 break;
-            case R.id.bt_zhe:
-                startActivity(new Intent(this, ZheActivity.class));
+            case 3:
+                fragments.get(3).onActivityResult(requestCode, resultCode, data);
                 break;
-            case R.id.bt_topbar:
-                startActivity(new Intent(this, TopbarActivity.class));
-                break;
-            case R.id.bt_recycleView:
-                startActivity(new Intent(this, RecActivity.class));
-                break;
-            case R.id.bt_viewDemo3:
-                startActivity(new Intent(this, ArcViewActivity.class));
-                break;
-            case R.id.bt_mediaplayer:
-                startActivity(new Intent(this, VideoActivity.class));
-                break;
-            case R.id.bt_ijkplayer:
-                startActivity(new Intent(this, VideoActivity.class));
-                break;
-            case R.id.bt_qx:
-                startActivity(new Intent(this, BleAcitivty.class));
+            default:
                 break;
         }
     }

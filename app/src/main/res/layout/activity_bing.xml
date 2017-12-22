@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.activitys.BingActivity">
+    tools:context="com.example.wood121.viewdemos.activity.BingActivity">
 
-    <com.example.wood121.viewdemos.views.FanShapedView
+    <com.example.wood121.viewdemos.widget.FanShapedView
         android:id="@+id/shapeview"
         android:layout_width="90dp"
         android:layout_height="90dp">
 
-    </com.example.wood121.viewdemos.views.FanShapedView>
+    </com.example.wood121.viewdemos.widget.FanShapedView>
 
-    <com.example.wood121.viewdemos.views.SimpleLineChart
+    <com.example.wood121.viewdemos.widget.SimpleLineChart
         android:id="@+id/linechart"
         android:layout_width="300dp"
         android:layout_height="200dp" />
