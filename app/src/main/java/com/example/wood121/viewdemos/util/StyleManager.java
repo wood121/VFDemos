@@ -11,6 +11,7 @@ import android.view.WindowManager;
 
 /**
  * Created by wood121 on 2017/12/21.
+ * app样式设置：statusBar,
  */
 
 public class StyleManager {

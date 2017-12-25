@@ -1,8 +1,24 @@
 package com.example.wood121.viewdemos.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.wood121.viewdemos.BaseFragment;
+import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.activity.EMerchantsActivity;
+import com.example.wood121.viewdemos.activity.EPropertyActivity;
+import com.example.wood121.viewdemos.activity.EpersonalActivity;
+import com.example.wood121.viewdemos.adapter.TabContentRecAdapter;
+import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
+import com.example.wood121.viewdemos.util.DisplayUtils;
+import com.example.wood121.viewdemos.util.RecyclerViewDivider;
+import com.example.wood121.viewdemos.util.VFSkipActivity;
+
+import java.util.ArrayList;
+
+import butterknife.BindView;
 
 /**
  * Created by wood121 on 2017/12/20.
@@ -10,8 +26,9 @@ import com.example.wood121.viewdemos.BaseFragment;
  */
 
 public class MineFragment extends BaseFragment {
-    private static String Mine_FRAGMENT = "MineFragment";
-    private String msg;
+    @BindView(R.id.recyclerview)
+    RecyclerView recyclerview;
+    private ArrayList<ModelRecyclerBean> arrayList;
 
     public MineFragment() {
     }
@@ -20,41 +37,39 @@ public class MineFragment extends BaseFragment {
         return new MineFragment();
     }
 
-    /**
-     * 避免在横竖屏切换的时候Fragment自动调用自己的无参构造函数，导致数据丢失。
-     * 在流程式的情况下适用，
-     *
-     * @param msg
-     * @return
-     */
-    public static APIViewFragment newInstance(String msg) {
-        APIViewFragment fragment = new APIViewFragment();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(Mine_FRAGMENT, msg);
-        fragment.setArguments(bundle);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (null != getArguments()) {
-            msg = (String) getArguments().getSerializable(Mine_FRAGMENT);
-        }
-    }
 
     @Override
     protected int setLayoutResouceId() {
-        return 0;
+        return R.layout.fragment_mine;
+    }
+
+    @Override
+    protected void initView(View mRootView) {
+
     }
 
     @Override
     protected void initData(Bundle arguments) {
-
+        arrayList = new ArrayList<>();
+        arrayList.add(new ModelRecyclerBean("e用户版", R.mipmap.circle_bullet, EpersonalActivity.class));
+        arrayList.add(new ModelRecyclerBean("e商户版", R.mipmap.circle_bullet, EMerchantsActivity.class));
+        arrayList.add(new ModelRecyclerBean("e物业版", R.mipmap.circle_bullet, EPropertyActivity.class));
+//        arrayList.add(new ModelRecyclerBean("go设备管理", R.mipmap.circle_credit_card, DeviceManagementActivity.class));
+//        arrayList.add(new ModelRecyclerBean("go商品购物", R.mipmap.circle_credit_card, DeviceSellActivity.class));
     }
 
     @Override
     protected void setListener() {
-
+        recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
+        recyclerview.addItemDecoration(new RecyclerViewDivider(DisplayUtils.dp2px(mContext, 5f)));
+        TabContentRecAdapter tabContentRecAdapter = new TabContentRecAdapter(arrayList);
+        tabContentRecAdapter.setData(arrayList);
+        tabContentRecAdapter.setOnItemClickListener(new TabContentRecAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(View view, ModelRecyclerBean modelRecyclerBean) {
+                VFSkipActivity.skipActivity(mContext, modelRecyclerBean.getActivity());
+            }
+        });
+        recyclerview.setAdapter(tabContentRecAdapter);
     }
 }

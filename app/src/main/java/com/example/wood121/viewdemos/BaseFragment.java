@@ -36,21 +36,31 @@ public abstract class BaseFragment extends Fragment {
         this.mActivity = (FragmentActivity) context;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (null == mRootView) {
             mRootView = inflater.inflate(setLayoutResouceId(), container, false);
             unbinder = ButterKnife.bind(this, mRootView);
+            initView(mRootView);
         }
+        return mRootView;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         initData(getArguments());
         setListener();
 
         mIsPrepare = true;  //判定是否需要懒加载
         onLazyLoad();
-
-        return mRootView;
     }
 
     private void onLazyLoad() {
@@ -84,6 +94,9 @@ public abstract class BaseFragment extends Fragment {
 
     //设置布局资源id
     protected abstract int setLayoutResouceId();
+
+    //初始化view数据
+    protected abstract void initView(View mRootView);
 
     //获取数据
     protected abstract void initData(Bundle arguments);

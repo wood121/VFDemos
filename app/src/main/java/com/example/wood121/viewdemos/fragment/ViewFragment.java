@@ -1,42 +1,32 @@
 package com.example.wood121.viewdemos.fragment;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.activity.ArcViewActivity;
+import com.example.wood121.viewdemos.activity.BingActivity;
+import com.example.wood121.viewdemos.activity.CheckProcessActivity;
+import com.example.wood121.viewdemos.activity.RecActivity;
+import com.example.wood121.viewdemos.activity.TopbarActivity;
+import com.example.wood121.viewdemos.activity.ZheActivity;
+import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
 /**
  * Created by wood121 on 2017/12/21.
+ * viewFragment，给予对象与数据
  */
 
-public class ViewFragment extends Fragment {
-
-    private static final String View_FRAGMENT = "ViewFragment";
-    private String msg;
+public class ViewFragment extends BaseTabContentFragment {
 
     public static ViewFragment newInstance() {
         return new ViewFragment();
     }
 
-    /**
-     * 避免在横竖屏切换的时候Fragment自动调用自己的无参构造函数，导致数据丢失。
-     * 在流程式的情况下适用，
-     *
-     * @param msg
-     * @return
-     */
-    public static ViewFragment newInstance(String msg) {
-        ViewFragment fragment = new ViewFragment();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(View_FRAGMENT, msg);
-        fragment.setArguments(bundle);
-        return fragment;
-    }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (null != getArguments()) {
-            msg = (String) getArguments().getSerializable(View_FRAGMENT);
-        }
+    protected void getFragDatas() {
+        mData.add(new ModelRecyclerBean("进度条", R.mipmap.circle_zip, ArcViewActivity.class));
+        mData.add(new ModelRecyclerBean("物流进度", R.mipmap.circle_zip, CheckProcessActivity.class));
+        mData.add(new ModelRecyclerBean("折线图1", R.mipmap.circle_zip, BingActivity.class));
+        mData.add(new ModelRecyclerBean("折线图2", R.mipmap.circle_zip, ZheActivity.class));
+        mData.add(new ModelRecyclerBean("标题栏", R.mipmap.circle_zip, TopbarActivity.class));
+        mData.add(new ModelRecyclerBean("RecView", R.mipmap.circle_zip, RecActivity.class));
     }
-
 }

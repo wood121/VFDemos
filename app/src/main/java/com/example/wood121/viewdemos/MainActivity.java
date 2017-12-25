@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import com.example.wood121.viewdemos.fragment.APIViewFragment;
 import com.example.wood121.viewdemos.fragment.FrameSDKFragment;
 import com.example.wood121.viewdemos.fragment.MineFragment;
-import com.example.wood121.viewdemos.fragment.SDAFragment;
+import com.example.wood121.viewdemos.fragment.MathJniFragment;
 import com.example.wood121.viewdemos.widget.TopBar;
 
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity {
     private APIViewFragment apiViewFragment;
     private FrameSDKFragment frameSDKFragment;
     private MineFragment mineFragment;
-    private SDAFragment sdaFragment;
+    private MathJniFragment sdaFragment;
     private FragmentManager supportFragmentManager;
 
     @Override
@@ -102,12 +102,12 @@ public class MainActivity extends BaseActivity {
         if (savedInstanceState != null) {
             apiViewFragment = (APIViewFragment) supportFragmentManager.getFragment(savedInstanceState, "apiViewFragment");
             frameSDKFragment = (FrameSDKFragment) supportFragmentManager.getFragment(savedInstanceState, "frameSDKFragment");
-            sdaFragment = (SDAFragment) supportFragmentManager.getFragment(savedInstanceState, "sdaFragment");
+            sdaFragment = (MathJniFragment) supportFragmentManager.getFragment(savedInstanceState, "sdaFragment");
             mineFragment = (MineFragment) supportFragmentManager.getFragment(savedInstanceState, "mineFragment");
         } else {
             apiViewFragment = APIViewFragment.newInstance();
             frameSDKFragment = FrameSDKFragment.newInstance();
-            sdaFragment = SDAFragment.newInstance();
+            sdaFragment = MathJniFragment.newInstance();
             mineFragment = MineFragment.newInstance();
         }
     }

@@ -27,14 +27,16 @@ dependencies {
     //    compile "io.reactivex.rxjava2:rxjava:2.x.y"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'fm.jiecao:jiecaovideoplayer:5.5.2'
     compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
     compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
     compile 'com.github.jokermonn:permissions4m:2.1.2-lib'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
 }

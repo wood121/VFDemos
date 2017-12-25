@@ -169,7 +169,9 @@ public class BleAcitivty extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         mBluetoothAdapter.cancelDiscovery();
-        unregisterReceiver(boadcastReceiver);
         mBluetoothAdapter.disable();
+        if (boadcastReceiver != null) {
+            unregisterReceiver(boadcastReceiver);
+        }
     }
 }

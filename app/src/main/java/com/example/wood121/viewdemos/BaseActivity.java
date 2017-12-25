@@ -155,7 +155,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
         super.setContentView(layoutResID);
