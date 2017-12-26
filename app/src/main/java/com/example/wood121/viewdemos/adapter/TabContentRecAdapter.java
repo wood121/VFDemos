@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,13 +24,17 @@ public class TabContentRecAdapter extends RecyclerView.Adapter<TabContentRecAdap
     private List<ModelRecyclerBean> mDatas;
     private Context context;
 
-    public TabContentRecAdapter(List<ModelRecyclerBean> mData) {
-        this.mDatas = mData;
+    /**
+     * 这个对象是唯一的，创建的集合就是唯一的,this.mDatas = mData会受外界数据影响
+     */
+    public TabContentRecAdapter() {
+        if (mDatas == null)
+            mDatas = new ArrayList<>();
     }
 
     public void setData(List<ModelRecyclerBean> mData) {
-        Log.e("wood121", "TabContentRecAdapter:setData:" + mData.hashCode());
-        this.mDatas = mData;
+        mDatas.clear();
+        mDatas.addAll(mData);
         notifyDataSetChanged();
     }
 
@@ -60,7 +65,6 @@ public class TabContentRecAdapter extends RecyclerView.Adapter<TabContentRecAdap
 
     @Override
     public int getItemCount() {
-        Log.e("wood121", "getItemCount:" + mDatas.size());
         return mDatas == null ? 0 : mDatas.size();
     }
 

@@ -11,8 +11,17 @@ import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
 public class FrameFragment extends BaseTabContentFragment {
 
+    public static FrameFragment frameFragment;
+
     public static FrameFragment newInstance() {
-        return new FrameFragment();
+        if (frameFragment == null) {
+            synchronized (FrameFragment.class) {
+                if (frameFragment == null) {
+                    frameFragment = new FrameFragment();
+                }
+            }
+        }
+        return frameFragment;
     }
 
     @Override

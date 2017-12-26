@@ -11,9 +11,20 @@ import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
 public class SDKFragment extends BaseTabContentFragment {
 
+
+    public static SDKFragment sdkFragment;
+
     public static SDKFragment newInstance() {
-        return new SDKFragment();
+        if (sdkFragment == null) {
+            synchronized (SDKFragment.class) {
+                if (sdkFragment == null) {
+                    sdkFragment = new SDKFragment();
+                }
+            }
+        }
+        return sdkFragment;
     }
+
 
     @Override
     protected void getFragDatas() {

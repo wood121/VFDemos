@@ -1,5 +1,7 @@
 package com.example.wood121.viewdemos.fragment;
 
+import static com.example.wood121.viewdemos.fragment.MathFragment.mathFragment;
+
 /**
  * Created by wood121 on 2017/12/20.
  * Data Structure and Algorithm，
@@ -7,10 +9,19 @@ package com.example.wood121.viewdemos.fragment;
 
 public class MathJniFragment extends BaseTabFragment {
 
+    public static MathJniFragment mathJniFragment;
 
     public static MathJniFragment newInstance() {
-        return new MathJniFragment();
+        if (mathJniFragment == null) {
+            synchronized (MathJniFragment.class) {
+                if (mathJniFragment == null) {
+                    mathJniFragment = new MathJniFragment();
+                }
+            }
+        }
+        return mathJniFragment;
     }
+
 
     @Override
     protected void getFragDatas() {

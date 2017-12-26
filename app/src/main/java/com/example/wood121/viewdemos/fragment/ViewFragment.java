@@ -11,13 +11,21 @@ import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
 /**
  * Created by wood121 on 2017/12/21.
- * viewFragment，给予对象与数据
+ * apiFragment，给予对象与数据
  */
 
 public class ViewFragment extends BaseTabContentFragment {
+    public static ViewFragment apiFragment;
 
     public static ViewFragment newInstance() {
-        return new ViewFragment();
+        if (apiFragment == null) {
+            synchronized (ViewFragment.class) {
+                if (apiFragment == null) {
+                    apiFragment = new ViewFragment();
+                }
+            }
+        }
+        return apiFragment;
     }
 
     @Override

@@ -6,8 +6,17 @@ package com.example.wood121.viewdemos.fragment;
 
 public class APIViewFragment extends BaseTabFragment {
 
+    public static APIViewFragment apiViewFragment;
+
     public static APIViewFragment newInstance() {
-        return new APIViewFragment();
+        if (apiViewFragment == null) {
+            synchronized (APIViewFragment.class) {
+                if (apiViewFragment == null) {
+                    apiViewFragment = new APIViewFragment();
+                }
+            }
+        }
+        return apiViewFragment;
     }
 
     /**

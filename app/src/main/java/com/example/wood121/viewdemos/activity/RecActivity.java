@@ -31,7 +31,6 @@ public class RecActivity extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rec);
 
-
         initViews();
         initDatas();
 

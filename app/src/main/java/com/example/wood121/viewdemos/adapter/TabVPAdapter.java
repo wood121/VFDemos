@@ -2,7 +2,7 @@ package com.example.wood121.viewdemos.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.fragment.APIFragment;
@@ -19,18 +19,13 @@ import java.util.ArrayList;
  * APIViewAdapter中创建的数据
  */
 
-public class TabVPAdapter extends FragmentStatePagerAdapter {
+public class TabVPAdapter extends FragmentPagerAdapter {
 
     private ArrayList<String> mList;
     private int mType;
 
     public TabVPAdapter(FragmentManager fm) {
         super(fm);
-    }
-
-    @Override
-    public int getItemPosition(Object object) {
-        return POSITION_NONE; //这个是必须的
     }
 
     @Override
@@ -80,7 +75,6 @@ public class TabVPAdapter extends FragmentStatePagerAdapter {
     public void setData(ArrayList<String> list, int type) {
         this.mType = type;
         this.mList = list;
-        notifyDataSetChanged(); //没走getItem
     }
 
 }

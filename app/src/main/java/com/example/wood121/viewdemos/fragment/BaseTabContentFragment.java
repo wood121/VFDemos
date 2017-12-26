@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.example.wood121.viewdemos.BaseFragment;
@@ -39,16 +38,43 @@ public class BaseTabContentFragment extends BaseFragment {
         return R.layout.fragment_base_avfsm;
     }
 
+
     @Override
-    protected void initView(View mRootView) {
+    protected void initData(Bundle arguments) {
 
     }
 
     @Override
-    protected void initData(Bundle arguments) {
+    protected void setListener() {
+        //列表数据
         if (mData == null)
             mData = new ArrayList<>();
         mData.clear();
+        getFragDatas(); //获取不同fragment的数据
+
+        //布局格式
+        if (mData.size() <= 3) {
+            recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
+        } else {
+            recyclerview.setLayoutManager(new GridLayoutManager(mContext, mColumnCount));
+        }
+
+        //分割线
+        recyclerview.addItemDecoration(new RecyclerViewDivider(DisplayUtils.dp2px(mContext, 5f)));
+
+        //适配器
+        if (tabContentRecAdapter == null) {
+            tabContentRecAdapter = new TabContentRecAdapter();
+        }
+        tabContentRecAdapter.setOnItemClickListener(new TabContentRecAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(View view, ModelRecyclerBean modelRecyclerBean) {
+                VFSkipActivity.skipActivity(mActivity, modelRecyclerBean.getActivity());
+            }
+        });
+        recyclerview.setHasFixedSize(true);
+        recyclerview.setAdapter(tabContentRecAdapter);
+        tabContentRecAdapter.setData(mData);  //刷新页面
     }
 
     /**
@@ -56,32 +82,5 @@ public class BaseTabContentFragment extends BaseFragment {
      */
     protected void getFragDatas() {
 
-    }
-
-    @Override
-    protected void setListener() {
-        getFragDatas(); //获取不同fragment的数据
-        Log.e("hashcode", "recyclerview:" + recyclerview.hashCode() + " mData:" + mData.hashCode());
-        //布局格式
-        if (mData.size() <= 3) {
-            recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
-        } else {
-            recyclerview.setLayoutManager(new GridLayoutManager(mContext, mColumnCount));
-        }
-        //分割线
-        recyclerview.addItemDecoration(new RecyclerViewDivider(DisplayUtils.dp2px(mContext, 5f)));
-        //适配器
-        if (tabContentRecAdapter == null) {
-            tabContentRecAdapter = new TabContentRecAdapter(mData);
-        }
-        Log.e("wood121", mData.size() + "");
-        tabContentRecAdapter.setOnItemClickListener(new TabContentRecAdapter.onItemClickListener() {
-            @Override
-            public void onItemClick(View view, ModelRecyclerBean modelRecyclerBean) {
-                VFSkipActivity.skipActivity(mActivity, modelRecyclerBean.getActivity());
-            }
-        });
-        recyclerview.setAdapter(tabContentRecAdapter);
-        tabContentRecAdapter.setData(mData);  //刷新页面
     }
 }

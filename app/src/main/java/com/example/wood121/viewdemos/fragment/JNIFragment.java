@@ -6,9 +6,19 @@ package com.example.wood121.viewdemos.fragment;
 
 public class JNIFragment extends BaseTabContentFragment {
 
+    public static JNIFragment jniFragment;
+
     public static JNIFragment newInstance() {
-        return new JNIFragment();
+        if (jniFragment == null) {
+            synchronized (JNIFragment.class) {
+                if (jniFragment == null) {
+                    jniFragment = new JNIFragment();
+                }
+            }
+        }
+        return jniFragment;
     }
+
 
     @Override
     protected void getFragDatas() {

@@ -64,6 +64,7 @@ public class BleAcitivty extends AppCompatActivity {
             }
         }
     };
+    private boolean isRegistered = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +101,7 @@ public class BleAcitivty extends AppCompatActivity {
         filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED); //扫描开始
         filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);  //扫描结束
         registerReceiver(boadcastReceiver, filter);
-
+        isRegistered = true;
         //开启蓝牙扫描
         if (mBluetoothAdapter.isDiscovering()) {
             mBluetoothAdapter.cancelDiscovery();
@@ -170,7 +171,7 @@ public class BleAcitivty extends AppCompatActivity {
         super.onDestroy();
         mBluetoothAdapter.cancelDiscovery();
         mBluetoothAdapter.disable();
-        if (boadcastReceiver != null) {
+        if (isRegistered) {
             unregisterReceiver(boadcastReceiver);
         }
     }

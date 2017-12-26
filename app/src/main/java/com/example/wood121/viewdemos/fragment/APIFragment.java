@@ -12,8 +12,17 @@ import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
 public class APIFragment extends BaseTabContentFragment {
 
+    public static APIFragment apiFragment;
+
     public static APIFragment newInstance() {
-        return new APIFragment();
+        if (apiFragment == null) {
+            synchronized (APIFragment.class) {
+                if (apiFragment == null) {
+                    apiFragment = new APIFragment();
+                }
+            }
+        }
+        return apiFragment;
     }
 
     @Override

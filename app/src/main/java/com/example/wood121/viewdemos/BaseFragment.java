@@ -47,7 +47,6 @@ public abstract class BaseFragment extends Fragment {
         if (null == mRootView) {
             mRootView = inflater.inflate(setLayoutResouceId(), container, false);
             unbinder = ButterKnife.bind(this, mRootView);
-            initView(mRootView);
         }
         return mRootView;
     }
@@ -64,6 +63,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     private void onLazyLoad() {
+
     }
 
     @Override
@@ -94,9 +94,6 @@ public abstract class BaseFragment extends Fragment {
 
     //设置布局资源id
     protected abstract int setLayoutResouceId();
-
-    //初始化view数据
-    protected abstract void initView(View mRootView);
 
     //获取数据
     protected abstract void initData(Bundle arguments);

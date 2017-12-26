@@ -119,7 +119,6 @@ public class MainActivity extends BaseActivity {
         fragments.add(mineFragment);
     }
 
-
     private void slectFragment(int position) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager()
                 .beginTransaction();
@@ -137,6 +136,11 @@ public class MainActivity extends BaseActivity {
                         fragmentTransaction.hide(fragment);
                     }
                 }
+
+//                if (i == position) {
+//                    fragmentTransaction.replace(R.id.fragment_container, fragment);
+//                    break;
+//                }
             }
         }
         fragmentTransaction.commit();

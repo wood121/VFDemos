@@ -33,19 +33,22 @@ public class MineFragment extends BaseFragment {
     public MineFragment() {
     }
 
-    public static MineFragment newInstance() {
-        return new MineFragment();
-    }
+    public static MineFragment mineFragment;
 
+    public static MineFragment newInstance() {
+        if (mineFragment == null) {
+            synchronized (MineFragment.class) {
+                if (mineFragment == null) {
+                    mineFragment = new MineFragment();
+                }
+            }
+        }
+        return mineFragment;
+    }
 
     @Override
     protected int setLayoutResouceId() {
         return R.layout.fragment_mine;
-    }
-
-    @Override
-    protected void initView(View mRootView) {
-
     }
 
     @Override
@@ -62,7 +65,7 @@ public class MineFragment extends BaseFragment {
     protected void setListener() {
         recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
         recyclerview.addItemDecoration(new RecyclerViewDivider(DisplayUtils.dp2px(mContext, 5f)));
-        TabContentRecAdapter tabContentRecAdapter = new TabContentRecAdapter(arrayList);
+        TabContentRecAdapter tabContentRecAdapter = new TabContentRecAdapter();
         tabContentRecAdapter.setData(arrayList);
         tabContentRecAdapter.setOnItemClickListener(new TabContentRecAdapter.onItemClickListener() {
             @Override

@@ -6,8 +6,17 @@ package com.example.wood121.viewdemos.fragment;
 
 public class FrameSDKFragment extends BaseTabFragment {
 
+    public static FrameSDKFragment frameSDKFragment;
+
     public static FrameSDKFragment newInstance() {
-        return new FrameSDKFragment();
+        if (frameSDKFragment == null) {
+            synchronized (FrameSDKFragment.class) {
+                if (frameSDKFragment == null) {
+                    frameSDKFragment = new FrameSDKFragment();
+                }
+            }
+        }
+        return frameSDKFragment;
     }
 
     @Override
