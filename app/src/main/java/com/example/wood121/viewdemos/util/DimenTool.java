@@ -18,7 +18,7 @@ public class DimenTool {
 
     public static void gen() {
 
-        File file = new File("./jieBianGo/src/main/res/values/dimens.xml");//这里如果找不到使用绝对路径即可
+        File file = new File("./app/src/main/res/values/dimens.xml");//这里如果找不到使用绝对路径即可
         BufferedReader reader = null;
         //添加分辨率
         StringBuilder sw240 = new StringBuilder();
@@ -84,14 +84,14 @@ public class DimenTool {
             System.out.println("<!--  sw600 -->");
             System.out.println(sw600);
 
-            String sw240file = "./jieBianGo/src/main/res/values-sw240dp/dimens.xml";
-            String sw260file = "./jieBianGo/src/main/res/values-sw260dp/dimens.xml";
-            String sw320file = "./jieBianGo/src/main/res/values-sw320dp/dimens.xml";
-            String sw400file = "./jieBianGo/src/main/res/values-sw400dp/dimens.xml";
-            String sw440file = "./jieBianGo/src/main/res/values-sw440dp/dimens.xml";
-            String sw480file = "./jieBianGo/src/main/res/values-sw480dp/dimens.xml";
-            String sw560file = "./jieBianGo/src/main/res/values-sw560dp/dimens.xml";
-            String sw600file = "./jieBianGo/src/main/res/values-sw600dp/dimens.xml";
+            String sw240file = "./app/src/main/res/values-sw240dp/dimens.xml";
+            String sw260file = "./app/src/main/res/values-sw260dp/dimens.xml";
+            String sw320file = "./app/src/main/res/values-sw320dp/dimens.xml";
+            String sw400file = "./app/src/main/res/values-sw400dp/dimens.xml";
+            String sw440file = "./app/src/main/res/values-sw440dp/dimens.xml";
+            String sw480file = "./app/src/main/res/values-sw480dp/dimens.xml";
+            String sw560file = "./app/src/main/res/values-sw560dp/dimens.xml";
+            String sw600file = "./app/src/main/res/values-sw600dp/dimens.xml";
             writeFile(sw240file, sw240.toString());
             writeFile(sw260file, sw260.toString());
             writeFile(sw320file, sw320.toString());

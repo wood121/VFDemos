@@ -26,8 +26,6 @@ public class FrameFragment extends BaseTabContentFragment {
 
     @Override
     protected void getFragDatas() {
-        mData.add(new ModelRecyclerBean("二维码生成", R.mipmap.circle_bullet, GoodsTransformActivity.class));
-        mData.add(new ModelRecyclerBean("二维码生成", R.mipmap.circle_bullet, GoodsTransformActivity.class));
-        mData.add(new ModelRecyclerBean("二维码生成", R.mipmap.circle_bullet, GoodsTransformActivity.class));
+        mData.add(new ModelRecyclerBean("未知内容", R.mipmap.circle_bullet, GoodsTransformActivity.class));
     }
 }

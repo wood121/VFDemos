@@ -14,6 +14,7 @@ import butterknife.Unbinder;
 
 /**
  * Created by wood121 on 2017/12/20.
+ * 左边三个tab页面的fragment封装
  */
 
 public abstract class BaseFragment extends Fragment {

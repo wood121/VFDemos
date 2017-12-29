@@ -47,7 +47,8 @@
         <activity android:name=".activity.BleAcitivty" />
         <activity android:name=".activity.EpersonalActivity" />
         <activity android:name=".activity.EMerchantsActivity" />
-        <activity android:name=".activity.EPropertyActivity"></activity>
+        <activity android:name=".activity.EPropertyActivity" />
+        <activity android:name=".activity.ExcelContentActivity"></activity>
     </application>
 
 </manifest>

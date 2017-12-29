@@ -33,7 +33,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     private Unbinder unbinder;
     private static final int PERMISSION_REQUEST_CODE = 0;
 
-
     /**
      * 需要进行检测的权限数组
      */
