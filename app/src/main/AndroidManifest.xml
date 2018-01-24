@@ -48,7 +48,24 @@
         <activity android:name=".activity.EpersonalActivity" />
         <activity android:name=".activity.EMerchantsActivity" />
         <activity android:name=".activity.EPropertyActivity" />
-        <activity android:name=".activity.ExcelContentActivity"></activity>
+        <activity android:name=".activity.ExcelContentActivity" />
+        <activity android:name=".activity.ServiceActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.example.wood121.viewdemos.service.MyService" />
+            </intent-filter>
+        </service>
+
+        <!-- <service -->
+        <!-- android:name=".service.MyService"/> -->
+
+        <service
+            android:name=".service.MyMessengerService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
