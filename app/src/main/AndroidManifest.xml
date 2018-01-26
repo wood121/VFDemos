@@ -65,7 +65,9 @@
         <service
             android:name=".service.MyMessengerService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".activity.MyLoaderActivity"></activity>
     </application>
 
 </manifest>
