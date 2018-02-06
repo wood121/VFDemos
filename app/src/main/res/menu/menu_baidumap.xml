@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:title="普通地图"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notifications"
+        android:title="卫星地图"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="交通图"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_hot"
+        android:orderInCategory="100"
+        android:title="百度热力城市地图"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_single"
+        android:orderInCategory="100"
+        android:title="个性化地图"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_offline"
+        android:orderInCategory="100"
+        android:title="离线地d"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_gesture"
+        android:orderInCategory="100"
+        android:title="控件与显示"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_inCity"
+        android:orderInCategory="100"
+        android:title="城市内POI检索"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_poiDetail"
+        android:orderInCategory="100"
+        android:title="poi详情"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sug"
+        android:orderInCategory="100"
+        android:title="POI热词检索"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_address2LL"
+        android:orderInCategory="100"
+        android:title="地理编码"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_ll2address"
+        android:orderInCategory="100"
+        android:title="反地理编码"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_bike"
+        android:orderInCategory="100"
+        android:title="骑行路线"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_walk"
+        android:orderInCategory="100"
+        android:title="步行路线"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_bikeNai"
+        android:orderInCategory="100"
+        android:title="骑行导航"
+        app:showAsAction="never" />
+
+
+</menu>

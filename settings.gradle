@@ -1,1 +1,1 @@
-include ':app', ':library', ':dataslayer', ':domain'
+include ':app', ':library', ':dataslayer', ':domain', ':ecomsumer'

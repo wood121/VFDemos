@@ -36,9 +36,8 @@ import android.view.WindowManager;
 import android.widget.FrameLayout.LayoutParams;
 
 /**
- * Class to manage status and navigation bar tint effects when using KitKat 
+ * Class to manage status and navigation bar tint effects when using KitKat
  * translucent system UI modes.
- *
  */
 public class SystemBarTintManagerUtils {
 
@@ -75,7 +74,7 @@ public class SystemBarTintManagerUtils {
             TypedArray a = activity.obtainStyledAttributes(attrs);
             try {
                 mStatusBarAvailable = a.getBoolean(0, false);
-                mNavBarAvailable = a.getBoolean(1, false);
+//                mNavBarAvailable = a.getBoolean(1, false);
             } finally {
                 a.recycle();
             }
@@ -104,12 +103,11 @@ public class SystemBarTintManagerUtils {
         if (mNavBarAvailable) {
             setupNavBarView(activity, decorViewGroup);
         }
-
     }
 
     /**
      * Enable tinting of the system status bar.
-     *
+     * <p>
      * If the platform is running Jelly Bean or earlier, or translucent system
      * UI modes have not been enabled in either the theme or via window flags,
      * then this method does nothing.
@@ -125,7 +123,7 @@ public class SystemBarTintManagerUtils {
 
     /**
      * Enable tinting of the system navigation bar.
-     *
+     * <p>
      * If the platform does not have soft navigation keys, is running Jelly Bean
      * or earlier, or translucent system UI modes have not been enabled in either
      * the theme or via window flags, then this method does nothing.
@@ -330,7 +328,6 @@ public class SystemBarTintManagerUtils {
     /**
      * Class which describes system bar sizing and other characteristics for the current
      * device configuration.
-     *
      */
     public static class SystemBarConfig {
 
