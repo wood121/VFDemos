@@ -32,6 +32,7 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.TextOptions;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.search.core.PoiInfo;
 import com.baidu.mapapi.search.core.SearchResult;
 import com.baidu.mapapi.search.geocode.GeoCodeOption;
 import com.baidu.mapapi.search.geocode.GeoCodeResult;
@@ -450,6 +451,9 @@ public class BaiduMapActivity extends AppCompatActivity {
 
     //骑行导航
     private void bikeNai() {
+//        AreaUtil
+//        SpatialRelationUtil
+
     }
 
     //步行路线
@@ -526,6 +530,12 @@ public class BaiduMapActivity extends AppCompatActivity {
                     //没有找到检索结果
                 }
                 ReverseGeoCodeResult.AddressComponent addressDetail = reverseGeoCodeResult.getAddressDetail();
+                List<PoiInfo> poiList = reverseGeoCodeResult.getPoiList();
+                for (int i = 0; i < poiList.size(); i++) {
+                    PoiInfo poiInfo = poiList.get(i);
+                    Log.e("url", poiInfo.uid + ":" + poiInfo.city + ":" + poiInfo.address);
+                }
+
                 Log.e("url", "addressDetail:" + addressDetail.province + addressDetail.district);
 
                 //获取反向地理编码结果
@@ -716,8 +726,14 @@ public class BaiduMapActivity extends AppCompatActivity {
         unregisterReceiver(mReceiver);
         baiduMap.setMyLocationEnabled(false);
         poiSearch.destroy();
-        suggestionSearch.destroy();
-        geoCoder.destroy();
-        bmapView.onDestroy();
+        if (suggestionSearch != null) {
+            suggestionSearch.destroy();
+        }
+        if (geoCoder != null) {
+            geoCoder.destroy();
+        }
+        if (baiduMap != null) {
+            bmapView.onDestroy();
+        }
     }
 }
