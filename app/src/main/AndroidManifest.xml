@@ -127,7 +127,10 @@
 
         <activity android:name=".activity.EmptyActivity" />
         <activity android:name=".activity.GetAddressActivity" />
-        <activity android:name=".activity.AddressActivity"></activity>
+        <activity android:name=".activity.AddressActivity" />
+        <activity android:name=".activity.IjkPlayerActvitiy" />
+        <activity android:name=".activity.DataStorageActivity" />
+        <activity android:name=".activity.FileStorageActivity"></activity>
     </application>
 
 </manifest>

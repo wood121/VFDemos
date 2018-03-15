@@ -125,7 +125,6 @@ public class VideoActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void initMediaPlayer() {
@@ -162,6 +161,4 @@ public class VideoActivity extends AppCompatActivity {
 
         }
     }
-
-
 }

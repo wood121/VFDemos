@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="请输入"
+        android:maxLength="100"
+        android:maxLines="3"
+        android:padding="@dimen/margin_10"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btn_get_ways"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取存储路径" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="存点东西（内部存储）" />
+
+        <Button
+            android:id="@+id/btn_output"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取点东西（内部存储）" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_input_storage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="存点东西（storage）" />
+
+        <Button
+            android:id="@+id/btn_output_storage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取点东西（storage）" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:padding="@dimen/margin_10"
+        android:textColor="@color/white" />
+
+</LinearLayout>  
