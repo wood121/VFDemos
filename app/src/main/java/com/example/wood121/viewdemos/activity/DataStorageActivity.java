@@ -51,7 +51,7 @@ public class DataStorageActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         //获取sp对象
-        sp = getSharedPreferences("User", Context.MODE_PRIVATE);
+        sp = getSharedPreferences("User", Context.MODE_WORLD_WRITEABLE);
         sp2 = getSharedPreferences("User2", Context.MODE_PRIVATE);
     }
 

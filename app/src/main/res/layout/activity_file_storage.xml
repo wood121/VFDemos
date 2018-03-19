@@ -63,6 +63,12 @@
             android:text="取点东西（storage）" />
     </LinearLayout>
 
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="@dimen/margin_30"
+        android:layout_height="wrap_content"
+        android:text="Switch" />
+
     <TextView
         android:id="@+id/tv_show"
         android:layout_width="match_parent"

@@ -26,7 +26,6 @@ import butterknife.OnClick;
 
 public class FileStorageActivity extends AppCompatActivity {
 
-
     @BindView(R.id.btn_get_ways)
     Button btnGetWays;
     @BindView(R.id.btn_input)
@@ -47,7 +46,6 @@ public class FileStorageActivity extends AppCompatActivity {
     private String state;
     private File file_storage;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +60,7 @@ public class FileStorageActivity extends AppCompatActivity {
         if (!dir.exists()) {
             dir.mkdir();
         }
+
         file_storage = new File(dir, "wood.txt");
         Log.e("url", "file_storage: " + file_storage.toString());
         //内部扩展 文件目录
