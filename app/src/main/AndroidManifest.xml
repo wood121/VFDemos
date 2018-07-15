@@ -131,7 +131,20 @@
         <activity android:name=".activity.AddressActivity" />
         <activity android:name=".activity.IjkPlayerActvitiy" />
         <activity android:name=".activity.DataStorageActivity" />
-        <activity android:name=".activity.FileStorageActivity"></activity>
+        <activity android:name=".activity.FileStorageActivity" />
+        <activity android:name=".activity.RetrofitActivity" />
+        <activity android:name=".activity.RxjavaActivity" />
+        <activity android:name=".activity.RxjavaRetrofitActivity" />
+        <activity android:name=".activity.RxjavaRetrofitTotalActivity" />
+
+        <service
+            android:name=".service.BookManagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".activity.BookManagerActivity" />
+        <activity android:name=".activity.AsynTaskDemoActivity"></activity>
     </application>
 
 </manifest>

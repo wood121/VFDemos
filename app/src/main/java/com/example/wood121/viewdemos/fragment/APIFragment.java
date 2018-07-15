@@ -1,7 +1,9 @@
 package com.example.wood121.viewdemos.fragment;
 
 import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.activity.AsynTaskDemoActivity;
 import com.example.wood121.viewdemos.activity.BleAcitivty;
+import com.example.wood121.viewdemos.activity.BookManagerActivity;
 import com.example.wood121.viewdemos.activity.DataStorageActivity;
 import com.example.wood121.viewdemos.activity.IjkPlayerActvitiy;
 import com.example.wood121.viewdemos.activity.MyLoaderActivity;
@@ -37,6 +39,8 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("Service", R.mipmap.circle_captcha, ServiceActivity.class));
         mData.add(new ModelRecyclerBean("Loader加载图片文件夹", R.mipmap.circle_captcha, MyLoaderActivity.class));
         mData.add(new ModelRecyclerBean("数据存储", R.mipmap.circle_captcha, DataStorageActivity.class));
+        mData.add(new ModelRecyclerBean("AIDL客户端", R.mipmap.circle_captcha, BookManagerActivity.class));
+        mData.add(new ModelRecyclerBean("AsynTask", R.mipmap.circle_captcha, AsynTaskDemoActivity.class));
     }
 
 }

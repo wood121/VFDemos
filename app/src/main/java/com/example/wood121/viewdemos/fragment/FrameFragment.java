@@ -2,6 +2,10 @@ package com.example.wood121.viewdemos.fragment;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.activity.GoodsTransformActivity;
+import com.example.wood121.viewdemos.activity.RetrofitActivity;
+import com.example.wood121.viewdemos.activity.RxjavaActivity;
+import com.example.wood121.viewdemos.activity.RxjavaRetrofitActivity;
+import com.example.wood121.viewdemos.activity.RxjavaRetrofitTotalActivity;
 import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
 
 /**
@@ -26,6 +30,10 @@ public class FrameFragment extends BaseTabContentFragment {
 
     @Override
     protected void getFragDatas() {
-        mData.add(new ModelRecyclerBean("未知内容", R.mipmap.circle_bullet, GoodsTransformActivity.class));
+        mData.add(new ModelRecyclerBean("未知内容", R.mipmap.circle_captcha, GoodsTransformActivity.class));
+        mData.add(new ModelRecyclerBean("Retrofit", R.mipmap.circle_captcha, RetrofitActivity.class));
+        mData.add(new ModelRecyclerBean("Rxjava", R.mipmap.circle_captcha, RxjavaActivity.class));
+        mData.add(new ModelRecyclerBean("Rxjava+Retrofit", R.mipmap.circle_captcha, RxjavaRetrofitActivity.class));
+        mData.add(new ModelRecyclerBean("Rxjava+Retrofit封装", R.mipmap.circle_captcha, RxjavaRetrofitTotalActivity.class));
     }
 }

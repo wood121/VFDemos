@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_init"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_flowable" />
+
+    <Button
+        android:id="@+id/btn_printarray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_observable" />
+
+    <Button
+        android:id="@+id/btn_getpictures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_single" />
+
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_complete" />
+
+    <Button
+        android:id="@+id/btn_Maybe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn_Maybe" />
+
+</LinearLayout>

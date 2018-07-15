@@ -73,6 +73,7 @@ public class BleAcitivty extends AppCompatActivity {
         ButterKnife.bind(this);
         //蓝牙适配器初始化
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
     }
 
     @Override

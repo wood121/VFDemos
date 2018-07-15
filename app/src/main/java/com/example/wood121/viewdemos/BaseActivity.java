@@ -86,6 +86,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 needRequestPermissionList.add(perm);
             }
         }
+
+
         return needRequestPermissionList;
     }
 
@@ -101,6 +103,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * 检测是否说有的权限都已经授权
+     *
      * @param grantResults
      * @return
      */
