@@ -144,7 +144,8 @@
             android:process=":remote" />
 
         <activity android:name=".activity.BookManagerActivity" />
-        <activity android:name=".activity.AsynTaskDemoActivity"></activity>
+        <activity android:name=".activity.AsynTaskDemoActivity" />
+        <activity android:name=".activity.ExecutorActivity"></activity>
     </application>
 
 </manifest>

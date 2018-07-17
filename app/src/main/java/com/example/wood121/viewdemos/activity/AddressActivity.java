@@ -203,6 +203,7 @@ public class AddressActivity extends BaseActivity {
         mapStatusUpdate = MapStatusUpdateFactory.newLatLngZoom(latLng, 16.0f);
         baiduMap.animateMapStatus(mapStatusUpdate);
 
+
         //获取poi信息
         getAllPois();
 //        List<Poi> poiList = mLocation.getPoiList();
