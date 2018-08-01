@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.http.Wood121LoggerInceptor;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -51,7 +52,9 @@ public class Okhttp3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_okhttp3);
         ButterKnife.bind(this);
 
-        okHttpClient = new OkHttpClient();
+//        okHttpClient = new OkHttpClient();
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        okHttpClient = builder.addInterceptor(new Wood121LoggerInceptor()).build();
     }
 
     @OnClick({R.id.btn_get, R.id.btn_postform, R.id.btn_postString, R.id.btn_postFile, R.id.btn_getFile, R.id.btn_postMultpart})

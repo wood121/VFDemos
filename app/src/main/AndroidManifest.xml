@@ -64,7 +64,7 @@
         <activity android:name=".activity.BingActivity" />
         <activity android:name=".activity.ZheActivity" />
         <activity android:name=".activity.TopbarActivity" />
-        <activity android:name=".activity.RecActivity" />
+        <activity android:name=".RecyclerView.RecActivity" />
         <activity android:name=".activity.ArcViewActivity" />
         <activity
             android:name=".activity.VideoActivity"
@@ -78,6 +78,7 @@
         <activity android:name=".activity.EPropertyActivity" />
         <activity android:name=".activity.ExcelContentActivity" />
         <activity android:name=".activity.ServiceActivity" />
+        <activity android:name=".activity.Okhttp3Activity" />
 
         <service
             android:name=".service.MyService"
