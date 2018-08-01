@@ -67,7 +67,6 @@ public class ExecutorActivity extends AppCompatActivity {
                 poolExecutor.remove(runnable);
                 Log.e("wood121", "移除了任务");
             }
-
         }
 
         ThreadPoolManager.shutDownNow();

@@ -1,8 +1,9 @@
-package com.example.wood121.viewdemos.activity;
+package com.example.wood121.viewdemos.RecyclerView;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.adapter.MyAdapter;
+import com.example.wood121.viewdemos.adapter.RecItemAdapter;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,7 @@ public class RecActivity extends AppCompatActivity implements View.OnClickListen
 
     private ArrayList<String> datas;
     private RecyclerView recycleView;
-    private MyAdapter myAdapter;
+    private RecItemAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,22 +36,24 @@ public class RecActivity extends AppCompatActivity implements View.OnClickListen
         initDatas();
 
         //recycleView使用基本设置
-        myAdapter = new MyAdapter(this, datas);
+        myAdapter = new RecItemAdapter(this, datas);
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         recycleView.setAdapter(myAdapter);
         Log.e("data", datas.size() + "onCreate");
 
-        //分割线
+        //item增加、删除操作的动画
+        recycleView.setItemAnimator(new DefaultItemAnimator());
+        //添加分割线
+        recycleView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
+
         //点击事件
-        myAdapter.setOnItemClickListener(new MyAdapter.onItemClickListener() {
+        myAdapter.setOnItemClickListener(new RecItemAdapter.onItemClickListener() {
             @Override
             public void onItemClick(View v, String str) {
                 Toast.makeText(RecActivity.this, v + ":::" + str, Toast.LENGTH_LONG).show();
             }
         });
-
-        //添加、删除操作
-        recycleView.setItemAnimator(new DefaultItemAnimator());
     }
 
     private void initViews() {
@@ -91,13 +94,15 @@ public class RecActivity extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.btn_list:
                 Toast.makeText(this, "list", Toast.LENGTH_SHORT).show();
-                recycleView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+                recycleView.setLayoutManager(new LinearLayoutManager(this));
                 //倒序的时候我们需要指定选中的位置
 //                recycleView.scrollToPosition(99);
                 break;
             case R.id.btn_gird:
                 Toast.makeText(this, "grid", Toast.LENGTH_SHORT).show();
-                recycleView.setLayoutManager(new GridLayoutManager(this, 3, GridLayoutManager.HORIZONTAL, false));
+                recycleView.setLayoutManager(new GridLayoutManager(this, 3));
+                //GridLayoutManager的时候，分割线不一样。
+                recycleView.addItemDecoration(new DividerGridItemDecoration(this));
                 break;
             case R.id.btn_flow:
                 Toast.makeText(this, "flow", Toast.LENGTH_SHORT).show();

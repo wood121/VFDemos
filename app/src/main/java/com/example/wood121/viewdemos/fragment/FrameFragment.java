@@ -2,6 +2,8 @@ package com.example.wood121.viewdemos.fragment;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.activity.GoodsTransformActivity;
+import com.example.wood121.viewdemos.activity.LeakCanaryActivity;
+import com.example.wood121.viewdemos.activity.Okhttp3Activity;
 import com.example.wood121.viewdemos.activity.RetrofitActivity;
 import com.example.wood121.viewdemos.activity.RxjavaActivity;
 import com.example.wood121.viewdemos.activity.RxjavaRetrofitActivity;
@@ -35,5 +37,7 @@ public class FrameFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("Rxjava", R.mipmap.circle_captcha, RxjavaActivity.class));
         mData.add(new ModelRecyclerBean("Rxjava+Retrofit", R.mipmap.circle_captcha, RxjavaRetrofitActivity.class));
         mData.add(new ModelRecyclerBean("Rxjava+Retrofit封装", R.mipmap.circle_captcha, RxjavaRetrofitTotalActivity.class));
+        mData.add(new ModelRecyclerBean("LeakCanary", R.mipmap.circle_captcha, LeakCanaryActivity.class));
+        mData.add(new ModelRecyclerBean("Okhttp3", R.mipmap.circle_captcha, Okhttp3Activity.class));
     }
 }

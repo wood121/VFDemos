@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.util.ArrayList;
 
@@ -17,23 +18,21 @@ import java.util.ArrayList;
  * Created by wood121 on 2017/10/11.
  */
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-
+public class RecItemAdapter extends RecyclerView.Adapter<RecItemAdapter.MyViewHolder> {
 
     private final Context mContext;
     private ArrayList<String> datas;
 
-    public MyAdapter(Context context, ArrayList<String> datas) {
+    public RecItemAdapter(Context context, ArrayList<String> datas) {
         this.mContext = context;
         this.datas = datas;
 
-        Log.e("data", "MyAdapter");
+        Log.e("data", "RecItemAdapter");
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.recycle_item, parent, false);
-//        LayoutInflater.from(mContext).inflate();
         Log.e("data", "onCreateViewHolder");
         return new MyViewHolder(itemView);
     }
@@ -62,17 +61,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         datas.remove(i);
         notifyItemRemoved(i);
 //        notifyDataSetChanged();
-
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imgView;
         private TextView tvName;
+        private final TextView tvDel;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             Log.e("data", "MyViewHolder");
+
+            tvDel = (TextView) itemView.findViewById(R.id.tv_del);
             imgView = (ImageView) itemView.findViewById(R.id.iv_img);
             tvName = (TextView) itemView.findViewById(R.id.tv_name);
 
@@ -81,6 +82,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 public void onClick(View view) {
 
                     listener.onItemClick(view, datas.get(getLayoutPosition()));
+                }
+            });
+
+            tvDel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ToastUtil.showToast(mContext, datas.get(getLayoutPosition()));
+                    //局部删除与刷新
+                    datas.remove(getLayoutPosition());
+                    notifyItemRemoved(getLayoutPosition());
                 }
             });
 

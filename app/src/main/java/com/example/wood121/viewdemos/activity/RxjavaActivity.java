@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.bean.Student;
 
 import org.reactivestreams.Subscription;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +32,7 @@ import io.reactivex.MaybeOnSubscribe;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.Scheduler;
 import io.reactivex.Single;
@@ -209,7 +213,6 @@ public class RxjavaActivity extends AppCompatActivity {
         //subscribe有5个重构方法,Observer形式、另外就是Consumer相关的4个重构方法（实质是一个）
         observable.subscribe(observer);
 
-
         /**
          * 链式调用
          */
@@ -292,22 +295,44 @@ public class RxjavaActivity extends AppCompatActivity {
                     }
                 });
 
-        Observable.just(1, 2, 3)
-                .map(new Function<Integer, String>() {
-
+        Observable.just("1", "2", "3")
+                .map(new Function<String, Integer>() {
                     @Override
-                    public String apply(@NonNull Integer integer) throws Exception {
+                    public Integer apply(@NonNull String s) throws Exception {
 
-                        return null;
+                        return Integer.parseInt(s);
                     }
                 }).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<String>() {
+                .subscribe(new Consumer<Integer>() {
                     @Override
-                    public void accept(@NonNull String s) throws Exception {
+                    public void accept(@NonNull Integer integer) throws Exception {
 
                     }
                 });
+
+
+        /**
+         * flatMap的应用
+         */
+        ArrayList<Student> list = new ArrayList<>();
+        list.add(new Student(1, "哈哈", new Student.Course("语文")));
+        list.add(new Student(2, "呵呵", new Student.Course("数学")));
+        list.add(new Student(3, "嘿嘿", new Student.Course("英语")));
+        Observable.fromIterable(list)
+                .flatMap(new Function<Student, ObservableSource<Student.Course>>() {
+                    @Override
+                    public ObservableSource<Student.Course> apply(@NonNull Student student) throws Exception {
+                        return Observable.just(student.getCourse());
+                    }
+                }).subscribe(new Consumer<Student.Course>() {
+            @Override
+            public void accept(@NonNull Student.Course course) throws Exception {
+                Log.e("wood121", course.getName());
+                Log.e("wood121", "这是一次");
+            }
+        });
+
 
     }
 

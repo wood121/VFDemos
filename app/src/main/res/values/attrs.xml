@@ -27,4 +27,11 @@
         <attr name="rightText" format="string" />
         <attr name="rightTextDrawable" format="reference|integer" />
     </declare-styleable>
+
+    <!--侧滑菜单-->
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
 </resources>

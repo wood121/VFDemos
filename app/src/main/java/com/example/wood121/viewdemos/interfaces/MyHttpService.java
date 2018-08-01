@@ -9,6 +9,8 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by wood121 on 2018/3/19.
@@ -17,17 +19,21 @@ import retrofit2.http.POST;
 public interface MyHttpService {
 
     /**
-     * 注解中传入网络请求的 部分URL
+     * ***********************get形式***********************
      *
      * @return
      */
     @GET("ajax.php?a=fy&f=auto&t=auto&w=hello%20world")
     Call<Reception> getCall();
 
+    @GET("{username}")
+    Call<Reception> getUser(@Path("username") String username);
+
+    @GET("user")
+    Call<Reception> getUserBySort(@Query("sortBy") String sort);
+
     /**
-     * //采用@Post表示Post方法进行请求（传入部分url地址）
-     * // 采用@FormUrlEncoded注解的原因:API规定采用请求格式x-www-form-urlencoded,即表单形式
-     * // 需要配合@Field 向服务器提交需要的字段
+     * **********************post形式***********************
      *
      * @return
      */

@@ -11,6 +11,8 @@ import com.example.wood121.viewdemos.bean.Reception;
 import com.example.wood121.viewdemos.bean.Reception2;
 import com.example.wood121.viewdemos.interfaces.MyHttpService;
 
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -18,6 +20,8 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,6 +44,16 @@ public class RetrofitActivity extends AppCompatActivity {
     }
 
     private void postMethod() {
+
+
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
+            @Override
+            public okhttp3.Response intercept(Chain chain) throws IOException {
+                return null;
+            }
+        }).build();
+
+
         //创建Retrofit对象
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://fanyi.youdao.com/")
@@ -62,6 +76,7 @@ public class RetrofitActivity extends AppCompatActivity {
                     @Override
                     public void onNext(Reception2 reception2) {
                         Log.e("url", "reception:" + reception2.toString());
+                        btnPost.setText(reception2.getType());
                     }
 
                     @Override
@@ -74,8 +89,6 @@ public class RetrofitActivity extends AppCompatActivity {
 
                     }
                 });
-
-
     }
 
     private void getMethod() {
@@ -87,8 +100,8 @@ public class RetrofitActivity extends AppCompatActivity {
 
         //创建 网络请求接口 的实例
         MyHttpService myHttpService = retrofit.create(MyHttpService.class);
-        Call<Reception> call = myHttpService.getCall();
 
+        Call<Reception> call = myHttpService.getCall();
         //发起请求、得到请求回调
         call.enqueue(new Callback<Reception>() {
             @Override
