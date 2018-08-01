@@ -145,7 +145,8 @@
 
         <activity android:name=".activity.BookManagerActivity" />
         <activity android:name=".activity.AsynTaskDemoActivity" />
-        <activity android:name=".activity.ExecutorActivity"></activity>
+        <activity android:name=".activity.ExecutorActivity" />
+        <activity android:name=".activity.ProxyActivity"></activity>
     </application>
 
 </manifest>

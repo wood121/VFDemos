@@ -2,6 +2,7 @@ package com.example.wood121.viewdemos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -136,11 +137,6 @@ public class MainActivity extends BaseActivity {
                         fragmentTransaction.hide(fragment);
                     }
                 }
-
-//                if (i == position) {
-//                    fragmentTransaction.replace(R.id.fragment_container, fragment);
-//                    break;
-//                }
             }
         }
         fragmentTransaction.commit();
@@ -170,6 +166,7 @@ public class MainActivity extends BaseActivity {
                 break;
             case 3:
                 fragments.get(3).onActivityResult(requestCode, resultCode, data);
+
                 break;
             default:
                 break;
