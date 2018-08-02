@@ -49,7 +49,7 @@ public class BikingRouteOverlay extends OverlayManager {
             return null;
         }
 
-        List<OverlayOptions> overlayList = new ArrayList<OverlayOptions>();
+        List<OverlayOptions> overlayList = new ArrayList<>();
         if (mRouteLine.getAllStep() != null
                 && mRouteLine.getAllStep().size() > 0) {
             for (BikingRouteLine.BikingStep step : mRouteLine.getAllStep()) {

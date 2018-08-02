@@ -45,7 +45,6 @@ public class MainActivity extends BaseActivity {
     private FrameSDKFragment frameSDKFragment;
     private MineFragment mineFragment;
     private MathJniFragment sdaFragment;
-    private FragmentManager supportFragmentManager;
 
     @Override
     protected int initPageLayoutId() {
@@ -99,7 +98,7 @@ public class MainActivity extends BaseActivity {
      * @param savedInstanceState
      */
     private void initFragments(Bundle savedInstanceState) {
-        supportFragmentManager = getSupportFragmentManager();
+        FragmentManager supportFragmentManager = getSupportFragmentManager();
         if (savedInstanceState != null) {
             apiViewFragment = (APIViewFragment) supportFragmentManager.getFragment(savedInstanceState, "apiViewFragment");
             frameSDKFragment = (FrameSDKFragment) supportFragmentManager.getFragment(savedInstanceState, "frameSDKFragment");

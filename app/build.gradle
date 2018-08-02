@@ -2,12 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        debug {
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storeFile file('/Users/Android/CHjijidao')
-            storePassword 'android'
-        }
     }
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -50,7 +44,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:25.3.1'
@@ -71,10 +64,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
-
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-
 }
 
 
