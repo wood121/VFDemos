@@ -1,4 +1,8 @@
-package com.example.wood121.viewdemos.http;
+package com.example.wood121.viewdemos.http.Rx;
+
+import com.example.wood121.viewdemos.http.ActivityLifeCycleEvent;
+import com.example.wood121.viewdemos.http.HttpResult;
+import com.example.wood121.viewdemos.http.exceptions.ApiException;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

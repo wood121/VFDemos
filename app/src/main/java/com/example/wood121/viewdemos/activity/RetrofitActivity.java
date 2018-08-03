@@ -5,11 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.bean.Reception;
 import com.example.wood121.viewdemos.bean.Reception2;
+import com.example.wood121.viewdemos.http.Rx.RxBus;
 import com.example.wood121.viewdemos.interfaces.MyHttpService;
+import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.io.IOException;
 
@@ -19,6 +22,7 @@ import butterknife.OnClick;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -35,12 +39,22 @@ public class RetrofitActivity extends AppCompatActivity {
     Button btnGet;
     @BindView(R.id.btn_post)
     Button btnPost;
+    @BindView(R.id.tv_rxbus)
+    TextView tvRxbus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
         ButterKnife.bind(this);
+
+        RxBus.getInstance().register("WOOD", new Consumer<String>() {
+            @Override
+            public void accept(String str) throws Exception {
+                ToastUtil.showToast(RetrofitActivity.this,"RetrofitActivity中收到了消息");
+                tvRxbus.setText(str);
+            }
+        });
     }
 
     private void postMethod() {

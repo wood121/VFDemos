@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.bean.Student;
+import com.example.wood121.viewdemos.http.Rx.RxBus;
 
 import org.reactivestreams.Subscription;
 
@@ -65,6 +66,8 @@ public class RxjavaActivity extends AppCompatActivity {
     Button btnComplete;
     @BindView(R.id.btn_Maybe)
     Button btnMaybe;
+    @BindView(R.id.btn_Rxbus)
+    Button btnRxbus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +87,7 @@ public class RxjavaActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_init, R.id.btn_printarray, R.id.btn_getpictures, R.id.btn_complete, R.id.btn_Maybe})
+    @OnClick({R.id.btn_init, R.id.btn_printarray, R.id.btn_getpictures, R.id.btn_complete, R.id.btn_Maybe,R.id.btn_Rxbus})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_init:
@@ -102,7 +105,14 @@ public class RxjavaActivity extends AppCompatActivity {
             case R.id.btn_Maybe:
                 maybeRxjava();
                 break;
+            case R.id.btn_Rxbus:
+                rxbusRxjava();
+                break;
         }
+    }
+
+    private void rxbusRxjava() {
+        RxBus.getInstance().post("WOOD","RxjavaActivity中传来的数据");
     }
 
     private void flowableRxjava() {
