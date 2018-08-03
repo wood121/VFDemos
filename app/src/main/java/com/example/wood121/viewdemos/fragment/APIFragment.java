@@ -7,6 +7,7 @@ import com.example.wood121.viewdemos.activity.BookManagerActivity;
 import com.example.wood121.viewdemos.activity.DataStorageActivity;
 import com.example.wood121.viewdemos.activity.ExecutorActivity;
 import com.example.wood121.viewdemos.activity.IjkPlayerActvitiy;
+import com.example.wood121.viewdemos.activity.LamadaActivity;
 import com.example.wood121.viewdemos.activity.MyLoaderActivity;
 import com.example.wood121.viewdemos.activity.ServiceActivity;
 import com.example.wood121.viewdemos.activity.VideoActivity;
@@ -43,6 +44,7 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("AIDL客户端", R.mipmap.circle_captcha, BookManagerActivity.class));
         mData.add(new ModelRecyclerBean("AsynTask", R.mipmap.circle_captcha, AsynTaskDemoActivity.class));
         mData.add(new ModelRecyclerBean("ThreadPoolExecutor", R.mipmap.circle_captcha, ExecutorActivity.class));
+        mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_captcha, LamadaActivity.class));
     }
 
 }

@@ -11,11 +11,18 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        jackOptions.enabled = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
 
         multiDexEnabled true
     }
+
+    compileOptions {
+//        sourceCompatibility org.gradle.api.Javaversion.VERSION_1_8
+//        targetCompatibility org.gradle.api.Javaversion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -67,10 +74,3 @@ dependencies {
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 }
-
-
-
-
-
-
-
