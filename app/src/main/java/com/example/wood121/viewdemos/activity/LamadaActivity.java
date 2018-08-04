@@ -1,9 +1,7 @@
 package com.example.wood121.viewdemos.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
@@ -35,19 +33,19 @@ public class LamadaActivity extends AppCompatActivity {
      * 有参数+语句：适用于匿名内部类中方法只有一个参数的情况
      */
     private void demo2() {
-        mBtnLamada.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        mBtnLamada.setOnClickListener((view) -> {
-            mBtnLamada.setText("我自己设置的lamada表达式");
-        });
-
-        //有参数+语句
-        mBtnLamada.setOnClickListener(v-> Log.e("wood121","hao"));
+//        mBtnLamada.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+//
+//        mBtnLamada.setOnClickListener((view) -> {
+//            mBtnLamada.setText("我自己设置的lamada表达式");
+//        });
+//
+//        //有参数+语句
+//        mBtnLamada.setOnClickListener(v-> Log.e("wood121","hao"));
 
     }
 
@@ -55,21 +53,21 @@ public class LamadaActivity extends AppCompatActivity {
      * 无参数+语句(代码块)：适用于匿名内部类中方法无参数的情况
      */
     private void demo1() {
-        //正常的写法
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //需要实现的逻辑代码
-            }
-        }).start();
-
-        //代码块
-        new Thread(() -> {
-
-        }).start();
-
-        //语句
-        new Thread(()-> Log.e("wood121","hao")).start();
+//        //正常的写法
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                //需要实现的逻辑代码
+//            }
+//        }).start();
+//
+//        //代码块
+//        new Thread(() -> {
+//
+//        }).start();
+//
+//        //语句
+//        new Thread(()-> Log.e("wood121","hao")).start();
 
     }
 }
