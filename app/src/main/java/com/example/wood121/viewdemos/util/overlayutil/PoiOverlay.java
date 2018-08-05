@@ -1,5 +1,4 @@
-package com.example.wood121.viewdemos.overlayutil;
-
+package com.example.wood121.viewdemos.util.overlayutil;
 
 import android.os.Bundle;
 
@@ -9,50 +8,50 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.Polyline;
-import com.baidu.mapapi.search.poi.PoiIndoorResult;
+import com.baidu.mapapi.search.poi.PoiResult;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 用于显示indoorpoi的overly
+ * 用于显示poi的overly
  */
-public class IndoorPoiOverlay extends OverlayManager {
+public class PoiOverlay extends OverlayManager {
 
     private static final int MAX_POI_SIZE = 10;
 
-    private PoiIndoorResult mIndoorPoiResult = null;
+    private PoiResult mPoiResult = null;
 
     /**
      * 构造函数
-     *
+     * 
      * @param baiduMap
-     *            该 IndoorPoiOverlay 引用的 BaiduMap 对象
+     *            该 PoiOverlay 引用的 BaiduMap 对象
      */
-    public IndoorPoiOverlay(BaiduMap baiduMap) {
+    public PoiOverlay(BaiduMap baiduMap) {
         super(baiduMap);
     }
 
     /**
-     * 设置IndoorPoi数据
-     *
-     * @param indoorpoiResult
-     *            设置indoorpoiResult数据
+     * 设置POI数据
+     * 
+     * @param poiResult
+     *            设置POI数据
      */
-    public void setData(PoiIndoorResult indoorpoiResult) {
-        this.mIndoorPoiResult = indoorpoiResult;
+    public void setData(PoiResult poiResult) {
+        this.mPoiResult = poiResult;
     }
 
     @Override
     public final List<OverlayOptions> getOverlayOptions() {
-        if (mIndoorPoiResult == null || mIndoorPoiResult.getmArrayPoiInfo() == null) {
+        if (mPoiResult == null || mPoiResult.getAllPoi() == null) {
             return null;
         }
         List<OverlayOptions> markerList = new ArrayList<OverlayOptions>();
         int markerSize = 0;
-        for (int i = 0; i < mIndoorPoiResult.getmArrayPoiInfo().size()
+        for (int i = 0; i < mPoiResult.getAllPoi().size()
                 && markerSize < MAX_POI_SIZE; i++) {
-            if (mIndoorPoiResult.getmArrayPoiInfo().get(i).latLng == null) {
+            if (mPoiResult.getAllPoi().get(i).location == null) {
                 continue;
             }
             markerSize++;
@@ -61,30 +60,36 @@ public class IndoorPoiOverlay extends OverlayManager {
             markerList.add(new MarkerOptions()
                     .icon(BitmapDescriptorFactory.fromAssetWithDpi("Icon_mark"
                             + markerSize + ".png")).extraInfo(bundle)
-                    .position(mIndoorPoiResult.getmArrayPoiInfo().get(i).latLng));
-
+                    .position(mPoiResult.getAllPoi().get(i).location));
+            
         }
         return markerList;
     }
 
     /**
-     * 获取该 IndoorPoiOverlay 的 indoorpoi数据
-     *
+     * 获取该 PoiOverlay 的 poi数据
+     * 
      * @return
      */
-    public PoiIndoorResult getIndoorPoiResult() {
-        return mIndoorPoiResult;
+    public PoiResult getPoiResult() {
+        return mPoiResult;
     }
 
     /**
      * 覆写此方法以改变默认点击行为
-     *
+     * 
      * @param i
      *            被点击的poi在
-     *            {@link PoiIndoorResult#getmArrayPoiInfo()} } 中的索引
+     *            {@link PoiResult#getAllPoi()} 中的索引
      * @return
      */
     public boolean onPoiClick(int i) {
+//        if (mPoiResult.getAllPoi() != null
+//                && mPoiResult.getAllPoi().get(i) != null) {
+//            Toast.makeText(BMapManager.getInstance().getContext(),
+//                    mPoiResult.getAllPoi().get(i).name, Toast.LENGTH_LONG)
+//                    .show();
+//        }
         return false;
     }
 
@@ -105,4 +110,3 @@ public class IndoorPoiOverlay extends OverlayManager {
         return false;
     }
 }
-

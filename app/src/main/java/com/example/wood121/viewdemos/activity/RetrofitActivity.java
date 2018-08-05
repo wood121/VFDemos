@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.bean.Reception;
 import com.example.wood121.viewdemos.bean.Reception2;
-import com.example.wood121.viewdemos.http.Rx.RxBus;
+import com.example.wood121.viewdemos.net.http.Rx.RxBus;
 import com.example.wood121.viewdemos.interfaces.MyHttpService;
 import com.example.wood121.viewdemos.util.ToastUtil;
 

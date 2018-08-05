@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.http;
+package com.example.wood121.viewdemos.net.http;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

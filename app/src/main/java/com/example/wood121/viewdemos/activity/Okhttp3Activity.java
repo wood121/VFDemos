@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.http.interceptors.Wood121LoggerInceptor;
+import com.example.wood121.viewdemos.net.http.interceptors.Wood121LoggerInceptor;
 
 import java.io.File;
 import java.io.FileOutputStream;

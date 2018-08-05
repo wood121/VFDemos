@@ -67,4 +67,6 @@ dependencies {
     annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
 }

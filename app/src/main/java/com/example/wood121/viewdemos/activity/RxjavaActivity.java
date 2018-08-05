@@ -11,13 +11,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 
 /**
  * Rxjva-demo
  */
 public class RxjavaActivity extends AppCompatActivity {
-
-
     @BindView(R.id.btn_init)
     Button btnInit;
     @BindView(R.id.btn_printarray)
@@ -45,6 +45,17 @@ public class RxjavaActivity extends AppCompatActivity {
 
 
 //        demo1();
+
+        //
+        Disposable disposable = Observable.just("1")
+                .subscribe(new Consumer<String>() {
+                    @Override
+                    public void accept(String s) throws Exception {
+
+                    }
+                });
+
+
     }
 
     /**

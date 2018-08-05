@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
  */
-package com.example.wood121.viewdemos.overlayutil;
+package com.example.wood121.viewdemos.util.overlayutil;
 
 import java.util.ArrayList;
 import java.util.List;

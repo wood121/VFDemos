@@ -64,7 +64,7 @@ import com.baidu.mapapi.search.sug.SuggestionResult;
 import com.baidu.mapapi.search.sug.SuggestionSearch;
 import com.baidu.mapapi.search.sug.SuggestionSearchOption;
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.overlayutil.PoiOverlay;
+import com.example.wood121.viewdemos.util.overlayutil.PoiOverlay;
 import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.util.List;
