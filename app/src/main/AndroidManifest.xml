@@ -157,10 +157,6 @@
         <activity android:name=".activity.ExecutorActivity" />
         <activity android:name=".activity.LamadaActivity" />
 
-        <service
-            android:name=".net.mqtt.MqttMsgService"
-            android:enabled="true"
-            android:exported="true"/>
     </application>
 
 </manifest>
