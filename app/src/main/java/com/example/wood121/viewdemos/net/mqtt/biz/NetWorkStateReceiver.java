@@ -4,10 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.het.basic.base.RxManage;
-import com.het.basic.utils.NetworkUtil;
-import com.het.log.Logc;
-
 /**
  * -----------------------------------------------------------------
  * Copyright (C) 2014-2016, by het, Shenzhen, All rights reserved.
@@ -25,14 +21,14 @@ public class NetWorkStateReceiver extends BroadcastReceiver {
     private final String MQTT_NETWORK_CHANGE="MQTT_NETWORK_CHANGE";
     @Override
     public void onReceive(Context context, Intent intent) {
-        Logc.d("网络状态发生变化");
-        RxManage.getInstance().post(MQTT_NETWORK_CHANGE,MQTT_NETWORK_CHANGE);
-        if (NetworkUtil.isConnected(context)) {
-            /**
-             * 网络状态发送变化，有网时候判断mqtt是否启动，没启动则重新启动
-             */
-            DeviceIotMqttManager.getInstances().reConnectMqtt();
-        }
+//        Logc.d("网络状态发生变化");
+//        RxManage.getInstance().post(MQTT_NETWORK_CHANGE,MQTT_NETWORK_CHANGE);
+//        if (NetworkUtil.isConnected(context)) {
+//            /**
+//             * 网络状态发送变化，有网时候判断mqtt是否启动，没启动则重新启动
+//             */
+//            DeviceIotMqttManager.getInstances().reConnectMqtt();
+//        }
     }
 
 }

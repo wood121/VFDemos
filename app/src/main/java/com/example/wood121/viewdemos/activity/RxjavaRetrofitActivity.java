@@ -5,12 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.net.http.ActivityLifeCycleEvent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.reactivex.subjects.PublishSubject;
 
 /**
  * 封装Rxjava+Retrofit
@@ -21,21 +19,21 @@ public class RxjavaRetrofitActivity extends AppCompatActivity {
     @BindView(R.id.btn_kwy)
     Button btnKwy;
 
-    public final PublishSubject<ActivityLifeCycleEvent> publishSubject = PublishSubject.create();
+//    public final PublishSubject<ActivityLifeCycleEvent> publishSubject = PublishSubject.create();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rxjava_retrofit);
-        publishSubject.onNext(ActivityLifeCycleEvent.CREATE);
+//        publishSubject.onNext(ActivityLifeCycleEvent.CREATE);
         ButterKnife.bind(this);
 
     }
 
     @Override
     protected void onPause() {
-        publishSubject.onNext(ActivityLifeCycleEvent.PAUSE);
+//        publishSubject.onNext(ActivityLifeCycleEvent.PAUSE);
         super.onPause();
     }
 
