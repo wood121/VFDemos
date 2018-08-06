@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.wood121.viewdemos.RecyclerView.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.wood121.viewdemos.widget.RecyclerView.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:background="#44ff0000"
@@ -35,4 +35,4 @@
         android:text="删除"
         android:textColor="@color/blue"
         android:textSize="@dimen/margin_10" />
-</com.example.wood121.viewdemos.RecyclerView.SwipeMenuLayout>
+</com.example.wood121.viewdemos.widget.RecyclerView.SwipeMenuLayout>

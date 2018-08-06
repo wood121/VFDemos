@@ -4,6 +4,7 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.activity.AsynTaskDemoActivity;
 import com.example.wood121.viewdemos.activity.BleAcitivty;
 import com.example.wood121.viewdemos.activity.BookManagerActivity;
+import com.example.wood121.viewdemos.activity.CsrmeshActivity;
 import com.example.wood121.viewdemos.activity.DataStorageActivity;
 import com.example.wood121.viewdemos.activity.ExecutorActivity;
 import com.example.wood121.viewdemos.activity.IjkPlayerActvitiy;
@@ -45,6 +46,7 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("AsynTask", R.mipmap.circle_captcha, AsynTaskDemoActivity.class));
         mData.add(new ModelRecyclerBean("ThreadPoolExecutor", R.mipmap.circle_captcha, ExecutorActivity.class));
         mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_captcha, LamadaActivity.class));
+        mData.add(new ModelRecyclerBean("csrmesh", R.mipmap.circle_captcha, CsrmeshActivity.class));
     }
 
 }

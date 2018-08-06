@@ -72,7 +72,7 @@
         <activity android:name=".activity.BingActivity" />
         <activity android:name=".activity.ZheActivity" />
         <activity android:name=".activity.TopbarActivity" />
-        <activity android:name=".RecyclerView.RecActivity" />
+        <activity android:name=".widget.RecyclerView.RecActivity" />
         <activity android:name=".activity.ArcViewActivity" />
         <activity
             android:name=".activity.VideoActivity"
@@ -156,7 +156,7 @@
         <activity android:name=".activity.AsynTaskDemoActivity" />
         <activity android:name=".activity.ExecutorActivity" />
         <activity android:name=".activity.LamadaActivity" />
-
+        <activity android:name=".activity.CsrmeshActivity"></activity>
     </application>
 
 </manifest>

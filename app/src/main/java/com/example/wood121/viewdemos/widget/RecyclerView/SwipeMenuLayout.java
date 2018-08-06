@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.RecyclerView;
+package com.example.wood121.viewdemos.widget.RecyclerView;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

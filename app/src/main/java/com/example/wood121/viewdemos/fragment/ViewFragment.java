@@ -4,7 +4,7 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.activity.ArcViewActivity;
 import com.example.wood121.viewdemos.activity.BingActivity;
 import com.example.wood121.viewdemos.activity.CheckProcessActivity;
-import com.example.wood121.viewdemos.RecyclerView.RecActivity;
+import com.example.wood121.viewdemos.widget.RecyclerView.RecActivity;
 import com.example.wood121.viewdemos.activity.TopbarActivity;
 import com.example.wood121.viewdemos.activity.ZheActivity;
 import com.example.wood121.viewdemos.bean.ModelRecyclerBean;
