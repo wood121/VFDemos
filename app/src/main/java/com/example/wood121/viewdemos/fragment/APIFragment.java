@@ -9,6 +9,7 @@ import com.example.wood121.viewdemos.activity.DataStorageActivity;
 import com.example.wood121.viewdemos.activity.ExecutorActivity;
 import com.example.wood121.viewdemos.activity.IjkPlayerActvitiy;
 import com.example.wood121.viewdemos.activity.LamadaActivity;
+import com.example.wood121.viewdemos.activity.MessengerActivity;
 import com.example.wood121.viewdemos.activity.MyLoaderActivity;
 import com.example.wood121.viewdemos.activity.ServiceActivity;
 import com.example.wood121.viewdemos.activity.VideoActivity;
@@ -47,6 +48,7 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("ThreadPoolExecutor", R.mipmap.circle_captcha, ExecutorActivity.class));
         mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_captcha, LamadaActivity.class));
         mData.add(new ModelRecyclerBean("csrmesh", R.mipmap.circle_captcha, CsrmeshActivity.class));
+        mData.add(new ModelRecyclerBean("messenger", R.mipmap.circle_captcha, MessengerActivity.class));
     }
 
 }

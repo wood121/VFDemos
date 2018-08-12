@@ -8,6 +8,8 @@ import com.example.wood121.viewdemos.util.MyCrashHandler;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * Created by wood121 on 2018/3/16.
  */
@@ -28,6 +30,9 @@ public class MyApplication extends Application {
         }
 
         refWatcher = LeakCanary.install(this);
+
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
 
     }
 }
