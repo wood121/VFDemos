@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.http;
+package com.example.wood121.viewdemos.net.http.okhttp;
 
 import android.util.Log;
 
@@ -41,7 +41,6 @@ public class Wood121LoggerInceptor implements Interceptor {
                 .concat("\nrequest ========= " + bodyToString(request.body()))
                 .concat("\nbody ============ " + buffer.clone().readString(UTF8));
         Log.e("wood121", "Wood121LoggerInceptor: " + log);
-
         return response;
     }
 

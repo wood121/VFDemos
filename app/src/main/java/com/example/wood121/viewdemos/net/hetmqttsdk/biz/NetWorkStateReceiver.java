@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.biz;
+package com.example.wood121.viewdemos.net.hetmqttsdk.biz;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

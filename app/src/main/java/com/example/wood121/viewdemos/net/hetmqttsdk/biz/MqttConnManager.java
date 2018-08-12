@@ -1,13 +1,13 @@
-package com.example.wood121.viewdemos.net.mqtt.biz;
+package com.example.wood121.viewdemos.net.hetmqttsdk.biz;
 
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
-import com.example.wood121.viewdemos.net.mqtt.bean.MqttConnBean;
-import com.example.wood121.viewdemos.net.mqtt.callback.IMqttStateCallback;
-import com.example.wood121.viewdemos.net.mqtt.constants.HetMqttConstant;
+import com.example.wood121.viewdemos.net.hetmqttsdk.bean.MqttConnBean;
+import com.example.wood121.viewdemos.net.hetmqttsdk.callback.IMqttStateCallback;
+import com.example.wood121.viewdemos.net.hetmqttsdk.constants.HetMqttConstant;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;

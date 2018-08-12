@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.bean;
+package com.example.wood121.viewdemos.net.hetmqttsdk.bean;
 
 /**
  * Created by xuchao on 2016/3/25.

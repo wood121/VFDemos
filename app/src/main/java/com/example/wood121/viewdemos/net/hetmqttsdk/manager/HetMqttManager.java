@@ -1,10 +1,10 @@
-package com.example.wood121.viewdemos.net.mqtt.manager;
+package com.example.wood121.viewdemos.net.hetmqttsdk.manager;
 
 import android.content.Context;
 
-import com.example.wood121.viewdemos.net.mqtt.bean.MqttConnBean;
-import com.example.wood121.viewdemos.net.mqtt.biz.DeviceIotMqttManager;
-import com.example.wood121.viewdemos.net.mqtt.callback.IMqttStateCallback;
+import com.example.wood121.viewdemos.net.hetmqttsdk.bean.MqttConnBean;
+import com.example.wood121.viewdemos.net.hetmqttsdk.biz.DeviceIotMqttManager;
+import com.example.wood121.viewdemos.net.hetmqttsdk.callback.IMqttStateCallback;
 
 /**
  * -----------------------------------------------------------------

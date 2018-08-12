@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.biz;
+package com.example.wood121.viewdemos.net.hetmqttsdk.biz;
 
 /**
  * -----------------------------------------------------------------
@@ -15,9 +15,9 @@ package com.example.wood121.viewdemos.net.mqtt.biz;
 import android.content.ContextWrapper;
 import android.text.TextUtils;
 
-import com.example.wood121.viewdemos.net.mqtt.bean.MqttDataBean;
-import com.example.wood121.viewdemos.net.mqtt.bean.MqttMsgData;
-import com.example.wood121.viewdemos.net.mqtt.constants.HetMqttConstant;
+import com.example.wood121.viewdemos.net.hetmqttsdk.bean.MqttDataBean;
+import com.example.wood121.viewdemos.net.hetmqttsdk.bean.MqttMsgData;
+import com.example.wood121.viewdemos.net.hetmqttsdk.constants.HetMqttConstant;
 import com.google.gson.JsonSyntaxException;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;

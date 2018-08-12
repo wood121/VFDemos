@@ -36,13 +36,13 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData(Bundle savedInstanceState) {
-        FragmentTabManager.getInstance().initFragments();
+        FragmentTabManager.getInstance(this).initFragments();
     }
 
     @Override
     protected void initPageViewListener() {
         tabRbHome.setChecked(true);
-        FragmentTabManager.getInstance().slectFragment(this, FragmentTabManager.API_VIEW_FRAGMENT);
+        FragmentTabManager.getInstance(this).slectFragment(FragmentTabManager.API_VIEW_FRAGMENT);
         tbView.setTitle("APIView");
         tabRgMenu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -51,19 +51,19 @@ public class MainActivity extends BaseActivity {
                 switch (checkedId) {
                     case R.id.tab_rb_home:
                         tbView.setTitle("APIView");
-                        FragmentTabManager.getInstance().slectFragment(MainActivity.this, FragmentTabManager.API_VIEW_FRAGMENT);
+                        FragmentTabManager.getInstance(MainActivity.this).slectFragment(FragmentTabManager.API_VIEW_FRAGMENT);
                         break;
                     case R.id.tab_rb_shop:
                         tbView.setTitle("FSDK");
-                        FragmentTabManager.getInstance().slectFragment(MainActivity.this, FragmentTabManager.FRAME_SDK_FRAGMENT);
+                        FragmentTabManager.getInstance(MainActivity.this).slectFragment(FragmentTabManager.FRAME_SDK_FRAGMENT);
                         break;
                     case R.id.tab_rb_neighbor:
                         tbView.setTitle("SDA");
-                        FragmentTabManager.getInstance().slectFragment(MainActivity.this, FragmentTabManager.MATH_JNI_FRAGMENT);
+                        FragmentTabManager.getInstance(MainActivity.this).slectFragment(FragmentTabManager.MATH_JNI_FRAGMENT);
                         break;
                     case R.id.tab_rb_user:
                         tbView.setTitle("Mine");
-                        FragmentTabManager.getInstance().slectFragment(MainActivity.this, FragmentTabManager.MINE_FRAGMENT);
+                        FragmentTabManager.getInstance(MainActivity.this).slectFragment(FragmentTabManager.MINE_FRAGMENT);
                         break;
                     default:
                         break;
@@ -83,25 +83,25 @@ public class MainActivity extends BaseActivity {
         switch (resultCode) {
             case 0:
                 FragmentTabManager
-                        .getInstance()
+                        .getInstance(this)
                         .getFragment(FragmentTabManager.API_VIEW_FRAGMENT)
                         .onActivityResult(requestCode, resultCode, data);
                 break;
             case 1:
                 FragmentTabManager
-                        .getInstance()
+                        .getInstance(this)
                         .getFragment(FragmentTabManager.FRAME_SDK_FRAGMENT)
                         .onActivityResult(requestCode, resultCode, data);
                 break;
             case 2:
                 FragmentTabManager
-                        .getInstance()
+                        .getInstance(this)
                         .getFragment(FragmentTabManager.MATH_JNI_FRAGMENT)
                         .onActivityResult(requestCode, resultCode, data);
                 break;
             case 3:
                 FragmentTabManager
-                        .getInstance()
+                        .getInstance(this)
                         .getFragment(FragmentTabManager.MINE_FRAGMENT)
                         .onActivityResult(requestCode, resultCode, data);
                 break;
@@ -112,7 +112,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        FragmentTabManager.getInstance().onDestroy();
+        FragmentTabManager.getInstance(this).onDestroy();
         super.onDestroy();
     }
 }

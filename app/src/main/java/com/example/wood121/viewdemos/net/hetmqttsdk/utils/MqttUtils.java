@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.utils;
+package com.example.wood121.viewdemos.net.hetmqttsdk.utils;
 
 import android.text.TextUtils;
 

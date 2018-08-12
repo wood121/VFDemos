@@ -1,11 +1,11 @@
-package com.example.wood121.viewdemos.net.mqtt.biz;
+package com.example.wood121.viewdemos.net.hetmqttsdk.biz;
 
 import android.content.Context;
 
-import com.example.wood121.viewdemos.net.mqtt.bean.MqttConnBean;
-import com.example.wood121.viewdemos.net.mqtt.callback.IMqttStateCallback;
-import com.example.wood121.viewdemos.net.mqtt.constants.HetMqttConstant;
-import com.example.wood121.viewdemos.net.mqtt.utils.MqttUtils;
+import com.example.wood121.viewdemos.net.hetmqttsdk.bean.MqttConnBean;
+import com.example.wood121.viewdemos.net.hetmqttsdk.callback.IMqttStateCallback;
+import com.example.wood121.viewdemos.net.hetmqttsdk.constants.HetMqttConstant;
+import com.example.wood121.viewdemos.net.hetmqttsdk.utils.MqttUtils;
 
 import java.util.HashMap;
 

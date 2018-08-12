@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.bean;
+package com.example.wood121.viewdemos.net.hetmqttsdk.bean;
 
 /**
  * ————————————————————————————————
@@ -11,24 +11,34 @@ package com.example.wood121.viewdemos.net.mqtt.bean;
  * 版本: 1.0<br>
  * 日期: 2017/5/12 12:08<br>
  **/
-public class MqttDataDataBean<T> {
+public class MqttDataBean<T> {
 
-    private String deviceId;
+
+
+    private long timestamp;
     private int type;
     private T data;
+
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+
+    public int getType() {
+        return type;
+    }
+
     public void setType(int type) {
         this.type = type;
     }
 
 
 
-    public String getDeviceId() {
-        return deviceId;
-    }
-
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-    }
 
     public T getData() {
         return data;
@@ -38,14 +48,10 @@ public class MqttDataDataBean<T> {
         this.data = data;
     }
 
-    public int getType() {
-        return type;
-    }
-
     @Override
     public String toString() {
-        return "MqttDataDataBean{" +
-                "deviceId=" + deviceId +
+        return "MqttDataBean{" +
+                "timestamp=" + timestamp +
                 ", type=" + type +
                 ", data=" + data +
                 '}';

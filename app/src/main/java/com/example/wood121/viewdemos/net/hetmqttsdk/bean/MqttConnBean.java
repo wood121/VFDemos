@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.bean;
+package com.example.wood121.viewdemos.net.hetmqttsdk.bean;
 
 import java.io.Serializable;
 

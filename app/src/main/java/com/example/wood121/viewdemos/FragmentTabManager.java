@@ -29,11 +29,12 @@ public class FragmentTabManager {
     private FragmentTabManager() {
     }
 
-    public static FragmentTabManager getInstance() {
+    public static FragmentTabManager getInstance(Context context) {
         if (sFragmentTabManager == null) {
             synchronized (FragmentTabManager.class) {
                 if (sFragmentTabManager == null) {
                     sFragmentTabManager = new FragmentTabManager();
+                    mContextWeakReference = new WeakReference<>(context);
                 }
             }
         }
@@ -44,17 +45,16 @@ public class FragmentTabManager {
         if (mFragmentsMap == null) {
             mFragmentsMap = new ConcurrentHashMap<>();
         }
+        MainActivity mainActivity = (MainActivity) mContextWeakReference.get();
         mFragmentsMap.clear();
+
         mFragmentsMap.put(API_VIEW_FRAGMENT, APIViewFragment.newInstance());
         mFragmentsMap.put(FRAME_SDK_FRAGMENT, FrameSDKFragment.newInstance());
         mFragmentsMap.put(MATH_JNI_FRAGMENT, MathJniFragment.newInstance());
         mFragmentsMap.put(MINE_FRAGMENT, MineFragment.newInstance());
     }
 
-    public void slectFragment(Context context, String fragmentTag) {
-        if (mContextWeakReference == null) {
-            mContextWeakReference = new WeakReference<>(context);
-        }
+    public void slectFragment(String fragmentTag) {
         MainActivity mainActivity = (MainActivity) mContextWeakReference.get();
         FragmentTransaction fragmentTransaction = mainActivity.getSupportFragmentManager().beginTransaction();
         for (String tag :
@@ -65,7 +65,7 @@ public class FragmentTabManager {
                     if (fragment.isAdded()) {
                         fragmentTransaction.show(fragment);
                     } else {
-                        fragmentTransaction.add(R.id.fragment_container, fragment);
+                        fragmentTransaction.add(R.id.fragment_container, fragment, fragment.getClass().getName());
                     }
                 } else {
                     if (fragment.isAdded()) {

@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.mqtt.constants;
+package com.example.wood121.viewdemos.net.hetmqttsdk.constants;
 
 /**
  * 控制相关常量
