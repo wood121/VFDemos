@@ -1,6 +1,6 @@
 package com.example.wood121.viewdemos.net.http.retrofit;
 
-import com.example.wood121.viewdemos.net.http.apis.HttpConfig;
+import com.example.wood121.viewdemos.net.http.config.HttpConfig;
 import com.example.wood121.viewdemos.net.http.okhttp.InceptorManager;
 import com.example.wood121.viewdemos.net.http.okhttp.Wood121LoggerInceptor;
 

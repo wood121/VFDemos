@@ -3,6 +3,7 @@ package com.example.wood121.viewdemos.fragment;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.activity.AsynTaskDemoActivity;
 import com.example.wood121.viewdemos.activity.BleAcitivty;
+import com.example.wood121.viewdemos.activity.BleBytesActivity;
 import com.example.wood121.viewdemos.activity.BookManagerActivity;
 import com.example.wood121.viewdemos.activity.CsrmeshActivity;
 import com.example.wood121.viewdemos.activity.DataStorageActivity;
@@ -49,6 +50,7 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_captcha, LamadaActivity.class));
         mData.add(new ModelRecyclerBean("csrmesh", R.mipmap.circle_captcha, CsrmeshActivity.class));
         mData.add(new ModelRecyclerBean("messenger", R.mipmap.circle_captcha, MessengerActivity.class));
+        mData.add(new ModelRecyclerBean("blebytes", R.mipmap.circle_captcha, BleBytesActivity.class));
     }
 
 }

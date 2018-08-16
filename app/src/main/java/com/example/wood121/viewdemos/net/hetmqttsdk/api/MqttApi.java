@@ -47,7 +47,7 @@ public class MqttApi {
 //                .sign(true)
 //                .accessToken(true)
 //                .timeStamp(true)
-//                .getParams()).compose(RxSchedulers._io_main());
+//                .getParams()).compose(RxHelper._io_main());
 //    }
 //
 //
@@ -77,7 +77,7 @@ public class MqttApi {
 //                .sign(true)
 //                .accessToken(true)
 //                .timeStamp(true)
-//                .getParams()).compose(RxSchedulers._io_main());
+//                .getParams()).compose(RxHelper._io_main());
 //    }
 
 }

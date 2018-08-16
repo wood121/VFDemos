@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.net.http.apis;
+package com.example.wood121.viewdemos.net.http.config;
 
 /**
  * @author wood121
@@ -7,5 +7,6 @@ package com.example.wood121.viewdemos.net.http.apis;
  */
 public interface HttpConfig {
     int TIME_OUT = 30000;
-    String BASE_URL = "https://www.baidu.com/";
+
+    String BASE_URL = "http://www.wanandroid.com/";
 }
