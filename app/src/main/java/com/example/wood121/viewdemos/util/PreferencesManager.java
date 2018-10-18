@@ -35,7 +35,7 @@ public class PreferencesManager {
     public void setValue(long value) {
         mPref.edit()
                 .putLong(KEY_VALUE, value)
-                .commit();
+                .apply();
     }
 
     public long getValue() {
@@ -45,7 +45,7 @@ public class PreferencesManager {
     public void remove(String key) {
         mPref.edit()
                 .remove(key)
-                .commit();
+                .apply();
     }
 
     public boolean clear() {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.wood121.viewdemos.activity.TopbarActivity">
+    tools:context="com.example.wood121.viewdemos.view_part.TopbarActivity">
 
     <!--箭头，文字，图片-->
     <com.example.wood121.viewdemos.widget.TopBar

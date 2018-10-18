@@ -105,7 +105,7 @@ public class MassTransitRouteOverlay extends OverlayManager {
             // polyline
             for ( int i = 0; i < steps.size(); i++ ) {
                 MassTransitRouteLine.TransitStep step = steps.get(i).get(0);
-                int color = 0;
+                int color;
                 if (step.getVehileType() != MassTransitRouteLine.TransitStep
                         .StepVehicleInfoType.ESTEP_WALK) {
                     // color = Color.argb(178, 0, 78, 255);
@@ -156,7 +156,7 @@ public class MassTransitRouteOverlay extends OverlayManager {
 
                 for (int j = 0; j < steps.get(i).size(); j++ ) {
                     MassTransitRouteLine.TransitStep step = steps.get(i).get(j);
-                    int color = 0;
+                    int color;
                     if (step.getVehileType() != MassTransitRouteLine.TransitStep
                             .StepVehicleInfoType.ESTEP_WALK) {
                         // color = Color.argb(178, 0, 78, 255);

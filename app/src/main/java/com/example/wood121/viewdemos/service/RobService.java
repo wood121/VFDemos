@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
-import com.example.wood121.viewdemos.activity.EmptyActivity;
+import com.example.wood121.viewdemos.mine_part.EmptyActivity;
 import com.example.wood121.viewdemos.util.PhoneController;
 import com.example.wood121.viewdemos.util.ToastUtil;
 

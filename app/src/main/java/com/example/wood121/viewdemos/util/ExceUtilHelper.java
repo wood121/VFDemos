@@ -1,8 +1,8 @@
 package com.example.wood121.viewdemos.util;
 
-import com.example.wood121.viewdemos.bean.MoneyPersonBean;
-import com.example.wood121.viewdemos.bean.Tab0206Bean;
-import com.example.wood121.viewdemos.bean.Tab0208Bean;
+import com.example.wood121.viewdemos.sdk_part.bean.MoneyPersonBean;
+import com.example.wood121.viewdemos.frame_part.bean.Tab0206Bean;
+import com.example.wood121.viewdemos.frame_part.bean.Tab0208Bean;
 
 import java.io.File;
 import java.io.FileOutputStream;

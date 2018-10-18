@@ -15,7 +15,6 @@ import android.view.WindowManager;
  */
 
 public class StyleManager {
-
     private static StyleManager mInstance;
     private static Context mContext;
 

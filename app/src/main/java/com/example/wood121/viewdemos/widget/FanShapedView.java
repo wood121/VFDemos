@@ -74,7 +74,7 @@ public class FanShapedView extends View {
             }
         }
         if (datasList != null && datasList.size() > 0 && countWeight > 0) {
-            int drawAngle = 0;
+            int drawAngle;
             int totalDrawAngle = 0;
             for (int i = 0; i < datasList.size(); i++) {
                 paint.reset();

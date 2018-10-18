@@ -14,9 +14,11 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.lang.reflect.Field;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -37,7 +39,8 @@ public class MyCrashHandler implements Thread.UncaughtExceptionHandler {
 
     public MyCrashHandler() {
         linkedHashMap = new LinkedHashMap<>();
-        dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
+
         Log.e("url", "MyCrashHandler构造函数");
     }
 

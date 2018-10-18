@@ -12,10 +12,9 @@ import android.util.Log;
 
 public class MyMessengerService extends Service {
 
-    //收到消息进行处理
-    private Handler mHandler = new Handler() {
+    private Handler mHandler = new Handler(new Handler.Callback() {
         @Override
-        public void handleMessage(Message msg) {
+        public boolean handleMessage(Message msg) {
             if (msg.what == 1) {
                 Bundle data = msg.getData();
                 Log.e("url", "MyMessengerService: " + data.get("string"));
@@ -37,8 +36,9 @@ public class MyMessengerService extends Service {
                 }
 
             }
+            return false;
         }
-    };
+    });
 
     private Messenger messenger = new Messenger(mHandler);
 

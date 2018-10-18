@@ -79,33 +79,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.GoodsTransformActivity" />
-        <activity android:name=".activity.CheckProcessActivity" />
-        <activity android:name=".activity.BingActivity" />
-        <activity android:name=".activity.ZheActivity" />
-        <activity android:name=".activity.TopbarActivity" />
-        <activity android:name=".widget.RecyclerView.RecActivity" />
-        <activity android:name=".activity.ArcViewActivity" />
+        <activity android:name=".sdk_part.GoodsTransformActivity" />
+        <activity android:name=".view_part.CheckProcessActivity" />
+        <activity android:name=".view_part.BingActivity" />
+        <activity android:name=".view_part.ZheActivity" />
+        <activity android:name=".view_part.TopbarActivity" />
+        <activity android:name=".view_part.RecyclerView.RecActivity" />
+        <activity android:name=".view_part.ArcViewActivity" />
         <activity
-            android:name=".activity.VideoActivity"
+            android:name=".api_part.VideoActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_activity_video"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.BleAcitivty" />
-        <activity android:name=".activity.EpersonalActivity" />
-        <activity android:name=".activity.EMerchantsActivity" />
-        <activity android:name=".activity.EPropertyActivity" />
-        <activity android:name=".activity.ExcelContentActivity" />
-        <activity android:name=".activity.ServiceActivity" />
-        <activity android:name=".activity.Okhttp3Activity" />
+        <activity android:name=".api_part.BlueToothActivity" />
+        <activity android:name=".sdk_part.ExcelContentActivity" />
+        <activity android:name=".api_part.ServiceActivity" />
+        <activity android:name=".frame_part.Okhttp3Activity" />
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -173,28 +170,28 @@
             android:exported="false" />
 
         <!-- User defined.  For test only  用户自定义的广播接收器 -->
-        <receiver
-            android:name=".net.jpush.MyReceiver"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
-                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
-                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
-                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
-                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
-                <category android:name="com.example.wood121.viewdemos" />
-            </intent-filter>
-        </receiver>
+        <!--<receiver-->
+            <!--android:name=".net.jpush.MyReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="cn.jpush.android.intent.REGISTRATION" /> &lt;!&ndash; Required  用户注册SDK的intent &ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK消息的intent &ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK通知栏信息的intent &ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> &lt;!&ndash; Required  用户打开自定义通知栏的intent &ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.CONNECTION" /> &lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;-->
+                <!--<category android:name="com.example.wood121.viewdemos" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
 
         <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
-        <receiver android:name=".net.jpush.MyJPushMsgReceiver">
-            <intent-filter>
-                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+        <!--<receiver android:name=".net.jpush.MyJPushMsgReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />-->
 
-                <category android:name="com.example.wood121.viewdemos" />
-            </intent-filter>
-        </receiver>
+                <!--<category android:name="com.example.wood121.viewdemos" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
         <!-- Required  . Enable it you can get statistics data with channel -->
         <meta-data
             android:name="JPUSH_CHANNEL"
@@ -204,7 +201,7 @@
             android:value="008050843a21edb24ee68dc9" /> <!-- </>值来自开发者平台取得的AppKey -->
 
         <service
-            android:name=".service.MyService"
+            android:name=".api_part.service.MyService"
             android:process=":remote">
             <intent-filter>
                 <action android:name="com.example.wood121.viewdemos.service.MyService" />
@@ -232,8 +229,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activity.MyLoaderActivity" />
-        <activity android:name=".activity.BaiduMapActivity" />
+        <activity android:name=".sdk_part.BaiduMapActivity" />
 
         <!-- 权限在4.0之后需要进行声明 -->
         <service
@@ -250,37 +246,38 @@
                 android:resource="@xml/accessibility" />
         </service>
 
-        <activity android:name=".activity.EmptyActivity" />
-        <activity android:name=".activity.GetAddressActivity" />
-        <activity android:name=".activity.AddressActivity" />
-        <activity android:name=".activity.IjkPlayerActvitiy" />
-        <activity android:name=".activity.DataStorageActivity" />
-        <activity android:name=".activity.FileStorageActivity" />
-        <activity android:name=".activity.RetrofitActivity" />
-        <activity android:name=".activity.RxjavaActivity" />
-        <activity android:name=".activity.RxjavaRetrofitActivity" />
-        <activity android:name=".activity.RxjavaRetrofitTotalActivity" />
+        <activity android:name="com.example.wood121.viewdemos.mine_part.EmptyActivity" />
+        <activity android:name=".sdk_part.GetAddressActivity" />
+        <activity android:name="com.example.wood121.viewdemos.mine_part.ProxyActivity" />
+        <activity android:name="com.example.wood121.viewdemos.frame_part.LeakCanaryActivity" />
+        <activity android:name="com.example.wood121.viewdemos.mine_part.MessengerActivity" />
+        <activity android:name=".sdk_part.AddressActivity" />
+        <activity android:name=".api_part.DataStorageActivity" />
+        <activity android:name="com.example.wood121.viewdemos.mine_part.FileStorageActivity" />
+        <activity android:name=".frame_part.RetrofitActivity" />
+        <activity android:name=".frame_part.RxjavaActivity" />
+        <activity android:name=".frame_part.RxjavaRetrofitActivity" />
+        <activity android:name=".frame_part.RxjavaRetrofitTotalActivity" />
 
         <service
-            android:name=".service.BookManagerService"
+            android:name=".api_part.service.BookManagerService"
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".activity.BookManagerActivity" />
-        <activity android:name=".activity.AsynTaskDemoActivity" />
-        <activity android:name=".activity.ExecutorActivity" />
-        <activity android:name=".activity.LamadaActivity" />
-        <activity android:name=".activity.CsrmeshActivity" />
+        <activity android:name=".api_part.BookManagerActivity" />
+        <activity android:name=".api_part.AsynTaskDemoActivity" />
+        <activity android:name=".api_part.ExecutorActivity" />
+        <activity android:name=".api_part.LamadaActivity" />
         <activity android:name=".activity.MessengerActivity" />
 
         <service
-            android:name=".service.MessengerService"
+            android:name=".api_part.service.MessengerService"
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".activity.BleBytesActivity"></activity>
+        <activity android:name=".api_part.BleBytesActivity" />
     </application>
 
 </manifest>

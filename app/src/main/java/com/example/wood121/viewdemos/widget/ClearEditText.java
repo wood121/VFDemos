@@ -17,7 +17,7 @@ import com.example.wood121.viewdemos.R;
  * 输入文本框 右边有自带的删除按钮 当有输入时，显示删除按钮，当无输入时，不显示删除按钮。
  */
 
-public class ClearEditText extends EditText implements OnFocusChangeListener, TextWatcher {
+public class ClearEditText extends android.support.v7.widget.AppCompatEditText implements OnFocusChangeListener, TextWatcher {
     /**
      * 删除按钮的引用
      */

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.activity.BingActivity">
+    tools:context="com.example.wood121.viewdemos.view_part.BingActivity">
 
     <com.example.wood121.viewdemos.widget.FanShapedView
         android:id="@+id/shapeview"

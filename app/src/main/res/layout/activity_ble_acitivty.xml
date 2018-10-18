@@ -4,17 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.wood121.viewdemos.activity.BleAcitivty">
+    tools:context="com.example.wood121.viewdemos.api_part.BlueToothActivity">
 
-    <TextView
-        android:background="@color/colorGreen"
+    <Button
         android:id="@+id/tv_ble"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@color/colorGreen"
         android:gravity="center"
-        android:text="蓝牙权限"
+        android:text="蓝牙权限、开启与扫描"
         android:textColor="@color/colorRed"
-        android:textSize="22sp" />
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/tv_ble_byte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorGreen"
+        android:gravity="center"
+        android:text="字节指令"
+        android:textColor="@color/colorRed"
+        android:textSize="16sp" />
 
 </LinearLayout>

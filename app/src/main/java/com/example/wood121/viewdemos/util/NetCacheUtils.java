@@ -1,5 +1,6 @@
 package com.example.wood121.viewdemos.util;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.widget.ImageView;
@@ -25,7 +26,7 @@ public class NetCacheUtils {
      * @Params Progress：后台任务子线程执行的百分比
      * @Params Result：后台执行任务最终返回结果。和doInBackground()方法的返回值类型保持一致。
      */
-    class BitmapTask extends AsyncTask<Object, Void, Bitmap> {//Params,Progress,Result
+    static class BitmapTask extends AsyncTask<Object, Void, Bitmap> {//Params,Progress,Result
         private ImageView imageView;
         private String url;
 
