@@ -45,7 +45,6 @@ public class RecActivity extends AppCompatActivity implements View.OnClickListen
         //添加分割线
         recycleView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-
         //点击事件
         myAdapter.setOnItemClickListener(new RecItemAdapter.onItemClickListener() {
             @Override

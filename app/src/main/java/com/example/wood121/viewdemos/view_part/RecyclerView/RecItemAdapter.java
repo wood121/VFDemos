@@ -16,6 +16,10 @@ import java.util.ArrayList;
 
 /**
  * Created by wood121 on 2017/10/11.
+ * 1.创建viewHolder,完成 class RecItemAdapter extends RecyclerView.Adapter<RecItemAdapter.MyViewHolder>
+ * 2.构造方法中&备用方法传入数据
+ * 3.onCreateViewHolder创建view，设置view或者item的点击事件
+ * 4.onBindViewHolder进行view与数据的绑定
  */
 
 public class RecItemAdapter extends RecyclerView.Adapter<RecItemAdapter.MyViewHolder> {

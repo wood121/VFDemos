@@ -6,6 +6,7 @@ import com.example.wood121.viewdemos.view_part.BingActivity;
 import com.example.wood121.viewdemos.view_part.CheckProcessActivity;
 import com.example.wood121.viewdemos.view_part.RecyclerView.RecActivity;
 import com.example.wood121.viewdemos.view_part.TopbarActivity;
+import com.example.wood121.viewdemos.view_part.ViewActionsActivity;
 import com.example.wood121.viewdemos.view_part.ZheActivity;
 import com.example.wood121.viewdemos.base.bean.ModelRecyclerBean;
 
@@ -36,5 +37,6 @@ public class ViewFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("折线图2", R.mipmap.circle_zip, ZheActivity.class));
         mData.add(new ModelRecyclerBean("标题栏", R.mipmap.circle_zip, TopbarActivity.class));
         mData.add(new ModelRecyclerBean("RecView", R.mipmap.circle_zip, RecActivity.class));
+        mData.add(new ModelRecyclerBean("ViewActions", R.mipmap.circle_zip, ViewActionsActivity.class));
     }
 }
