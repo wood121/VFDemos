@@ -271,7 +271,7 @@
         <activity android:name=".api_part.AsynTaskDemoActivity" />
         <activity android:name=".api_part.ExecutorActivity" />
         <activity android:name=".api_part.LamadaActivity" />
-        <activity android:name=".activity.MessengerActivity" />
+        <activity android:name=".api_part.ChatActivity" />
 
         <service
             android:name=".api_part.service.MessengerService"
@@ -281,7 +281,8 @@
 
         <activity android:name=".api_part.BleBytesActivity" />
         <activity android:name=".view_part.ViewActionsActivity" />
-        <activity android:name=".view_part.ViewActionRecActivity"></activity>
+        <activity android:name=".view_part.ViewActionRecActivity" />
+        <activity android:name=".api_part.SqliteActivity"></activity>
     </application>
 
 </manifest>
