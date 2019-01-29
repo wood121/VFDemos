@@ -8,49 +8,28 @@
     tools:context=".api_part.database.SqliteActivity">
 
     <EditText
-        android:id="@+id/et_deviceId"
+        android:id="@+id/et_sname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="deviceId" />
+        android:hint="name" />
 
     <EditText
-        android:id="@+id/et_macAddress"
+        android:id="@+id/et_sauthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="macAddress" />
+        android:hint="author" />
 
     <EditText
-        android:id="@+id/et_networkDeviceId"
+        android:id="@+id/et_sprice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="networkDeviceId" />
+        android:hint="price" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/et_spages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/et_meshId"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="meshId" />
-
-        <EditText
-            android:id="@+id/et_phoneId"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="phoneId" />
-
-        <EditText
-            android:id="@+id/et_virtualId"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="virtualId" />
-    </LinearLayout>
+        android:hint="pages" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,11 +110,6 @@
             android:layout_height="wrap_content"
             android:text="批量插入" />
 
-        <Button
-            android:id="@+id/btn_cal_VirtualId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="计算虚拟id" />
     </LinearLayout>
 
     <LinearLayout
@@ -152,7 +126,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/margin_5"
-            android:text="i" />
+            android:text="index" />
 
         <TextView
             android:id="@+id/tv_deviceId"
@@ -161,7 +135,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/margin_5"
-            android:text="d_id" />
+            android:text="name" />
 
         <TextView
             android:id="@+id/tv_macAddress"
@@ -170,7 +144,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/margin_5"
-            android:text="mac" />
+            android:text="author" />
 
         <TextView
             android:id="@+id/tv_networkDeviceId"
@@ -179,7 +153,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/margin_5"
-            android:text="net_id" />
+            android:text="pages" />
 
         <TextView
             android:id="@+id/tv_meshId"
@@ -188,25 +162,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="@dimen/margin_5"
-            android:text="m_Id" />
-
-        <TextView
-            android:id="@+id/tv_phoneId"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="@dimen/margin_5"
-            android:text="p_Id" />
-
-        <TextView
-            android:id="@+id/tv_virtualId"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="@dimen/margin_5"
-            android:text="v_id" />
+            android:text="price" />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

@@ -115,6 +115,29 @@
                 <category android:name="com.example.wood121.viewdemos" />
             </intent-filter>
         </activity>
+        <activity android:name=".sdk_part.BaiduMapActivity" />
+        <activity android:name=".mine_part.EmptyActivity" />
+        <activity android:name=".sdk_part.GetAddressActivity" />
+        <activity android:name=".mine_part.ProxyActivity" />
+        <activity android:name=".frame_part.LeakCanaryActivity" />
+        <activity android:name=".mine_part.MessengerActivity" />
+        <activity android:name=".sdk_part.AddressActivity" />
+        <activity android:name=".api_part.DataStorageActivity" />
+        <activity android:name=".mine_part.FileStorageActivity" />
+        <activity android:name=".frame_part.RetrofitActivity" />
+        <activity android:name=".frame_part.RxjavaActivity" />
+        <activity android:name=".frame_part.RxjavaRetrofitActivity" />
+        <activity android:name=".frame_part.RxjavaRetrofitTotalActivity" />
+        <activity android:name=".api_part.BookManagerActivity" />
+        <activity android:name=".api_part.AsynTaskDemoActivity" />
+        <activity android:name=".api_part.ExecutorActivity" />
+        <activity android:name=".api_part.LamadaActivity" />
+        <activity android:name=".api_part.ChatActivity" />
+        <activity android:name=".api_part.BleBytesActivity" />
+        <activity android:name=".view_part.ViewActionsActivity" />
+        <activity android:name=".view_part.ViewActionRecActivity" />
+        <activity android:name=".api_part.database.SqliteActivity" />
+        <activity android:name=".datebase_device.SqliteDeviceActivity" />
 
         <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
@@ -202,6 +225,16 @@
             android:name="JPUSH_APPKEY"
             android:value="008050843a21edb24ee68dc9" /> <!-- </>值来自开发者平台取得的AppKey -->
 
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="t0cfQ7b2T6d5ENv4ozcUlkytViKCy2G5" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5bee8501f1f5567da000020c" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="market_xiaomi" />
+
         <service
             android:name=".api_part.service.MyService"
             android:process=":remote">
@@ -209,11 +242,6 @@
                 <action android:name="com.example.wood121.viewdemos.service.MyService" />
             </intent-filter>
         </service>
-
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="t0cfQ7b2T6d5ENv4ozcUlkytViKCy2G5" />
-
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
@@ -231,8 +259,6 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".sdk_part.BaiduMapActivity" />
-
         <!-- 权限在4.0之后需要进行声明 -->
         <service
             android:name=".service.RobService"
@@ -247,42 +273,18 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility" />
         </service>
-
-        <activity android:name=".mine_part.EmptyActivity" />
-        <activity android:name=".sdk_part.GetAddressActivity" />
-        <activity android:name=".mine_part.ProxyActivity" />
-        <activity android:name=".frame_part.LeakCanaryActivity" />
-        <activity android:name=".mine_part.MessengerActivity" />
-        <activity android:name=".sdk_part.AddressActivity" />
-        <activity android:name=".api_part.DataStorageActivity" />
-        <activity android:name=".mine_part.FileStorageActivity" />
-        <activity android:name=".frame_part.RetrofitActivity" />
-        <activity android:name=".frame_part.RxjavaActivity" />
-        <activity android:name=".frame_part.RxjavaRetrofitActivity" />
-        <activity android:name=".frame_part.RxjavaRetrofitTotalActivity" />
-
         <service
             android:name=".api_part.service.BookManagerService"
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
-
-        <activity android:name=".api_part.BookManagerActivity" />
-        <activity android:name=".api_part.AsynTaskDemoActivity" />
-        <activity android:name=".api_part.ExecutorActivity" />
-        <activity android:name=".api_part.LamadaActivity" />
-        <activity android:name=".api_part.ChatActivity" />
-
         <service
             android:name=".api_part.service.MessengerService"
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".api_part.BleBytesActivity" />
-        <activity android:name=".view_part.ViewActionsActivity" />
-        <activity android:name=".view_part.ViewActionRecActivity" />
-        <activity android:name=".api_part.SqliteActivity"></activity>
+        <activity android:name=".view_part.ContextActivity"></activity>
     </application>
 
 </manifest>

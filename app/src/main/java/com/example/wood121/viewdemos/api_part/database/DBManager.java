@@ -9,12 +9,10 @@ import android.database.sqlite.SQLiteStatement;
 import android.os.SystemClock;
 import android.util.Log;
 
-import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.api_part.database.bean.Book;
 import com.example.wood121.viewdemos.api_part.database.tables.TableBook;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -64,7 +62,7 @@ public class DBManager {
      */
 
     /**
-     * insertBook,getBook,getBookCursor，插入后又查出来
+     * insertBook,getVirtualidDeviceBean,getBookCursor，插入后又查出来
      *
      * @param book
      * @return
@@ -253,6 +251,7 @@ public class DBManager {
 
     /**
      * 1000-63,2000-65,5000-125,10k-202,20k-330
+     * 开启事务与SqliteStatement的优化
      *
      * @param list
      */

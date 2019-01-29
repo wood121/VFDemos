@@ -23,7 +23,6 @@ public class AsynTaskDemoActivity extends AppCompatActivity {
 
         @Override
         protected Long doInBackground(URL... params) {
-
             int count = params.length;
             int totalSize = 0;
 
@@ -33,7 +32,6 @@ public class AsynTaskDemoActivity extends AppCompatActivity {
                 publishProgress(i / count);
                 if (isCancelled()) {
                     break;
-
 
                 }
             }

@@ -1,22 +1,18 @@
-package com.example.wood121.viewdemos.api_part;
+package com.example.wood121.viewdemos.api_part.database;
 
-import android.content.ContentResolver;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.api_part.adapter.RecAdapter;
-import com.example.wood121.viewdemos.api_part.database.DBManager;
+import com.example.wood121.viewdemos.api_part.adapter.RecDeviceAdapter;
 import com.example.wood121.viewdemos.api_part.database.bean.Book;
 
 import java.util.ArrayList;
@@ -40,10 +36,7 @@ public class SqliteActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sqlite);
-
-        ContentResolver cr = getContentResolver();
-        Cursor cursor = cr.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
+        setContentView(R.layout.activity_sqlite_book);
 
         mEtName = findViewById(R.id.et_sname);
         mEtAuthor = findViewById(R.id.et_sauthor);
@@ -111,6 +104,7 @@ public class SqliteActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+
     //批量插入数据
     private void batInsert() {
         String insertNumbers = mEtInsertNumbers.getText().toString().trim();
@@ -144,8 +138,6 @@ public class SqliteActivity extends AppCompatActivity implements View.OnClickLis
 
     //修改数据
     private void update() {
-
-
         getAllBooks();
         mRecAdapter.setData(mList);
     }

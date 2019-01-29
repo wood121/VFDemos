@@ -23,6 +23,7 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import okhttp3.OkHttpClient;
 
 /**
  * Created by wood121 on 2017/12/21.
@@ -59,6 +60,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(initPageLayoutId());
         // 初始化页面控件点击
         initPageViewListener();
+
+        new OkHttpClient.Builder().build();
     }
 
     //检测所需权限是否满足

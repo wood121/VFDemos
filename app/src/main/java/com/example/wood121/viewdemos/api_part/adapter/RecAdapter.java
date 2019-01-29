@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.api_part.database.bean.Book;
+import com.example.wood121.viewdemos.datebase_device.bean.VirtualidDeviceBean;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         mContext = parent.getContext();
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_sqlite, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_sqlite_book, parent, false);
 
         return new MyViewHolder(view);
     }
@@ -37,7 +38,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.MyViewHolder> {
         holder.mTvName.setText(book.getName());
         holder.mTvAuthor.setText(book.getAuthor());
         holder.mTvPages.setText(book.getPages() + "");
-        holder.mTvPrices.setText(book.getPrice() + "");
+        holder.mTvPrice.setText(book.getPrice() + "+");
     }
 
     @Override
@@ -51,20 +52,21 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.MyViewHolder> {
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
+
+        private final TextView mTvIndex;
         private final TextView mTvName;
         private final TextView mTvAuthor;
         private final TextView mTvPages;
-        private final TextView mTvPrices;
-        private final TextView mTvIndex;
+        private final TextView mTvPrice;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
+            mTvIndex = itemView.findViewById(R.id.tv_index);
             mTvName = itemView.findViewById(R.id.tv_name);
             mTvAuthor = itemView.findViewById(R.id.tv_author);
             mTvPages = itemView.findViewById(R.id.tv_pages);
-            mTvPrices = itemView.findViewById(R.id.tv_prices);
-            mTvIndex = itemView.findViewById(R.id.tv_index);
+            mTvPrice = itemView.findViewById(R.id.tv_price);
         }
     }
 }

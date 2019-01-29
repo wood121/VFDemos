@@ -5,65 +5,48 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/tv_index_item"
+        android:id="@+id/tv_index"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:padding="@dimen/margin_5"
-        android:text="i" />
+        android:text="index" />
 
     <TextView
-        android:id="@+id/tv_deviceId_item"
+        android:id="@+id/tv_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:padding="@dimen/margin_5"
-        android:text="deviceId" />
+        android:text="name" />
 
     <TextView
-        android:id="@+id/tv_macAddress_item"
+        android:id="@+id/tv_author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:padding="@dimen/margin_5"
-        android:text="macAddress" />
+        android:text="author" />
 
     <TextView
-        android:id="@+id/tv_networkDeviceId_item"
+        android:id="@+id/tv_pages"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:padding="@dimen/margin_5"
-        android:text="networkDeviceId" />
+        android:text="pages" />
 
     <TextView
-        android:id="@+id/tv_meshId_item"
+        android:id="@+id/tv_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:padding="@dimen/margin_5"
-        android:text="meshId" />
+        android:text="price" />
 
-    <TextView
-        android:id="@+id/tv_phoneId_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:padding="@dimen/margin_5"
-        android:text="phoneId" />
-
-    <TextView
-        android:id="@+id/tv_virtualId_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:padding="@dimen/margin_5"
-        android:text="virtualId" />
 </LinearLayout>

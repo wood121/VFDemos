@@ -1,0 +1,57 @@
+package com.example.wood121.viewdemos.view_part;
+
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.PopupWindow;
+
+import com.example.wood121.viewdemos.MyApplication;
+import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.util.ToastUtil;
+
+public class ContextActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button mBtn_toast;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_context);
+
+        mBtn_toast = findViewById(R.id.btn_toast);
+        mBtn_toast.setOnClickListener(this);
+        findViewById(R.id.btn_dialog).setOnClickListener(this);
+        findViewById(R.id.btn_dialog_app).setOnClickListener(this);
+        findViewById(R.id.btn_pop).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_toast:
+                ToastUtil.showToast(MyApplication.getAppContext(), "hahaha");
+                break;
+            case R.id.btn_dialog:
+                AlertDialog dialog = new AlertDialog.Builder(this)
+                        .setTitle("dialog")
+                        .setMessage("dialog")
+                        .create();
+                dialog.show();
+                break;
+            case R.id.btn_dialog_app:
+                AlertDialog dialog_app = new AlertDialog.Builder(MyApplication.getAppContext())
+                        .setTitle("dialog_app")
+                        .setMessage("dialog_app")
+                        .create();
+                dialog_app.show();
+                break;
+            case R.id.btn_pop:
+                PopupWindow popupWindow = new PopupWindow();
+                
+                popupWindow.showAsDropDown(mBtn_toast);
+                break;
+        }
+    }
+}

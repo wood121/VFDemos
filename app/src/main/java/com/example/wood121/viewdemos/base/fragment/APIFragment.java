@@ -5,13 +5,15 @@ import com.example.wood121.viewdemos.api_part.AsynTaskDemoActivity;
 import com.example.wood121.viewdemos.api_part.BlueToothActivity;
 import com.example.wood121.viewdemos.api_part.BookManagerActivity;
 import com.example.wood121.viewdemos.api_part.ChatActivity;
+import com.example.wood121.viewdemos.view_part.ContextActivity;
 import com.example.wood121.viewdemos.api_part.DataStorageActivity;
 import com.example.wood121.viewdemos.api_part.ExecutorActivity;
 import com.example.wood121.viewdemos.api_part.LamadaActivity;
 import com.example.wood121.viewdemos.api_part.ServiceActivity;
-import com.example.wood121.viewdemos.api_part.SqliteActivity;
+import com.example.wood121.viewdemos.api_part.database.SqliteActivity;
 import com.example.wood121.viewdemos.api_part.VideoActivity;
 import com.example.wood121.viewdemos.base.bean.ModelRecyclerBean;
+import com.example.wood121.viewdemos.datebase_device.SqliteDeviceActivity;
 import com.example.wood121.viewdemos.mine_part.MessengerActivity;
 
 /**
@@ -47,5 +49,6 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("messenger", R.mipmap.circle_captcha, MessengerActivity.class));
         mData.add(new ModelRecyclerBean("udp_chat", R.mipmap.circle_captcha, ChatActivity.class));
         mData.add(new ModelRecyclerBean("TableBook_DBManager", R.mipmap.circle_captcha, SqliteActivity.class));
-    }
+        mData.add(new ModelRecyclerBean("TableVirtualidDeviceBean_DBManager", R.mipmap.circle_captcha, SqliteDeviceActivity.class));
+        }
 }

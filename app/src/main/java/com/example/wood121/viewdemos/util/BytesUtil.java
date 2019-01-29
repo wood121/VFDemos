@@ -105,5 +105,18 @@ public class BytesUtil {
         return sb.toString();
     }
 
+    public static int byteArrayToInt(byte[] b) {
+        return byteArrayToInt(b, 0);
+    }
+
+    public static int byteArrayToInt(byte[] b, int offset) {
+        int value = 0;
+        int len = Math.min(b.length - offset, 4);
+        for (int i = 0; i < len; i++) {
+            int shift = (len - 1 - i) * 8;
+            value += (b[i + offset] & 0x000000FF) << shift;
+        }
+        return value;
+    }
 
 }
