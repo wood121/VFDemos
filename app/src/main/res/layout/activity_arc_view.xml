@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.view_part.ArcViewActivity">
+    tools:context="com.example.wood121.viewdemos.views.widgets_self.ArcViewActivity">
 
 
     <!--<com.example.wood121.viewdemos.views.ArcPercentView-->
@@ -12,7 +12,7 @@
     <!--android:layout_width="wrap_content"-->
     <!--android:layout_height="wrap_content" />-->
 
-    <com.example.wood121.viewdemos.widget.VolueView
+    <com.example.wood121.viewdemos.views.widgets_self.widget.VolueView
         android:layout_width="match_parent"
         android:layout_height="400dp" />
 </android.support.constraint.ConstraintLayout>

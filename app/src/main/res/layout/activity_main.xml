@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.wood121.viewdemos.widget.TopBar
+    <com.example.wood121.viewdemos.views.widgets_self.widget.TopBar
         android:id="@+id/tb_view"
         android:layout_width="match_parent"
         android:layout_height="45dp"

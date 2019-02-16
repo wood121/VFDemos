@@ -86,23 +86,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sdk_part.GoodsTransformActivity" />
-        <activity android:name=".view_part.CheckProcessActivity" />
-        <activity android:name=".view_part.BingActivity" />
-        <activity android:name=".view_part.ZheActivity" />
-        <activity android:name=".view_part.TopbarActivity" />
-        <activity android:name=".view_part.RecyclerView.RecActivity" />
-        <activity android:name=".view_part.ArcViewActivity" />
+        <activity android:name=".sdk_thirdparty.QrCodeActivity" />
+        <activity android:name=".views.widgets_self.CheckProcessActivity" />
+        <activity android:name=".views.charts.BingActivity" />
+        <activity android:name=".views.charts.ZheActivity" />
+        <activity android:name=".views.widgets_self.TopbarActivity" />
+        <activity android:name=".views.widgets.RecyclerView.RecActivity" />
+        <activity android:name=".views.widgets_self.ArcViewActivity" />
         <activity
-            android:name=".api_part.VideoActivity"
+            android:name=".apis.audio_video.VideoActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_activity_video"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".api_part.BlueToothActivity" />
-        <activity android:name=".sdk_part.ExcelContentActivity" />
-        <activity android:name=".api_part.ServiceActivity" />
-        <activity android:name=".frame_part.Okhttp3Activity" />
+        <activity android:name=".frames.wireless_iot.BlueToothActivity" />
+        <activity android:name=".sdk_thirdparty.ExcelContentActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.Okhttp3Activity" />
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -115,29 +114,24 @@
                 <category android:name="com.example.wood121.viewdemos" />
             </intent-filter>
         </activity>
-        <activity android:name=".sdk_part.BaiduMapActivity" />
-        <activity android:name=".mine_part.EmptyActivity" />
-        <activity android:name=".sdk_part.GetAddressActivity" />
-        <activity android:name=".mine_part.ProxyActivity" />
-        <activity android:name=".frame_part.LeakCanaryActivity" />
-        <activity android:name=".mine_part.MessengerActivity" />
-        <activity android:name=".sdk_part.AddressActivity" />
-        <activity android:name=".api_part.DataStorageActivity" />
-        <activity android:name=".mine_part.FileStorageActivity" />
-        <activity android:name=".frame_part.RetrofitActivity" />
-        <activity android:name=".frame_part.RxjavaActivity" />
-        <activity android:name=".frame_part.RxjavaRetrofitActivity" />
-        <activity android:name=".frame_part.RxjavaRetrofitTotalActivity" />
-        <activity android:name=".api_part.BookManagerActivity" />
-        <activity android:name=".api_part.AsynTaskDemoActivity" />
-        <activity android:name=".api_part.ExecutorActivity" />
-        <activity android:name=".api_part.LamadaActivity" />
-        <activity android:name=".api_part.ChatActivity" />
-        <activity android:name=".api_part.BleBytesActivity" />
-        <activity android:name=".view_part.ViewActionsActivity" />
-        <activity android:name=".view_part.ViewActionRecActivity" />
-        <activity android:name=".api_part.database.SqliteActivity" />
-        <activity android:name=".datebase_device.SqliteDeviceActivity" />
+        <activity android:name=".sdk_thirdparty.map.BaiduMapActivity" />
+        <activity android:name=".sdk_thirdparty.map.MapActivity" />
+        <activity android:name=".math.ProxyActivity" />
+        <activity android:name=".frames.LeakCanaryActivity" />
+        <activity android:name=".apis.ipc.MessengerActivity" />
+        <activity android:name=".sdk_thirdparty.map.AddressActivity" />
+        <activity android:name=".apis.data_storage.DataStorageActivity" />
+        <activity android:name=".apis.data_storage.FileStorageActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.RetrofitActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.RxjavaActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.RxjavaRetrofitTotalActivity" />
+        <activity android:name=".apis.threads.AsynTaskDemoActivity" />
+        <activity android:name=".apis.threads.ExecutorActivity" />
+        <activity android:name=".apis.LamadaActivity" />
+        <activity android:name=".views.widgets_self.ViewActionsActivity" />
+        <activity android:name=".views.widgets.recaction.ViewActionRecActivity" />
+        <activity android:name=".apis.database_.sqlite_book.SqliteActivity" />
+        <activity android:name=".apis.database_.sqlite_device.SqliteDeviceActivity" />
 
         <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
@@ -236,13 +230,6 @@
             android:value="market_xiaomi" />
 
         <service
-            android:name=".api_part.service.MyService"
-            android:process=":remote">
-            <intent-filter>
-                <action android:name="com.example.wood121.viewdemos.service.MyService" />
-            </intent-filter>
-        </service>
-        <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
@@ -255,13 +242,13 @@
         <!-- android:name=".service.MyService"/> -->
 
         <service
-            android:name=".service.MyMessengerService"
+            android:name=".apis.ipc.MyMessengerService"
             android:enabled="true"
             android:exported="true" />
 
         <!-- 权限在4.0之后需要进行声明 -->
         <service
-            android:name=".service.RobService"
+            android:name=".codebase_practice.RobService"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
@@ -274,17 +261,21 @@
                 android:resource="@xml/accessibility" />
         </service>
         <service
-            android:name=".api_part.service.BookManagerService"
-            android:enabled="true"
-            android:exported="true"
-            android:process=":remote" />
-        <service
-            android:name=".api_part.service.MessengerService"
+            android:name=".apis.service.MessengerService"
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".view_part.ContextActivity"></activity>
+        <activity android:name=".views.widgets.ContextActivity" />
+        <activity android:name=".views.charts.ChartsActivity" />
+        <activity android:name=".views.widgets.WidgetsActivity" />
+        <activity android:name=".views.widgets_self.WidgetsSelfActivity" />
+        <activity android:name=".sdk_thirdparty.LoginActivity" />
+        <activity android:name=".frames.wireless_iot.WirelessIotActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.HttpRequestActivity" />
+        <activity android:name=".apis.database_.DBActivity" />
+        <activity android:name=".apis.threads.ThreadsActivity" />
+        <activity android:name=".apis.ipc.IpcActivity"></activity>
     </application>
 
 </manifest>

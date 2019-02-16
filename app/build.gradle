@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.example.wood121.viewdemos"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -55,13 +55,13 @@ dependencies {
 //    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
 //    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
     implementation 'com.github.jokermonn:permissions4m:2.1.2-lib'
-    implementation 'com.github.bumptech.glide:glide:4.0.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
 //    testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'

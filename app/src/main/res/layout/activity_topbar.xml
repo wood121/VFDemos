@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.wood121.viewdemos.view_part.TopbarActivity">
+    tools:context="com.example.wood121.viewdemos.views.widgets_self.TopbarActivity">
 
     <!--箭头，文字，图片-->
-    <com.example.wood121.viewdemos.widget.TopBar
+    <com.example.wood121.viewdemos.views.widgets_self.widget.TopBar
         android:id="@+id/tb_view1"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -16,7 +16,7 @@
         top:midText="标题1"
         top:rightTextDrawable="@mipmap/ic_launcher" />
 
-    <com.example.wood121.viewdemos.widget.TopBar
+    <com.example.wood121.viewdemos.views.widgets_self.widget.TopBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -24,7 +24,7 @@
         top:rightBtnVisible="false"
         top:title_backgroud_color="@color/colorRed" />
 
-    <com.example.wood121.viewdemos.widget.TopBar
+    <com.example.wood121.viewdemos.views.widgets_self.widget.TopBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"

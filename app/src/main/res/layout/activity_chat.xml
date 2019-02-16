@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.wood121.viewdemos.frame_part.ChatActivity" >
+    tools:context="com.example.wood121.viewdemos.frames.net.multicast.ChatActivity" >
 
     <ScrollView
         android:layout_width="match_parent"

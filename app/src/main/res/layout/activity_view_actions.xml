@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view_part.ViewActionsActivity">
+    tools:context=".views.widgets_self.ViewActionsActivity">
 
     <Button
         android:id="@+id/btn_oo"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="onTouch || onClick" />
 
-    <com.example.wood121.viewdemos.widget.MyLayout
+    <com.example.wood121.viewdemos.views.widgets_self.widget.MyLayout
         android:id="@+id/mylayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="btn_two" />
 
-    </com.example.wood121.viewdemos.widget.MyLayout>
+    </com.example.wood121.viewdemos.views.widgets_self.widget.MyLayout>
 
     <Button
         android:id="@+id/btn_rec"

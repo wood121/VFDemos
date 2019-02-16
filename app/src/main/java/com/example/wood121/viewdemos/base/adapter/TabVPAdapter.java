@@ -5,12 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
-import com.example.wood121.viewdemos.base.fragment.APIFragment;
-import com.example.wood121.viewdemos.base.fragment.FrameFragment;
-import com.example.wood121.viewdemos.base.fragment.JNIFragment;
-import com.example.wood121.viewdemos.base.fragment.MathFragment;
-import com.example.wood121.viewdemos.base.fragment.SDKFragment;
-import com.example.wood121.viewdemos.base.fragment.ViewFragment;
+import com.example.wood121.viewdemos.apis.APIFragment;
+import com.example.wood121.viewdemos.frames.FrameFragment;
+import com.example.wood121.viewdemos.base.fragments.JNIFragment;
+import com.example.wood121.viewdemos.math.MathFragment;
+import com.example.wood121.viewdemos.sdk_thirdparty.SDKFragment;
+import com.example.wood121.viewdemos.views.ViewFragment;
 
 import java.util.ArrayList;
 

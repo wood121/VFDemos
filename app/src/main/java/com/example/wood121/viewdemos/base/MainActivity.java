@@ -8,7 +8,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.widget.TopBar;
+import com.example.wood121.viewdemos.views.widgets_self.widget.TopBar;
 
 import butterknife.BindView;
 

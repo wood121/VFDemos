@@ -1,8 +1,8 @@
 package com.example.wood121.viewdemos.util;
 
-import com.example.wood121.viewdemos.sdk_part.bean.MoneyPersonBean;
-import com.example.wood121.viewdemos.frame_part.bean.Tab0206Bean;
-import com.example.wood121.viewdemos.frame_part.bean.Tab0208Bean;
+import com.example.wood121.viewdemos.sdk_thirdparty.bean.MoneyPersonBean;
+import com.example.wood121.viewdemos.frames.bean.Tab0206Bean;
+import com.example.wood121.viewdemos.frames.bean.Tab0208Bean;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -71,8 +71,7 @@ public class ExceUtilHelper {
                 originList.add(moneyPersonBean);
             }
             workbook.close();
-
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
         return originList;
@@ -140,7 +139,7 @@ public class ExceUtilHelper {
             }
             workbook.close();
 
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
         return tab0206List;
@@ -215,7 +214,7 @@ public class ExceUtilHelper {
                 tab0208List.add(tab0208Bean);
             }
             workbook.close();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
         return tab0208List;
     }

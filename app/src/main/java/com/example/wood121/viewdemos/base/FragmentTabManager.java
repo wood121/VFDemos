@@ -5,10 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.base.fragment.APIViewFragment;
-import com.example.wood121.viewdemos.base.fragment.FrameSDKFragment;
-import com.example.wood121.viewdemos.base.fragment.MathJniFragment;
-import com.example.wood121.viewdemos.base.fragment.MineFragment;
+import com.example.wood121.viewdemos.base.fragments.APIViewFragment;
+import com.example.wood121.viewdemos.base.fragments.FrameSDKFragment;
+import com.example.wood121.viewdemos.base.fragments.MathJniFragment;
+import com.example.wood121.viewdemos.mine.MineFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.concurrent.ConcurrentHashMap;

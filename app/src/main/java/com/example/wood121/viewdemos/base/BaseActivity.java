@@ -1,6 +1,7 @@
 package com.example.wood121.viewdemos.base;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -30,7 +31,6 @@ import okhttp3.OkHttpClient;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-
     private StyleManager styleManager;
     private Unbinder unbinder;
     private static final int PERMISSION_REQUEST_CODE = 0;
@@ -60,8 +60,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(initPageLayoutId());
         // 初始化页面控件点击
         initPageViewListener();
-
-        new OkHttpClient.Builder().build();
     }
 
     //检测所需权限是否满足
@@ -90,7 +88,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 needRequestPermissionList.add(perm);
             }
         }
-
 
         return needRequestPermissionList;
     }
@@ -170,6 +167,72 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract int initPageLayoutId();
 
     protected abstract void initPageViewListener();
+
+    /**
+     * 界面跳转
+     *
+     * @param clazz 目标Activity
+     */
+    protected void readyGo(Class<?> clazz) {
+        readyGo(clazz, null);
+    }
+
+    /**
+     * 跳转界面，  传参
+     *
+     * @param clazz  目标Activity
+     * @param bundle 数据
+     */
+    protected void readyGo(Class<?> clazz, Bundle bundle) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle)
+            intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转界面并关闭当前界面
+     *
+     * @param clazz 目标Activity
+     */
+    protected void readyGoThenKill(Class<?> clazz) {
+        readyGoThenKill(clazz, null);
+    }
+
+    /**
+     * @param clazz  目标Activity
+     * @param bundle 数据
+     */
+    protected void readyGoThenKill(Class<?> clazz, Bundle bundle) {
+        readyGo(clazz, bundle);
+        finish();
+    }
+
+    /**
+     * startActivityForResult
+     *
+     * @param clazz       目标Activity
+     * @param requestCode 发送判断值
+     */
+    protected void readyGoForResult(Class<?> clazz, int requestCode) {
+        Intent intent = new Intent(this, clazz);
+        startActivityForResult(intent, requestCode);
+    }
+
+    /**
+     * startActivityForResult with bundle
+     *
+     * @param clazz       目标Activity
+     * @param requestCode 发送判断值
+     * @param bundle      数据
+     */
+    protected void readyGoForResult(Class<?> clazz, int requestCode, Bundle bundle) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        startActivityForResult(intent, requestCode);
+    }
 
     @Override
     protected void onDestroy() {

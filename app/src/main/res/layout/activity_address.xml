@@ -21,7 +21,7 @@
             android:gravity="center"
             android:text="北京市" />
 
-        <com.example.wood121.viewdemos.widget.ClearEditText
+        <com.example.wood121.viewdemos.sdk_thirdparty.map.ClearEditText
             android:id="@+id/clear_et"
             android:layout_width="0dp"
             android:layout_height="@dimen/margin_33"

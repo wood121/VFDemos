@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.wood121.viewdemos.api_part.BlueToothActivity">
+    tools:context="com.example.wood121.viewdemos.frames.wireless_iot.BlueToothActivity">
 
     <Button
         android:id="@+id/tv_ble"
