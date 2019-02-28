@@ -222,7 +222,6 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="t0cfQ7b2T6d5ENv4ozcUlkytViKCy2G5" />
-
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5bee8501f1f5567da000020c" />
@@ -271,7 +270,7 @@
         <activity android:name=".views.charts.ChartsActivity" />
         <activity android:name=".views.widgets.WidgetsActivity" />
         <activity android:name=".views.widgets_self.WidgetsSelfActivity" />
-        <activity android:name=".sdk_thirdparty.LoginActivity" />
+        <activity android:name=".sdk_thirdparty.login_share.LoginActivity" />
         <activity android:name=".frames.wireless_iot.WirelessIotActivity" />
         <activity android:name=".frames.net.rxjava_retrofit_okhttp.HttpRequestActivity" />
         <activity android:name=".apis.database_.DBActivity" />
@@ -280,7 +279,56 @@
         <activity android:name=".apis.audio_video.AVActivity" />
         <activity android:name=".apis.bitmaps.BitmapsActivity" />
         <activity android:name=".apis.bitmaps.TakePhotoActivity" />
-        <activity android:name=".views.webview.WebViewActivity"></activity>
+        <activity android:name=".views.webview.WebViewActivity" />
+
+        <!-- 新浪 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- qq -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".sdk_thirdparty.login_share.HomeActivity"></activity>
     </application>
 
 </manifest>

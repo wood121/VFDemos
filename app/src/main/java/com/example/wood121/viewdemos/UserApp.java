@@ -1,7 +1,7 @@
 package com.example.wood121.viewdemos;
 
-import android.app.Application;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.util.MyCrashHandler;
@@ -9,6 +9,7 @@ import com.meituan.android.walle.WalleChannelReader;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.umeng.commonsdk.UMConfigure;
+import com.umeng.socialize.PlatformConfig;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -19,10 +20,19 @@ import cn.jpush.android.api.JPushInterface;
  * Created by wood121 on 2018/3/16.
  */
 
-public class UserApp extends Application {
+public class UserApp extends MultiDexApplication {
 
-    private RefWatcher refWatcher;
     private static UserApp myApplication;
+    //201902281515--微信的还需要审核
+    private static final String mWXAppID = "wxd9ce22c68070fc42";
+    private static final String mWXAppSecret = "f03d3d7d1374cb7eac942537922a98cc";
+    //qq的还未通过开发者认证
+    private static final String mQQAppID = "1105974383";
+    private static final String mQQAppSecret = "Ck6IhpKVd2zUU8NC";
+    //微博的还未通过开发者认证
+    private static final String mWBAppID = "2753635618";
+    private static final String mWBAppSecret = "bf021ea3a1688db5cd18c0eb47e93801";
+
 
     public static UserApp getAppContext() {
         return myApplication;
@@ -42,7 +52,7 @@ public class UserApp extends Application {
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return;
         }
-        refWatcher = LeakCanary.install(this);
+        RefWatcher refWatcher = LeakCanary.install(this);
 
         //极光推送
         JPushInterface.setDebugMode(true);
@@ -55,5 +65,13 @@ public class UserApp extends Application {
         String channel = WalleChannelReader.getChannel(this.getApplicationContext());
         Log.i("yicooll", "" + "*****************************" + channel);
         UMConfigure.init(this, "5bee8501f1f5567da000020c", channel, UMConfigure.DEVICE_TYPE_PHONE, "");
+        //微信
+        PlatformConfig.setWeixin(mWXAppID, mWXAppSecret);
+        //新浪微博
+        PlatformConfig.setSinaWeibo(mWBAppID, mWBAppSecret, "http://sns.whalecloud.com");
+        //qq
+        PlatformConfig.setQQZone(mQQAppID, mQQAppSecret);
+        //支付宝
+        PlatformConfig.setAlipay("2015111700822536");
     }
 }

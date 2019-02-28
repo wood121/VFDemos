@@ -3,6 +3,7 @@ package com.example.wood121.viewdemos.sdk_thirdparty;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.fragments.BaseTabContentFragment;
 import com.example.wood121.viewdemos.base.bean.ModelRecyclerBean;
+import com.example.wood121.viewdemos.sdk_thirdparty.login_share.LoginActivity;
 import com.example.wood121.viewdemos.sdk_thirdparty.map.MapActivity;
 
 /**
@@ -36,7 +37,7 @@ public class SDKFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("OCR", R.mipmap.circle_captcha, LoginActivity.class));
         mData.add(new ModelRecyclerBean("极光推送", R.mipmap.circle_captcha, LoginActivity.class));
         mData.add(new ModelRecyclerBean("Bugly", R.mipmap.circle_captcha, LoginActivity.class));
-        mData.add(new ModelRecyclerBean("友盟统计", R.mipmap.circle_captcha, LoginActivity.class));
+        mData.add(new ModelRecyclerBean("友盟登录与分享", R.mipmap.circle_captcha, LoginActivity.class));
         mData.add(new ModelRecyclerBean("Excel比对", R.mipmap.circle_captcha, ExcelContentActivity.class));
     }
 
