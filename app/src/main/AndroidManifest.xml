@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.wood121.viewdemos">
+    package="com.example.wood121.viewdemos"
+    tools:ignore="ExtraText">
 
     <permission
         android:name="com.example.wood121.viewdemos.permission.JPUSH_MESSAGE"
@@ -10,24 +11,9 @@
     <!-- Required  一些系统要求的权限，如访问网络等 -->
     <uses-permission android:name="com.example.wood121.viewdemos.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.WRITE_SETTINGS"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -44,8 +30,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     //获取设备网络状态，禁用后无法获取网络状态
     <uses-permission android:name="android.permission.INTERNET" />
-    //网络权限，当禁用后，无法进行检索等相关业务
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     //读取设备硬件信息，统计数据
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     //读取系统信息，包含系统版本等信息，用作统计
@@ -72,13 +56,15 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name=".MyApplication"
-        android:allowBackup="true"
+        android:name=".UserApp"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="icon,label,theme,allowBackup">
         <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -93,6 +79,20 @@
         <activity android:name=".views.widgets_self.TopbarActivity" />
         <activity android:name=".views.widgets.RecyclerView.RecActivity" />
         <activity android:name=".views.widgets_self.ArcViewActivity" />
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.wood121.viewdemos.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
         <activity
             android:name=".apis.audio_video.VideoActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -222,12 +222,13 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="t0cfQ7b2T6d5ENv4ozcUlkytViKCy2G5" />
+
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5bee8501f1f5567da000020c" />
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="market_xiaomi" />
+            android:value="${UMENG_CHANNEL_VALUE}" />
 
         <service
             android:name="com.baidu.location.f"
@@ -275,7 +276,11 @@
         <activity android:name=".frames.net.rxjava_retrofit_okhttp.HttpRequestActivity" />
         <activity android:name=".apis.database_.DBActivity" />
         <activity android:name=".apis.threads.ThreadsActivity" />
-        <activity android:name=".apis.ipc.IpcActivity"></activity>
+        <activity android:name=".apis.ipc.IpcActivity" />
+        <activity android:name=".apis.audio_video.AVActivity" />
+        <activity android:name=".apis.bitmaps.BitmapsActivity" />
+        <activity android:name=".apis.bitmaps.TakePhotoActivity" />
+        <activity android:name=".views.webview.WebViewActivity"></activity>
     </application>
 
 </manifest>

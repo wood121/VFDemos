@@ -5,6 +5,7 @@ import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.util.MyCrashHandler;
+import com.meituan.android.walle.WalleChannelReader;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.umeng.commonsdk.UMConfigure;
@@ -18,12 +19,12 @@ import cn.jpush.android.api.JPushInterface;
  * Created by wood121 on 2018/3/16.
  */
 
-public class MyApplication extends Application {
+public class UserApp extends Application {
 
     private RefWatcher refWatcher;
-    private static MyApplication myApplication;
+    private static UserApp myApplication;
 
-    public static MyApplication getAppContext() {
+    public static UserApp getAppContext() {
         return myApplication;
     }
 
@@ -46,8 +47,13 @@ public class MyApplication extends Application {
         //极光推送
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
-        //友盟统计
-        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, null);
 
+        //友盟统计
+//        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, null);
+
+        //友盟初始化
+        String channel = WalleChannelReader.getChannel(this.getApplicationContext());
+        Log.i("yicooll", "" + "*****************************" + channel);
+        UMConfigure.init(this, "5bee8501f1f5567da000020c", channel, UMConfigure.DEVICE_TYPE_PHONE, "");
     }
 }

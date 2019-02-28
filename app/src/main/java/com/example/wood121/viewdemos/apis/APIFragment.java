@@ -1,7 +1,8 @@
 package com.example.wood121.viewdemos.apis;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.apis.audio_video.VideoActivity;
+import com.example.wood121.viewdemos.apis.audio_video.AVActivity;
+import com.example.wood121.viewdemos.apis.bitmaps.BitmapsActivity;
 import com.example.wood121.viewdemos.apis.data_storage.DataStorageActivity;
 import com.example.wood121.viewdemos.apis.database_.DBActivity;
 import com.example.wood121.viewdemos.apis.ipc.IpcActivity;
@@ -35,7 +36,8 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("数据库", R.mipmap.circle_seek, DBActivity.class));
         mData.add(new ModelRecyclerBean("进程通信", R.mipmap.circle_seek, IpcActivity.class));
         mData.add(new ModelRecyclerBean("多线程", R.mipmap.circle_seek, ThreadsActivity.class));
-        mData.add(new ModelRecyclerBean("MediaPlayer", R.mipmap.circle_seek, VideoActivity.class));
+        mData.add(new ModelRecyclerBean("图片处理", R.mipmap.circle_seek, BitmapsActivity.class));
+        mData.add(new ModelRecyclerBean("音视频", R.mipmap.circle_seek, AVActivity.class));
         mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_seek, LamadaActivity.class));
     }
 }

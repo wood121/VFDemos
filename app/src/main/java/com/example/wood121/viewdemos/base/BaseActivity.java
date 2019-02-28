@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.LayoutRes;
@@ -18,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.StyleManager;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected String[] mNeedPermissions = {
             // 这里填你需要申请的权限
             // 如：读取sd卡
+            Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
     };
@@ -71,6 +74,17 @@ public abstract class BaseActivity extends AppCompatActivity {
                     needRequestPermissionList.toArray(
                             new String[needRequestPermissionList.size()]),
                     PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    /**
+     * 判断是否是6.0以上
+     */
+    protected boolean isMore23() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -232,6 +246,18 @@ public abstract class BaseActivity extends AppCompatActivity {
             intent.putExtras(bundle);
         }
         startActivityForResult(intent, requestCode);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     @Override

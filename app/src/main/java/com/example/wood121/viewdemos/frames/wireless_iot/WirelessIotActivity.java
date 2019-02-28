@@ -6,9 +6,10 @@ import android.view.View;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
 
+/**
+ * 无线网络与物联网：wifi、蓝牙、zigbee
+ */
 public class WirelessIotActivity extends BaseActivity implements View.OnClickListener {
-
-
     @Override
     protected void initData(Bundle savedInstanceState) {
 

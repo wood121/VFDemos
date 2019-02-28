@@ -21,7 +21,6 @@ public class AsynTaskDemoActivity extends AppCompatActivity {
 
     private class DownLoadFilesTask extends AsyncTask<URL, Integer, Long> {
 
-
         @Override
         protected Long doInBackground(URL... params) {
             int count = params.length;

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
-import com.example.wood121.viewdemos.MyApplication;
+import com.example.wood121.viewdemos.UserApp;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
 
@@ -34,7 +34,7 @@ public class ContextActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_toast:
-                ToastUtil.showToast(MyApplication.getAppContext(), "hahaha");
+                ToastUtil.showToast(UserApp.getAppContext(), "hahaha");
                 break;
             case R.id.btn_dialog:
                 AlertDialog dialog = new AlertDialog.Builder(this)
@@ -44,7 +44,7 @@ public class ContextActivity extends AppCompatActivity implements View.OnClickLi
                 dialog.show();
                 break;
             case R.id.btn_dialog_app:
-                AlertDialog dialog_app = new AlertDialog.Builder(MyApplication.getAppContext())
+                AlertDialog dialog_app = new AlertDialog.Builder(UserApp.getAppContext())
                         .setTitle("dialog_app")
                         .setMessage("dialog_app")
                         .create();
