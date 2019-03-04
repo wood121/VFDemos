@@ -76,6 +76,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 platforms.add(e.toSnsPlatform());
             }
         }
+
     }
 
     UMAuthListener authListener = new UMAuthListener() {
