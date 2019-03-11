@@ -1,0 +1,33 @@
+project.task("showConfig") {
+    doLast {
+        println("$project.name:脚本插件,config.gradle被引用方式")
+    }
+}
+
+//提交Maven的Task任务，此Task将提交工程中Setting.gradle中申明的所有library工程，执行此Task一定要检查library版本和依赖的正确性，要很慎重!!!
+//task upload() {
+//    Set<Project> uploadProjects = new HashSet<>();
+//    logger.lifecycle('【**下面是需要提交的项目列表,请仔细检查**】')
+//    getSubprojects().each {
+//        boolean isExists = it.getBuildFile().exists()
+//        if (isExists) {
+//            boolean isLibrary = it.getBuildFile().getText().contains('com.android.library')
+//            if (isLibrary) {
+//                boolean noSubProject = it.getSubprojects().isEmpty()
+//                if (noSubProject) {
+//                    String pro = rootProject.ext.dependencies[it.name.toLowerCase()]
+//                    if (pro != null) {
+//                        logger.lifecycle('***正常:' + rootProject.ext.dependencies[it.name.toLowerCase()])
+//                        uploadProjects.add(it)
+//                    } else {
+//                        logger.log(LogLevel.ERROR, '***警告:' + it.name + '项目未配置版本控制，此项目提交未成功，请配置版本控制再提交！！！')
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    dependsOn {
+//        uploadProjects.uploadArchives
+//    }
+//}
+

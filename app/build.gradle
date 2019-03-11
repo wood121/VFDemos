@@ -139,3 +139,93 @@ walle {
     channelFile = new File("${project.getProjectDir()}/channel")//渠道配置文件的位置
     //configFile = new File("${project.getProjectDir()}/config.json")
 }
+
+/** ***********************以下为gradle -task练习********************** **/
+/**
+ * 安装包、并启动：必须放置在app.gradlew中才能有效执行
+ * adb命令行方式：
+ * adb install -r app-debug.apk
+ * adb shell am start -n 包名/首 Activity
+ *
+ * gralde自动化调用命令行:
+ * dependsOn：因为安装前提必须有个apk，所以需要进行依赖
+ * workingDir为工作环境，commandLine需要命令行执行的命令（参数为list）
+ */
+task installAndRun(dependsOn: 'assembleDebug') {
+    doFirst {
+        exec {
+            workingDir("${buildDir} /outputs/apk/debug")
+            commandLine 'adb', 'install', '-r', 'app-debug.apk'
+        }
+        exec {
+            def path = "${buildDir}/intermediates/manifests/full/debug/AndroidManifest.xml"
+            def parser = new XmlParser(false, false).parse(new File(path))
+            parser.application.activity.each { activity ->
+//                activity.'intent-filter'.each { filter ->
+//                    if (filter.action.@"android:name".contains("android.intent.action.MAIN")) {
+//                        def targetActivity = activity.@"android:name"
+//                        commandLine 'adb', 'shell', 'am', 'start', '-n', "${android.defaultConfig.applicationId}/${targetActivity}"
+//                        println("马上要到commandLine")
+//                    }
+//                }
+
+                if (activity.@"android:name".contains("MainActivity")) {
+                    def targetActivity = activity.@"android:name"
+                    commandLine 'adb', 'shell', 'am', 'start', '-n', "${android.defaultConfig.applicationId}/${targetActivity}"
+                    println("马上要到commandLine")
+                }
+            }
+        }
+    }
+}
+
+task hookAssets {
+    afterEvaluate {
+        tasks.findByName("packageDebug").doFirst { task ->
+            copy {
+                from "${projectDir.absolutePath}/test.png"
+                into "${task.assets.asPath}"
+            }
+        }
+    }
+}
+
+/** ***********************以下为gradle plugin练习********************** **/
+/**
+ *  脚本插件，创建config.gradle，然后其它gradle文件进行引用
+ */
+apply from: "../config.gradle"
+
+/**
+ * gradle脚本中直接实现plugin接口，  【第一种对象插件的写法】 官方demo
+ */
+//apply plugin: GreetingPlugin
+
+//class GreetingPlugin implements Plugin<Project> {
+//
+//    @Override
+//    void apply(Project target) {
+//        def extension = project.extensions.create('greeting', GreetingPluginExtension)
+//        target.task('hello') {
+//            doLast {
+////            println('hello from the GreetingPlugin')
+//                println extension.message
+//            }
+//        }
+//    }
+//}
+
+/**
+ * gradle脚本做可配置的扩展
+ */
+
+
+/**
+ * 使用本项目的module创建plugin（本项目内module通用的插件），
+ * 也可升级为项目通用的（上传到Maven仓库）
+ */
+apply plugin: TestPlugin
+testExtension {
+    message 'hello gradle,我是wood121啊'
+}
+

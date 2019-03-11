@@ -49,10 +49,10 @@ public class UserApp extends MultiDexApplication {
         //65534个方法类的
         MultiDex.install(this);
         //内存泄漏分析
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            return;
-        }
-        RefWatcher refWatcher = LeakCanary.install(this);
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            return;
+//        }
+//        RefWatcher refWatcher = LeakCanary.install(this);
 
         //极光推送
         JPushInterface.setDebugMode(true);

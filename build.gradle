@@ -11,6 +11,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.1.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.meituan.android.walle:plugin:1.1.6'
+        classpath 'com.novoda:bintray-release:0.5.0'
     }
 }
 
@@ -26,3 +27,109 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+/** ***********************以下为gradle 练习********************** **/
+
+/**
+ * 编译、运行groovy语法
+ */
+task(yugangshuo).doLast {
+    println "start execute yuangshuo"
+    haveFun()
+}
+
+def haveFun() {
+    println "have fun!"
+    1
+
+    Book book = new Book()
+    book.with {
+        name = "wood121"
+        gender = "男"
+        age = 12
+    }
+//    println(book.getName() + "," + book.getGender() + "," + book.getAge())
+    println(book.name + "," + book.gender + "," + book.age)
+
+    def file1 = new File("a.txt")
+    def file2 = new File("a.txt")
+    assert file1 == file2
+    assert !file1.is(file2)
+}
+
+class Book {
+    public String name
+
+    public String gender
+
+    public String age
+}
+
+/**
+ * Task定义,四种创建方式,第四种name的方式有问题？
+ */
+task taskNothing
+
+task taskWithA {
+    println("taskWithA")
+}
+
+task(taskWithB) {
+    println("taskWithB")
+}
+
+//task(name: taskWithC) {
+//    println("taskWithC")
+//}
+
+/**
+ * Task定义，4种之后的扩展
+ */
+//task(name: actionTest, action: new Action<Task>() {
+//    @Override
+//    void execute(Task task) {
+//        println 'hello'
+//    }
+//})
+
+/**
+ * task内容格式，大部分的内容要写在doFirst{}/doLast{}中，内容结果如下所示：
+ *
+ * > Configure project :
+ taskWithA
+ taskWithB
+ Configuration 阶段和 Execution 阶段皆会执行
+
+ * > Task :myTask
+ before execute myTask
+ after execute myTask
+ */
+task myTask {
+    println 'Configuration 阶段和 Execution 阶段皆会执行'
+
+    doFirst {
+        println "before execute myTask"
+    }
+
+    doLast {
+        println "after execute myTask"
+    }
+}
+
+/**
+ * task被支持的Task类的写法
+ */
+abstract class GreetingTask extends DefaultTask {
+    String greeting = 'hello from GreetingTask'
+
+    @TaskAction
+    def greet() {
+        println greeting
+    }
+}
+
+//task(name: hello, type: GreetingTask)
+//task(name: greeting, type: GreetingTask) {
+//    greeting = 'greetings from GreetingTask'
+//}
+
