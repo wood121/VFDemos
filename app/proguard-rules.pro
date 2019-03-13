@@ -297,7 +297,7 @@ public static final int *;
 }
 
 #==========AndFix==========
--keep class * extends java.lang.annotation.Annotation
+-keep class * implements java.lang.annotation.Annotation
 -keepclasseswithmembernames class * {
     native <methods>;
 }

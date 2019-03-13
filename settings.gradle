@@ -1,1 +1,1 @@
-include ':app', ':buildsrc', ':buildSrc', ':cooker-plugin'
+include ':app', ':buildsrc',':localrepo'

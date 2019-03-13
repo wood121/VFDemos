@@ -91,6 +91,16 @@ android {
     configurations {
         all*.exclude group: 'com.squareup.okhttp3', module: 'okhttp'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -105,8 +115,6 @@ dependencies {
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'fm.jiecao:jiecaovideoplayer:5.5.2'
-//    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
-//    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
     implementation 'com.github.jokermonn:permissions4m:2.1.2-lib'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
@@ -123,24 +131,81 @@ dependencies {
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
-//    implementation 'com.anggrayudi:android-hidden-api:28.1'
-
     implementation 'com.github.lovetuzitong:MultiImageSelector:1.2'
-
     implementation 'com.meituan.android.walle:library:1.1.6'
+
+    //引用module中的类库
+//    implementation project(':localrepo')
+    //引用locaol maven的library
+//    implementation 'com.wood121:viewdemos:1.0'
 }
 
-walle {
-    // 指定渠道包的输出路径
-    apkOutputFolder = new File("${project.buildDir}/outputs/channels")
-    // 定制渠道包的APK的文件名称
-    apkFileNameFormat = 'VFDemos-${channel}-${buildType}-v${versionName}.apk'
-    //configFile与channelFile两者必须存在一个，否则无法生成渠道包。两者都存在时优先执行configFile
-    channelFile = new File("${project.getProjectDir()}/channel")//渠道配置文件的位置
-    //configFile = new File("${project.getProjectDir()}/config.json")
-}
+//walle {
+//    // 指定渠道包的输出路径
+//    apkOutputFolder = new File("${project.buildDir}/outputs/channels")
+//    // 定制渠道包的APK的文件名称
+//    apkFileNameFormat = 'VFDemos-${channel}-${buildType}-v${versionName}.apk'
+//    //configFile与channelFile两者必须存在一个，否则无法生成渠道包。两者都存在时优先执行configFile
+//    channelFile = new File("${project.getProjectDir()}/channel")//渠道配置文件的位置
+//    //configFile = new File("${project.getProjectDir()}/config.json")
+//
+//    configFile
+//}
 
 /** ***********************以下为gradle -task练习********************** **/
+/**
+ * Task定义声明,四种创建方式,第四种name的方式有问题？
+ */
+task taskNothing
+
+task taskWithA {
+    println("taskWithA")
+}
+
+task(taskWithB) {
+    println("taskWithB")
+}
+
+//task(name: taskWithC) {
+//    println("taskWithC")
+//}
+
+/**
+ * task内容格式，大部分的内容要写在doFirst{}/doLast{}中，内容结果如下所示：
+ *
+ * > Configure project :
+ taskWithA
+ taskWithB
+ Configuration 阶段和 Execution 阶段皆会执行
+
+ * > Task :myTask
+ before execute myTask
+ after execute myTask
+ */
+task myTask {
+    println 'Configuration 阶段和 Execution 阶段皆会执行'
+
+    doFirst {
+        println "before execute myTask"
+    }
+
+    doLast {
+        println "after execute myTask"
+    }
+}
+
+/**
+ * task被支持的Task类的写法
+ */
+//class GreetingTask extends DefaultTask {
+//    String greeting = 'hello from GreetingTask'
+//
+//    @TaskAction
+//    def greet() {
+//        println greeting
+//    }
+//}
+
 /**
  * 安装包、并启动：必须放置在app.gradlew中才能有效执行
  * adb命令行方式：
@@ -184,7 +249,8 @@ task hookAssets {
         tasks.findByName("packageDebug").doFirst { task ->
             copy {
                 from "${projectDir.absolutePath}/test.png"
-                into "${task.assets.asPath}"
+                into "${buildDir}/intermediates/assets/debug"
+                println('执行到这了')
             }
         }
     }
@@ -218,7 +284,6 @@ apply from: "../config.gradle"
 /**
  * gradle脚本做可配置的扩展
  */
-
 
 /**
  * 使用本项目的module创建plugin（本项目内module通用的插件），

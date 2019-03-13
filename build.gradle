@@ -1,5 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+println "Configure for $project.name" //遍历子Project，project变量对应每个子Project
 
+//buildscript里面配置的是gradle构建项目时需要的插件的maven仓库。
 buildscript {
     repositories {
 //        jcenter()
@@ -9,18 +11,37 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
         classpath 'com.meituan.android.walle:plugin:1.1.6'
-        classpath 'com.novoda:bintray-release:0.5.0'
+        classpath 'com.novoda:bintray-release:0.9'
+
+        //jcenter的插件
+        classpath 'com.novoda:bintray-release:0.9'
     }
 }
 
+//而allprojects中是项目依赖库的仓库配置
 allprojects {
     repositories {
-        google()
 //        jcenter()
+
+        google()
         maven { url "https://jitpack.io" }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        // 添加本地maven地址配置
+//        maven {
+////            url uri("${rootProject.projectDir}/repo")
+//            url 'file://E:/github/repo_wood'
+//        }
+    }
+
+    //:app:mockableAndroidJar
+    gradle.taskGraph.whenReady {
+        tasks.each { task ->
+            if (task.name.equals('mockableAndroidJar')) {
+                task.enabled = false
+            }
+        }
     }
 }
 
@@ -28,7 +49,40 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-/** ***********************以下为gradle 练习********************** **/
+/** ***********************以下为groovy 练习********************** **/
+/**
+ * 一些前提知识
+ * 可以不写分号、变量定义、函数定义/调用、单引号/双引号、
+ */
+def wood = 1
+int woodA = 2
+
+def nonReturnTypeFuc() {
+    last_line
+}
+
+String hasReturnTypeFuc() {
+    return "i am groovy"
+}
+
+def hah = 1
+def thisWood = 'hah'
+def thisWood121 = "$hah"
+
+/**
+ * 这句话在configure project的时候执行
+ * 如果在app.gradle中，则是configure app的时候就执行
+ */
+def iamList = [1, 2, 3, 4, 5]  //定义一个List变量
+iamList.each { //调用它的each函数，只要传入一个Closure就可以了。
+    println '遍历一个iamList集合'
+    println it
+}
+
+println "In posdevice, gradle id is " + gradle.hashCode()
+println "Home Dir:" + gradle.gradleHomeDir
+println "User Home Dir:" + gradle.gradleUserHomeDir
+println "Parent: " + gradle.parent
 
 /**
  * 编译、运行groovy语法
@@ -65,71 +119,4 @@ class Book {
     public String age
 }
 
-/**
- * Task定义,四种创建方式,第四种name的方式有问题？
- */
-task taskNothing
-
-task taskWithA {
-    println("taskWithA")
-}
-
-task(taskWithB) {
-    println("taskWithB")
-}
-
-//task(name: taskWithC) {
-//    println("taskWithC")
-//}
-
-/**
- * Task定义，4种之后的扩展
- */
-//task(name: actionTest, action: new Action<Task>() {
-//    @Override
-//    void execute(Task task) {
-//        println 'hello'
-//    }
-//})
-
-/**
- * task内容格式，大部分的内容要写在doFirst{}/doLast{}中，内容结果如下所示：
- *
- * > Configure project :
- taskWithA
- taskWithB
- Configuration 阶段和 Execution 阶段皆会执行
-
- * > Task :myTask
- before execute myTask
- after execute myTask
- */
-task myTask {
-    println 'Configuration 阶段和 Execution 阶段皆会执行'
-
-    doFirst {
-        println "before execute myTask"
-    }
-
-    doLast {
-        println "after execute myTask"
-    }
-}
-
-/**
- * task被支持的Task类的写法
- */
-abstract class GreetingTask extends DefaultTask {
-    String greeting = 'hello from GreetingTask'
-
-    @TaskAction
-    def greet() {
-        println greeting
-    }
-}
-
-//task(name: hello, type: GreetingTask)
-//task(name: greeting, type: GreetingTask) {
-//    greeting = 'greetings from GreetingTask'
-//}
 

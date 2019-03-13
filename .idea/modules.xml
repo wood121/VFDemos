@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VFDemos.iml" filepath="$PROJECT_DIR$/VFDemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cooker-plugin/cooker-plugin.iml" filepath="$PROJECT_DIR$/cooker-plugin/cooker-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildsrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildsrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/localrepo/localrepo.iml" filepath="$PROJECT_DIR$/localrepo/localrepo.iml" />
     </modules>
   </component>
 </project>

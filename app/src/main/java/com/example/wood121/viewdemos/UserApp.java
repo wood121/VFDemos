@@ -6,8 +6,6 @@ import android.util.Log;
 
 import com.example.wood121.viewdemos.util.MyCrashHandler;
 import com.meituan.android.walle.WalleChannelReader;
-import com.squareup.leakcanary.LeakCanary;
-import com.squareup.leakcanary.RefWatcher;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
 
@@ -73,5 +71,7 @@ public class UserApp extends MultiDexApplication {
         PlatformConfig.setQQZone(mQQAppID, mQQAppSecret);
         //支付宝
         PlatformConfig.setAlipay("2015111700822536");
+
+//        WoodUtil.sayHello();
     }
 }
