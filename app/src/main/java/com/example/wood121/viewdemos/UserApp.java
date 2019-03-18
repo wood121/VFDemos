@@ -4,6 +4,7 @@ import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.wood121.viewdemos.util.MyCrashHandler;
 import com.meituan.android.walle.WalleChannelReader;
 import com.umeng.commonsdk.UMConfigure;
@@ -35,6 +36,8 @@ public class UserApp extends MultiDexApplication {
     public static UserApp getAppContext() {
         return myApplication;
     }
+
+    private static final boolean isDebug = true;
 
     @Override
     public void onCreate() {
@@ -73,5 +76,17 @@ public class UserApp extends MultiDexApplication {
         PlatformConfig.setAlipay("2015111700822536");
 
 //        WoodUtil.sayHello();
+
+        if (isDebug) {
+            ARouter.openLog();
+            ARouter.openDebug();
+        }
+        ARouter.init(this);
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        ARouter.getInstance().destroy();
     }
 }

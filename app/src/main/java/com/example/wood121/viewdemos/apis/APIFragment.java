@@ -39,6 +39,7 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("图片处理", R.mipmap.circle_seek, BitmapsActivity.class));
         mData.add(new ModelRecyclerBean("音视频", R.mipmap.circle_seek, AVActivity.class));
         mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_seek, LamadaActivity.class));
+        mData.add(new ModelRecyclerBean("intent", R.mipmap.circle_seek, IntentActivity.class));
 
     }
 }

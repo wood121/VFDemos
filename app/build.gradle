@@ -1,20 +1,20 @@
 apply plugin: 'com.android.application'
-apply plugin: 'walle'
-
+//apply plugin: 'walle'
+apply plugin: "com.dorongold.task-tree"
 def releaseTime() {
     return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        applicationId "com.example.wood121.viewdemos"
-        minSdkVersion 16
-        targetSdkVersion 27
-        versionCode 1
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
         flavorDimensions "versionCode"
-        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
 
@@ -24,7 +24,8 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                includeCompileClasspath = true
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+//                includeCompileClasspath = true
             }
         }
     }
@@ -123,9 +124,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
-    implementation 'com.jakewharton:butterknife:8.8.1'
 //    testCompile 'junit:junit:4.12'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
@@ -133,9 +132,11 @@ dependencies {
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
     implementation 'com.github.lovetuzitong:MultiImageSelector:1.2'
     implementation 'com.meituan.android.walle:library:1.1.6'
-
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     //引用module中的类库
-//    implementation project(':localrepo')
+    implementation project(':locamavenbase')
+    implementation project(':secondlibrary')
+
     //引用locaol maven的library
 //    implementation 'com.wood121:viewdemos:1.0'
 }
@@ -293,4 +294,3 @@ apply plugin: TestPlugin
 testExtension {
     message 'hello gradle,我是wood121啊'
 }
-

@@ -72,7 +72,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sdk_thirdparty.QrCodeActivity" />
+        <activity
+            android:name=".sdk_thirdparty.QrCodeActivity"
+            android:process=":haha" />
         <activity android:name=".views.widgets_self.CheckProcessActivity" />
         <activity android:name=".views.charts.BingActivity" />
         <activity android:name=".views.charts.ZheActivity" />
@@ -328,7 +330,9 @@
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name=".sdk_thirdparty.login_share.HomeActivity"/>
+        <activity android:name=".sdk_thirdparty.login_share.HomeActivity" />
+        <activity android:name=".apis.broadcast.LocalBroadcastActivity" />
+        <activity android:name=".apis.IntentActivity"></activity>
     </application>
 
 </manifest>

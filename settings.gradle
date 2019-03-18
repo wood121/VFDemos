@@ -1,1 +1,1 @@
-include ':app', ':buildsrc',':localrepo'
+include ':app', ':buildsrc', ':locamavenbase', ':secondlibrary'

@@ -1,4 +1,4 @@
-package com.example.loacarepo;
+package com.example.loacarepo.utils;
 
 public class WoodUtil {
 

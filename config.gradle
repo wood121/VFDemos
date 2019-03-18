@@ -4,6 +4,28 @@ project.task("showConfig") {
     }
 }
 
+/**
+ *   applicationId "com.example.wood121.viewdemos"
+ minSdkVersion 19
+ targetSdkVersion 28
+ versionCode 1
+ versionName "1.0"
+
+ compileSdkVersion 28
+ buildToolsVersion '27.0.3'
+ */
+ext {
+    android = [compileSdkVersion: 28,
+               buildToolsVersion: '27.0.3',
+               applicationId    : "com.example.wood121.viewdemos",
+               minSdkVersion    : 19,
+               targetSdkVersion : 28,
+               versionCode      : 1,
+               versionName      : "1.0"
+    ]
+
+}
+
 //提交Maven的Task任务，此Task将提交工程中Setting.gradle中申明的所有library工程，执行此Task一定要检查library版本和依赖的正确性，要很慎重!!!
 //task upload() {
 //    Set<Project> uploadProjects = new HashSet<>();
