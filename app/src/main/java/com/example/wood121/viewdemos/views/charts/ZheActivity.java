@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.views.charts;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.R;
@@ -9,6 +8,7 @@ import com.example.wood121.viewdemos.views.charts.widget.SimpleLineChart;
 
 import java.util.HashMap;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

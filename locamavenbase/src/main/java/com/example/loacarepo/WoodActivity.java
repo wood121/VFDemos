@@ -1,12 +1,13 @@
 package com.example.loacarepo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.loacarepo.utils.RouteConfigs;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 @Route(path = RouteConfigs.WOOD_ACTIVITY)
 public class WoodActivity extends AppCompatActivity implements View.OnClickListener {

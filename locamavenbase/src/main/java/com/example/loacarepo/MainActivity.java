@@ -1,9 +1,9 @@
 package com.example.loacarepo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

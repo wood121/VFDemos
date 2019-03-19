@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -13,6 +12,8 @@ import android.view.View;
 import android.view.WindowManager;
 
 import com.example.wood121.viewdemos.util.DisplayUtils;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by wood121 on 2017/10/16.

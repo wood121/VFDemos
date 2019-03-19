@@ -9,11 +9,12 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.apis.service.MessengerService;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MessengerActivity extends AppCompatActivity {
     private static final String TAG = MessengerActivity.class.getSimpleName() + " :";

@@ -1,9 +1,10 @@
 package com.example.wood121.viewdemos.views.widgets_self;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.wood121.viewdemos.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ArcViewActivity extends AppCompatActivity {
 

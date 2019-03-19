@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.sdk_thirdparty.map;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import com.baidu.mapapi.search.core.PoiInfo;
 import com.example.wood121.viewdemos.R;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by wood121 on 2018/2/23.

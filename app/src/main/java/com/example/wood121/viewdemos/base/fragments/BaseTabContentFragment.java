@@ -1,9 +1,6 @@
 package com.example.wood121.viewdemos.base.fragments;
 
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.wood121.viewdemos.base.BaseFragment;
@@ -17,6 +14,9 @@ import com.example.wood121.viewdemos.util.VFSkipActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 
 /**

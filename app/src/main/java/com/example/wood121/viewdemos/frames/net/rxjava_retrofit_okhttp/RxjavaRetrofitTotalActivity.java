@@ -1,9 +1,10 @@
 package com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.wood121.viewdemos.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RxjavaRetrofitTotalActivity extends AppCompatActivity {
 

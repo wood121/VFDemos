@@ -1,10 +1,11 @@
 package com.example.wood121.viewdemos.views.widgets.recaction;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>描述：(这里用一句话描述这个类的作用)</p>

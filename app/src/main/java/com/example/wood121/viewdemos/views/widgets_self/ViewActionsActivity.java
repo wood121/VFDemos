@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,6 +12,8 @@ import android.widget.Button;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
 import com.example.wood121.viewdemos.views.widgets.recaction.ViewActionRecActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * *****View的事件分发：https://blog.csdn.net/guolin_blog/article/details/9097463/

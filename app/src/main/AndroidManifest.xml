@@ -58,13 +58,14 @@
     <application
         android:name=".UserApp"
         android:allowBackup="false"
+        android:appComponentFactory="任意字符"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="icon,label,theme,allowBackup">
+        tools:replace="android:appComponentFactory,icon,label,theme,allowBackup">
         <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,7 +87,7 @@
             android:configChanges="orientation|screenSize" />
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.wood121.viewdemos.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -332,7 +333,9 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".sdk_thirdparty.login_share.HomeActivity" />
         <activity android:name=".apis.broadcast.LocalBroadcastActivity" />
-        <activity android:name=".apis.IntentActivity"></activity>
+        <activity android:name=".apis.IntentActivity" />
+        <activity android:name=".apis.ClazzActivity" />
+        <activity android:name=".apis.annotation.AnnotationActivity"></activity>
     </application>
 
 </manifest>

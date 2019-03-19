@@ -2,8 +2,6 @@ package com.example.wood121.viewdemos.views.widgets.recaction;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +13,9 @@ import com.example.wood121.viewdemos.util.ToastUtil;
 import com.example.wood121.viewdemos.views.widgets.RecyclerView.RecItemAdapter;
 
 import java.util.ArrayList;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>描述：(这里用一句话描述这个类的作用)</p>

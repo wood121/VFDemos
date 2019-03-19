@@ -1,8 +1,6 @@
 package com.example.wood121.viewdemos.base;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.fragments.APIViewFragment;
@@ -12,6 +10,9 @@ import com.example.wood121.viewdemos.mine.MineFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.concurrent.ConcurrentHashMap;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * @author wood121

@@ -1,8 +1,9 @@
 package com.example.wood121.viewdemos.util;
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by vonde on 2016/11/13.

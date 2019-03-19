@@ -1,28 +1,24 @@
 package com.example.wood121.viewdemos.apis.bitmaps;
 
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
-import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.example.wood121.viewdemos.apis.bitmaps.TakePhotoActivity;
 import com.example.wood121.viewdemos.util.AppConstant;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.core.content.FileProvider;
 
 public class BitmapUtil {
 

@@ -16,7 +16,7 @@ project.task("showConfig") {
  */
 ext {
     android = [compileSdkVersion: 28,
-               buildToolsVersion: '27.0.3',
+               buildToolsVersion: '28.0.3',
                applicationId    : "com.example.wood121.viewdemos",
                minSdkVersion    : 19,
                targetSdkVersion : 28,

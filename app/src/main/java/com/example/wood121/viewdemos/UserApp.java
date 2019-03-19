@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos;
 
-import android.support.multidex.MultiDex;
-import android.support.multidex.MultiDexApplication;
+import android.content.Context;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -13,6 +12,9 @@ import com.umeng.socialize.PlatformConfig;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import androidx.core.content.FileProvider;
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 import cn.jpush.android.api.JPushInterface;
 
 /**
@@ -47,8 +49,6 @@ public class UserApp extends MultiDexApplication {
         Log.e("url", "MyApplication");
         //crash信息收集
         MyCrashHandler.getInstance().init(getApplicationContext());
-        //65534个方法类的
-        MultiDex.install(this);
         //内存泄漏分析
 //        if (LeakCanary.isInAnalyzerProcess(this)) {
 //            return;
@@ -82,6 +82,16 @@ public class UserApp extends MultiDexApplication {
             ARouter.openDebug();
         }
         ARouter.init(this);
+    }
+
+    /**
+     * //65534个方法类的
+     * MultiDex.install(this);
+     */
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(base);
     }
 
     @Override

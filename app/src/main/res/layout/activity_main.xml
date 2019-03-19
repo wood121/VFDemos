@@ -45,8 +45,8 @@
             android:button="@null"
             android:drawableTop="@drawable/tab_home_btn"
             android:gravity="center"
-            android:paddingBottom="10dp"
             android:paddingTop="15dp"
+            android:paddingBottom="10dp"
             android:text="APIView"
             android:textColor="@color/tab_text_selector"
             android:textSize="12sp" />
@@ -59,8 +59,8 @@
             android:button="@null"
             android:drawableTop="@drawable/tab_shop_btn"
             android:gravity="center"
-            android:paddingBottom="10dp"
             android:paddingTop="15dp"
+            android:paddingBottom="10dp"
             android:text="FSdk"
             android:textColor="@color/tab_text_selector"
             android:textSize="12sp" />
@@ -73,8 +73,8 @@
             android:button="@null"
             android:drawableTop="@drawable/tab_nei_btn"
             android:gravity="center"
-            android:paddingBottom="10dp"
             android:paddingTop="15dp"
+            android:paddingBottom="10dp"
             android:text="MBase"
             android:textColor="@color/tab_text_selector"
             android:textSize="12sp" />
@@ -87,11 +87,10 @@
             android:button="@null"
             android:drawableTop="@drawable/tab_user_btn"
             android:gravity="center"
-            android:paddingBottom="10dp"
             android:paddingTop="15dp"
+            android:paddingBottom="10dp"
             android:text="Mine"
             android:textColor="@color/tab_text_selector"
             android:textSize="12sp" />
     </RadioGroup>
-
 </RelativeLayout>

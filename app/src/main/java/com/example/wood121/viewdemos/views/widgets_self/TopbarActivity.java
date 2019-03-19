@@ -1,12 +1,12 @@
 package com.example.wood121.viewdemos.views.widgets_self;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.views.widgets_self.widget.TopBar;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

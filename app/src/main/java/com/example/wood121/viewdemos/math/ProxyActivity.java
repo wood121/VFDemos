@@ -1,5 +1,4 @@
 package com.example.wood121.viewdemos.math;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,6 +11,8 @@ import com.example.wood121.viewdemos.codebase_practice.TimingInvocationHandler;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ProxyActivity extends AppCompatActivity {
 

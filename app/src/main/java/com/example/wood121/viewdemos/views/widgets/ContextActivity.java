@@ -1,8 +1,6 @@
 package com.example.wood121.viewdemos.views.widgets;
 
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupWindow;
@@ -10,6 +8,9 @@ import android.widget.PopupWindow;
 import com.example.wood121.viewdemos.UserApp;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * toast,dialog, pop需要传入的context类型

@@ -1,6 +1,7 @@
 package com.example.wood121.viewdemos.apis;
 
 import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.apis.annotation.AnnotationActivity;
 import com.example.wood121.viewdemos.apis.audio_video.AVActivity;
 import com.example.wood121.viewdemos.apis.bitmaps.BitmapsActivity;
 import com.example.wood121.viewdemos.apis.data_storage.DataStorageActivity;
@@ -40,6 +41,7 @@ public class APIFragment extends BaseTabContentFragment {
         mData.add(new ModelRecyclerBean("音视频", R.mipmap.circle_seek, AVActivity.class));
         mData.add(new ModelRecyclerBean("Lamada", R.mipmap.circle_seek, LamadaActivity.class));
         mData.add(new ModelRecyclerBean("intent", R.mipmap.circle_seek, IntentActivity.class));
-
+        mData.add(new ModelRecyclerBean("动态创建", R.mipmap.circle_seek, ClazzActivity.class));
+        mData.add(new ModelRecyclerBean("Annotation", R.mipmap.circle_seek, AnnotationActivity.class));
     }
 }

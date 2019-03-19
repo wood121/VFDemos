@@ -3,8 +3,6 @@ package com.example.wood121.viewdemos.sdk_thirdparty;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -12,6 +10,8 @@ import android.widget.ImageView;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.QRCode;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

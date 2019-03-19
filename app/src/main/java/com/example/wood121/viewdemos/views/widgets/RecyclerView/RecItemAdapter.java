@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.views.widgets.RecyclerView;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,8 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.util.ArrayList;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by wood121 on 2017/10/11.

@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.apis.threads;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -11,6 +10,7 @@ import com.example.wood121.viewdemos.util.ThreadPoolManager;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

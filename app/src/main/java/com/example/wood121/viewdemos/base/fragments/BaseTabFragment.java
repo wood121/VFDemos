@@ -1,16 +1,16 @@
 package com.example.wood121.viewdemos.base.fragments;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.base.BaseFragment;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.adapter.TabVPAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
+import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 
 /**

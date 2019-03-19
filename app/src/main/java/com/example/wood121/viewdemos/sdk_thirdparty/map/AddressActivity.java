@@ -1,9 +1,6 @@
 package com.example.wood121.viewdemos.sdk_thirdparty.map;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -38,9 +35,12 @@ import com.baidu.mapapi.search.poi.PoiSortType;
 import com.example.wood121.viewdemos.base.BaseActivity;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.List;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.OnClick;
 

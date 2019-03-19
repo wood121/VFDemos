@@ -1,9 +1,6 @@
 package com.example.wood121.viewdemos.apis.database_.sqlite_device;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -22,6 +19,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SqliteDeviceActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "SqliteDeviceActivity";

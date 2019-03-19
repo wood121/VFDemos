@@ -4,12 +4,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class LocalBroadcastActivity extends BaseActivity {
 

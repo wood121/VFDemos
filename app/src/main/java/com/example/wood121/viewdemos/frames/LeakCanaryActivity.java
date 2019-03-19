@@ -1,10 +1,11 @@
 package com.example.wood121.viewdemos.frames;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LeakCanaryActivity extends AppCompatActivity {
 

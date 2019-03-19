@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.apis.database_.sqlite_book;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.apis.database_.sqlite_book.bean.Book;
 
 import java.util.ArrayList;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>描述：(这里用一句话描述这个类的作用)</p>

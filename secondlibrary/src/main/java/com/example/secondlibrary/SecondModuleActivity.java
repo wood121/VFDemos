@@ -2,13 +2,14 @@ package com.example.secondlibrary;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.loacarepo.utils.RouteConfigs;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 @Route(path = RouteConfigs.SECOND_ACTIVITY)
 public class SecondModuleActivity extends AppCompatActivity implements View.OnClickListener {

@@ -4,9 +4,7 @@ import android.accessibilityservice.AccessibilityService;
 import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.PendingIntent;
-import android.content.Intent;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
@@ -15,6 +13,8 @@ import com.example.wood121.viewdemos.util.PhoneController;
 import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.util.List;
+
+import androidx.annotation.RequiresApi;
 
 /**
  * 整个窗口内容本质上是关于AccessibilityWindowInfo和AccessibilityNodeInfo的树结构,我称之为内容树.

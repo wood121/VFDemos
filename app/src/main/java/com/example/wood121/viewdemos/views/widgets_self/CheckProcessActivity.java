@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.views.widgets_self;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.wood121.viewdemos.R;
@@ -10,6 +9,7 @@ import com.example.wood121.viewdemos.views.widgets_self.widget.DrawHookView;
 
 import java.util.Random;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

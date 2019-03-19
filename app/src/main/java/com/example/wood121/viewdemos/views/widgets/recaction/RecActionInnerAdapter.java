@@ -1,7 +1,6 @@
 package com.example.wood121.viewdemos.views.widgets.recaction;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,8 @@ import android.widget.ImageView;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>描述：(这里用一句话描述这个类的作用)</p>

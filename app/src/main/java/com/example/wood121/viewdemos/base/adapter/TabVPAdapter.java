@@ -1,8 +1,5 @@
 package com.example.wood121.viewdemos.base.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.apis.APIFragment;
@@ -13,6 +10,10 @@ import com.example.wood121.viewdemos.sdk_thirdparty.SDKFragment;
 import com.example.wood121.viewdemos.views.ViewFragment;
 
 import java.util.ArrayList;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 /**
  * Created by wood121 on 2017/12/21.

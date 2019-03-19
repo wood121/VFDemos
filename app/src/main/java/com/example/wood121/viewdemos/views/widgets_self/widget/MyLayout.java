@@ -2,11 +2,12 @@ package com.example.wood121.viewdemos.views.widgets_self.widget;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 /**
  * <p>描述：(这里用一句话描述这个类的作用)</p>

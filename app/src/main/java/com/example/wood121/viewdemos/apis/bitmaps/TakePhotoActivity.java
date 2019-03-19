@@ -1,28 +1,21 @@
 package com.example.wood121.viewdemos.apis.bitmaps;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.RequiresApi;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
 import com.example.wood121.viewdemos.util.AppConstant;
 
 import java.io.File;
-import java.util.List;
 
-import me.nereo.multi_image_selector.MultiImageSelector;
-import me.nereo.multi_image_selector.MultiImageSelectorActivity;
+import androidx.annotation.RequiresApi;
 
 /**
  * 1.打开系统相机拍照、裁剪，图片处理技术

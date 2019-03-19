@@ -2,12 +2,13 @@ package com.example.wood121.viewdemos.apis.threads;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.net.URL;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AsynTaskDemoActivity extends AppCompatActivity {
 

@@ -1,9 +1,6 @@
 package com.example.wood121.viewdemos.apis.database_.sqlite_book;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +12,10 @@ import com.example.wood121.viewdemos.apis.database_.sqlite_book.bean.Book;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SqliteActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int INSERT_ONE = 101;
