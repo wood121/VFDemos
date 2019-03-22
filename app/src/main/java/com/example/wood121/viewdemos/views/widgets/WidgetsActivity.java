@@ -6,6 +6,8 @@ import android.view.View;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
 import com.example.wood121.viewdemos.views.widgets.RecyclerView.RecActivity;
+import com.example.wood121.viewdemos.views.widgets.recaction.RecItemClickConflictActivity;
+import com.example.wood121.viewdemos.views.widgets.tablayout.TablayoutActivity;
 
 public class WidgetsActivity extends BaseActivity implements View.OnClickListener {
 
@@ -25,18 +27,26 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
      */
     @Override
     protected void initPageViewListener() {
-        findViewById(R.id.btn_rec).setOnClickListener(this);
         findViewById(R.id.btn_dialog_context).setOnClickListener(this);
+        findViewById(R.id.btn_rec).setOnClickListener(this);
+        findViewById(R.id.btn_viewaction).setOnClickListener(this);
+        findViewById(R.id.btn_tab).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_dialog_context:
+                readyGo(DialogWithContextActivity.class);
+                break;
             case R.id.btn_rec:
                 readyGo(RecActivity.class);
                 break;
-            case R.id.btn_dialog_context:
-                readyGo(ContextActivity.class);
+            case R.id.btn_viewaction:
+                readyGo(RecItemClickConflictActivity.class);
+                break;
+            case R.id.btn_tab:
+                readyGo(TablayoutActivity.class);
                 break;
         }
     }

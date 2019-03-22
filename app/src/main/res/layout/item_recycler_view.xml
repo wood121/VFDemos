@@ -31,5 +31,4 @@
             android:textColor="@color/actionbar_title_color"
             android:textSize="@dimen/text_16" />
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

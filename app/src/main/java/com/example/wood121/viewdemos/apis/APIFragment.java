@@ -18,17 +18,21 @@ import com.example.wood121.viewdemos.base.fragments.BaseTabContentFragment;
 
 public class APIFragment extends BaseTabContentFragment {
 
-    public static APIFragment apiFragment;
+//    public static APIFragment apiFragment;
 
     public static APIFragment newInstance() {
-        if (apiFragment == null) {
-            synchronized (APIFragment.class) {
-                if (apiFragment == null) {
-                    apiFragment = new APIFragment();
-                }
-            }
-        }
-        return apiFragment;
+//        if (apiFragment == null) {
+//            synchronized (APIFragment.class) {
+//                if (apiFragment == null) {
+//                    apiFragment = new APIFragment();
+//                }
+//            }
+//        }
+        return InstanceHolder.sAPIFragment;
+    }
+
+    static class InstanceHolder {
+        private static APIFragment sAPIFragment = new APIFragment();
     }
 
     @Override

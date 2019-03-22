@@ -20,7 +20,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
 
     protected FragmentActivity mActivity; //这里可以返回BaseActivity对象
-    protected Context mContext;
+        protected Context mContext;
     private boolean mIsPrepare;
     private View mRootView;
     private boolean mIsVisible;

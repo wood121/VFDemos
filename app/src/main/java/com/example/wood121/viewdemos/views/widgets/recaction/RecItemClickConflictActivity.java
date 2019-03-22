@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ViewActionRecActivity extends AppCompatActivity {
+/**
+ * recyclerView的item中大块点击事件、小块点击事件
+ */
+public class RecItemClickConflictActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

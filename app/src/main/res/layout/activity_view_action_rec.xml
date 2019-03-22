@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.widgets.recaction.ViewActionRecActivity">
+    tools:context=".views.widgets.recaction.RecItemClickConflictActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/action_recycleView"

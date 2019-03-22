@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 //apply plugin: 'walle'
 apply plugin: "com.dorongold.task-tree"
 apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 def releaseTime() {
     return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
@@ -27,7 +28,7 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
-//                includeCompileClasspath = true
+                includeCompileClasspath = true
             }
         }
 
@@ -102,6 +103,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+//    packagingOptions {
+//        exclude 'META-INF/services/javax.annotation.processing.Processor'
+//    }
+
     lintOptions {
         abortOnError false
     }
@@ -114,12 +119,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 //    testCompile 'junit:junit:4.12'
-//    implementation 'com.android.support:multidex:1.0.3'
-//    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-//    implementation 'com.android.support:design:28.0.0'
-//    implementation 'com.android.support:recyclerview-v7:28.0.0'
-//    implementation 'com.android.support:cardview-v7:28.0.0'
-//    implementation 'com.android.support:appcompat-v7:28.0.0'
 
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -139,7 +138,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
     annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
@@ -152,6 +151,8 @@ dependencies {
     //引用module中的类库
     implementation project(':locamavenbase')
     implementation project(':secondlibrary')
+    implementation project(':annotations')
+    implementation project(':annotation_processor')
 
     //引用locaol maven的library
 //    implementation 'com.wood121:viewdemos:1.0'
@@ -171,6 +172,11 @@ dependencies {
 
 configurations {
     all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+}
+
+//指定编译的编码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
 /** ***********************以下为gradle -task练习********************** **/
 /**

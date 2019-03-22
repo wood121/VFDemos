@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * toast,dialog, pop需要传入的context类型
  */
-public class ContextActivity extends AppCompatActivity implements View.OnClickListener {
+public class DialogWithContextActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtn_toast;
 

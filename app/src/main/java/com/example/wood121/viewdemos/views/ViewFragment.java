@@ -3,14 +3,9 @@ package com.example.wood121.viewdemos.views;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.fragments.BaseTabContentFragment;
 import com.example.wood121.viewdemos.views.charts.ChartsActivity;
+import com.example.wood121.viewdemos.views.webview.WebViewActivity;
 import com.example.wood121.viewdemos.views.widgets.WidgetsActivity;
-import com.example.wood121.viewdemos.views.widgets.ContextActivity;
-import com.example.wood121.viewdemos.views.widgets.RecyclerView.RecActivity;
 import com.example.wood121.viewdemos.base.bean.ModelRecyclerBean;
-import com.example.wood121.viewdemos.views.widgets_self.ArcViewActivity;
-import com.example.wood121.viewdemos.views.widgets_self.CheckProcessActivity;
-import com.example.wood121.viewdemos.views.widgets_self.TopbarActivity;
-import com.example.wood121.viewdemos.views.widgets_self.ViewActionsActivity;
 import com.example.wood121.viewdemos.views.widgets_self.WidgetsSelfActivity;
 
 /**
@@ -34,8 +29,9 @@ public class ViewFragment extends BaseTabContentFragment {
 
     @Override
     protected void getFragDatas() {
-        mData.add(new ModelRecyclerBean("图表控件", R.mipmap.circle_zip, ChartsActivity.class));
         mData.add(new ModelRecyclerBean("基础控件", R.mipmap.circle_zip, WidgetsActivity.class));
+        mData.add(new ModelRecyclerBean("WebView", R.mipmap.circle_zip, WebViewActivity.class));
+        mData.add(new ModelRecyclerBean("图表控件", R.mipmap.circle_zip, ChartsActivity.class));
         mData.add(new ModelRecyclerBean("自定义控件", R.mipmap.circle_zip, WidgetsSelfActivity.class));
     }
 }

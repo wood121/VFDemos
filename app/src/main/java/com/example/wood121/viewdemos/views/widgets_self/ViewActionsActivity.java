@@ -11,7 +11,7 @@ import android.widget.Button;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
-import com.example.wood121.viewdemos.views.widgets.recaction.ViewActionRecActivity;
+import com.example.wood121.viewdemos.views.widgets.recaction.RecItemClickConflictActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -47,7 +47,7 @@ public class ViewActionsActivity extends AppCompatActivity {
         findViewById(R.id.btn_rec).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewActionsActivity.this, ViewActionRecActivity.class));
+                startActivity(new Intent(ViewActionsActivity.this, RecItemClickConflictActivity.class));
             }
         });
     }

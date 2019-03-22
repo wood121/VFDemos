@@ -7,6 +7,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_dialog_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dialog_context" />
 
         <Button
             android:id="@+id/btn_rec"
@@ -15,9 +20,16 @@
             android:text="RecyclerView" />
 
         <Button
-            android:id="@+id/btn_dialog_context"
+            android:id="@+id/btn_viewaction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="dialog_context" />
+            android:text="viiew_action" />
+
+        <Button
+            android:id="@+id/btn_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="tab_viewpager_fragment" />
+
     </LinearLayout>
 </ScrollView>

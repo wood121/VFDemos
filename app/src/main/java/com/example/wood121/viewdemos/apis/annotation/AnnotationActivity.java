@@ -2,10 +2,14 @@ package com.example.wood121.viewdemos.apis.annotation;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.annotations.WoodAnnotation;
+import com.example.annotations.getViewTo;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
+import com.google.android.material.tabs.TabLayout;
 
 import java.lang.reflect.Field;
 
@@ -14,13 +18,14 @@ import java.lang.reflect.Field;
  * 2.AnnotationProcessor
  * 3.
  */
+@WoodAnnotation("i am annotation")
 public class AnnotationActivity extends BaseActivity implements View.OnClickListener {
+
+    @getViewTo(R.id.btn_wood)
+    private Button mBtn;
 
     @getViewTo(R.id.tv_wood)
     private TextView mTv;
-
-    @getViewTo(R.id.btn_wood)
-    private TextView mBtn;
 
     @Override
     protected void initData(Bundle savedInstanceState) {
@@ -35,7 +40,6 @@ public class AnnotationActivity extends BaseActivity implements View.OnClickList
     @Override
     protected void initPageViewListener() {
         getAllAnnotationView();
-
         mBtn.setOnClickListener(this);
     }
 
