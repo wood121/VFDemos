@@ -47,7 +47,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory,icon,label,theme,allowBackup">
-        <activity android:name=".views.widgets.tablayout.TablayoutActivity"></activity>
+        <activity android:name=".views.widgets.viewpager.GuideNewActivity"></activity>
+        <activity android:name=".views.widgets.viewpager.ViewPagerActivity" />
+        <activity android:name=".views.widgets.tablayout.TablayoutActivity" />
         <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

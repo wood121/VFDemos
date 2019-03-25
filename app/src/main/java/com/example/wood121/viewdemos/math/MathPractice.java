@@ -13,7 +13,10 @@ import com.example.wood121.viewdemos.util.BytesUtil;
 public class MathPractice {
 
     public void main(String[] args) {
-        bytestransfer();
+//        bytestransfer();
+
+        double a = 3.6000000000000227;
+
     }
 
     private void bytestransfer() {

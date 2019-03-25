@@ -99,7 +99,6 @@ public class RecItemAdapter extends RecyclerView.Adapter<RecItemAdapter.MyViewHo
                     notifyItemRemoved(getLayoutPosition());
                 }
             });
-
         }
     }
 

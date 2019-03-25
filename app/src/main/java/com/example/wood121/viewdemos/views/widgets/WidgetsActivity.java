@@ -8,6 +8,8 @@ import com.example.wood121.viewdemos.base.BaseActivity;
 import com.example.wood121.viewdemos.views.widgets.RecyclerView.RecActivity;
 import com.example.wood121.viewdemos.views.widgets.recaction.RecItemClickConflictActivity;
 import com.example.wood121.viewdemos.views.widgets.tablayout.TablayoutActivity;
+import com.example.wood121.viewdemos.views.widgets.viewpager.GuideNewActivity;
+import com.example.wood121.viewdemos.views.widgets.viewpager.ViewPagerActivity;
 
 public class WidgetsActivity extends BaseActivity implements View.OnClickListener {
 
@@ -31,6 +33,8 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
         findViewById(R.id.btn_rec).setOnClickListener(this);
         findViewById(R.id.btn_viewaction).setOnClickListener(this);
         findViewById(R.id.btn_tab).setOnClickListener(this);
+        findViewById(R.id.btn_guide).setOnClickListener(this);
+        findViewById(R.id.btn_banner).setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +51,12 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.btn_tab:
                 readyGo(TablayoutActivity.class);
+                break;
+            case R.id.btn_guide:
+                readyGo(GuideNewActivity.class);
+                break;
+            case R.id.btn_banner:
+                readyGo(ViewPagerActivity.class);
                 break;
         }
     }

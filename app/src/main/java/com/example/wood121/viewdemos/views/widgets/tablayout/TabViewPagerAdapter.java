@@ -25,6 +25,7 @@ public class TabViewPagerAdapter extends FragmentPagerAdapter {
         this.mContext = context;
         this.mTabs = tabs;
         this.mFragments = fragments;
+        notifyDataSetChanged();
     }
 
     public TabViewPagerAdapter(@NonNull FragmentManager fm) {
@@ -39,7 +40,7 @@ public class TabViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return mFragments.size();
+        return mFragments == null ? 0 : mFragments.size();
     }
 
     @Nullable

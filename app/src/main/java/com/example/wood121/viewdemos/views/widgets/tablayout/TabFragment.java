@@ -6,6 +6,14 @@ import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseFragment;
+import com.example.wood121.viewdemos.views.widgets.RecyclerView.DividerGridItemDecoration;
+import com.example.wood121.viewdemos.views.widgets.tablayout.entity.DeviceBean;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>描述：(这里用一句话描述这个类的作用)</p>
@@ -14,22 +22,27 @@ import com.example.wood121.viewdemos.base.BaseFragment;
  * 版本： v2.0<br>
  */
 public class TabFragment extends BaseFragment {
-    private Context mTabContext;
-    private String mTabName;
-    private TextView mTvContent;
+    private List<DeviceBean> mDeviceList;
+    private RecyclerView mRecyclerView;
 
-    public static TabFragment getInstance() {
-        return TabFragmentHolder.sTabFragment;
+    public TabFragment() {
     }
 
-    public void setData(Context context, String tabName) {
-        this.mTabContext = context;
-        this.mTabName = tabName;
+    public static TabFragment newInstance(ArrayList<DeviceBean> deviceBeanList) {
+        TabFragment fragment = new TabFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("DEVICE_LIST", deviceBeanList);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
-    static class TabFragmentHolder {
-        private static TabFragment sTabFragment = new TabFragment();
-    }
+//    public static TabFragment getInstance() {
+//        return TabFragmentHolder.sTabFragment;
+//    }
+//
+//    static class TabFragmentHolder {
+//        private static TabFragment sTabFragment = new TabFragment();
+//    }
 
     @Override
     protected int setLayoutResouceId() {
@@ -38,13 +51,22 @@ public class TabFragment extends BaseFragment {
 
     @Override
     protected void initData(Bundle arguments) {
-
+        Bundle bundle = getArguments();
+        if (null != bundle) {
+            mDeviceList = (List<DeviceBean>) bundle.getSerializable("DEVICE_LIST");
+        }
     }
 
     @Override
     protected void setListener() {
-        mTvContent = findViewById(R.id.tv_content);
 
-        mTvContent.setText(mTabName + "...");
+        mRecyclerView = findViewById(R.id.recyclerview);
+        //布局样式
+        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3));
+        //GridLayoutManager的时候，分割线不一样。
+        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(mContext));
+        TabRecAdapter  adapter=  new TabRecAdapter(mDeviceList);
+        mRecyclerView.setAdapter(adapter);
+
     }
 }
