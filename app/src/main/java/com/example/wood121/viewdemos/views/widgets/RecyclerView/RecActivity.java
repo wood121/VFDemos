@@ -77,6 +77,7 @@ public class RecActivity extends AppCompatActivity implements View.OnClickListen
             datas.add("content" + i);
         }
         Log.e("data", datas.size() + "initDatas");
+        Log.e("data", datas.size() + "initDatas");
     }
 
     @Override
