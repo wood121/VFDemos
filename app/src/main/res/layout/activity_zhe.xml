@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.views.charts.ZheActivity">
-
-
+    tools:context="com.example.wood121.viewdemos.views.charts.line.ZheActivity">
     <LinearLayout
         android:padding="40dp"
         android:gravity="center"
@@ -14,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp">
 
-        <com.example.wood121.viewdemos.views.charts.widget.SimpleLineChart
+        <com.example.wood121.viewdemos.views.charts.line.SimpleLineChart
             android:id="@+id/linechart"
             android:layout_width="300dp"
             android:layout_height="200dp" />

@@ -1,5 +1,6 @@
 package com.example.wood121.viewdemos.util;
 
+import android.annotation.SuppressLint;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.os.PowerManager;
@@ -30,7 +31,7 @@ public class PhoneController {
      */
     public static void wakeAndUnlockScreen(Context context) {
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP
+        @SuppressLint("InvalidWakeLockTag") PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP
                 | PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "bright");
         wakeLock.acquire(1000); // 点亮屏幕
         wakeLock.release();

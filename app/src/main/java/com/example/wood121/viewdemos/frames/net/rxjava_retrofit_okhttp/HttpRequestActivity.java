@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
-import com.example.wood121.viewdemos.views.charts.ZheActivity;
+import com.example.wood121.viewdemos.views.charts.line.ZheActivity;
 
 public class HttpRequestActivity extends BaseActivity implements View.OnClickListener {
 

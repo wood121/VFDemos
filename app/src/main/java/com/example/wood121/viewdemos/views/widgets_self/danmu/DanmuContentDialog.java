@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.views.widgets_self.widget;
+package com.example.wood121.viewdemos.views.widgets_self.danmu;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -18,7 +18,6 @@ import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
-import com.example.wood121.viewdemos.views.widgets_self.TextWatcherListener;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

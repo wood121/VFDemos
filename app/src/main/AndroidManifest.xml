@@ -48,7 +48,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory,icon,label,theme,allowBackup">
         <activity android:name=".views.widgets.ConstraintActivity" />
-        <activity android:name=".views.widgets_self.DanMuActivity" />
+        <activity android:name=".views.widgets_self.danmu.DanMuActivity" />
         <activity android:name=".views.widgets.viewpager.GuideNewActivity" />
         <activity android:name=".views.widgets.viewpager.ViewPagerActivity" />
         <activity android:name=".views.widgets.tablayout.TablayoutActivity" />
@@ -62,12 +62,12 @@
         <activity
             android:name=".sdk_thirdparty.QrCodeActivity"
             android:process=":haha" />
-        <activity android:name=".views.widgets_self.CheckProcessActivity" />
-        <activity android:name=".views.charts.BingActivity" />
-        <activity android:name=".views.charts.ZheActivity" />
-        <activity android:name=".views.widgets_self.TopbarActivity" />
+        <activity android:name=".views.widgets_self.circlecheck.CheckProcessActivity" />
+        <activity android:name=".views.charts.bing.BingActivity" />
+        <activity android:name=".views.charts.line.ZheActivity" />
+        <activity android:name=".views.widgets_self.topbar.TopbarActivity" />
         <activity android:name=".views.widgets.RecyclerView.RecActivity" />
-        <activity android:name=".views.widgets_self.ArcViewActivity" />
+        <activity android:name=".views.widgets_self.base.View3StepActivity" />
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:configChanges="orientation|screenSize" />
@@ -117,7 +117,6 @@
         <activity android:name=".apis.threads.AsynTaskDemoActivity" />
         <activity android:name=".apis.threads.ExecutorActivity" />
         <activity android:name=".apis.LamadaActivity" />
-        <activity android:name=".views.widgets_self.ViewActionsActivity" />
         <activity android:name=".views.widgets.recaction.RecItemClickConflictActivity" />
         <activity android:name=".apis.database_.sqlite_book.SqliteActivity" />
         <activity android:name=".apis.database_.sqlite_device.SqliteDeviceActivity" /> <!-- Required SDK 核心功能 -->

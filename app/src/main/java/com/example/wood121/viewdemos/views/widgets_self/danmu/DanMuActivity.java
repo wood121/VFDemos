@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.views.widgets_self;
+package com.example.wood121.viewdemos.views.widgets_self.danmu;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,8 +17,6 @@ import com.example.wood121.viewdemos.util.DisplayUtils;
 import com.example.wood121.viewdemos.util.SharePreferencesUtil;
 import com.example.wood121.viewdemos.views.utils.SofeKeyBroadManager;
 import com.example.wood121.viewdemos.views.widgets_self.model.BarrageListModel;
-import com.example.wood121.viewdemos.views.widgets_self.widget.DanmuContentDialog;
-import com.example.wood121.viewdemos.views.widgets_self.widget.RevealAnimationLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;

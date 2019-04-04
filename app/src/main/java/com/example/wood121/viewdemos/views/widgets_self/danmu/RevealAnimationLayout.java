@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.views.widgets_self.widget;
+package com.example.wood121.viewdemos.views.widgets_self.danmu;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -21,6 +21,9 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+/**
+ * 带揭露动画的布局
+ */
 public class RevealAnimationLayout extends FrameLayout {
     public Path mClipPath;
     public Path mOpClipPath;

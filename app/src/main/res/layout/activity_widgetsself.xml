@@ -12,25 +12,19 @@
             android:id="@+id/btn_arcview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="进度条-音视频" />
+            android:text="view三部曲" />
 
         <Button
             android:id="@+id/btn_checkprocess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="物流进度" />
+            android:text="圆形带对错样式" />
 
         <Button
             android:id="@+id/btn_topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="标题栏" />
-
-        <Button
-            android:id="@+id/btn_viewaction"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ViewActions" />
 
         <Button
             android:id="@+id/btn_danmu"

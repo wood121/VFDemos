@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.views.widgets_self.widget;
+package com.example.wood121.viewdemos.views.widgets_self.topbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,9 +15,8 @@ import com.example.wood121.viewdemos.R;
 
 /**
  * Created by wood121 on 2017/9/18.
- * 标题栏的封装
+ * 封装的标题栏
  */
-
 public class TopBar extends RelativeLayout {
 
     private topbarClickListener mClickListener;

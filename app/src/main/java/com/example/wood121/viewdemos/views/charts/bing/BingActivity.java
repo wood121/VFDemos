@@ -1,11 +1,10 @@
-package com.example.wood121.viewdemos.views.charts;
+package com.example.wood121.viewdemos.views.charts.bing;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.views.charts.widget.FanShapedView;
-import com.example.wood121.viewdemos.views.charts.widget.SimpleLineChart;
+import com.example.wood121.viewdemos.views.charts.line.SimpleLineChart;
 
 import java.util.HashMap;
 
@@ -14,7 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * 饼状图、折线图
+ * 饼状图
  */
 public class BingActivity extends AppCompatActivity {
     @BindView(R.id.shapeview)

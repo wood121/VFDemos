@@ -21,6 +21,6 @@
             android:id="@+id/btn_zhe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="饼状图" />
+            android:text="折线图" />
     </LinearLayout>
 </ScrollView>

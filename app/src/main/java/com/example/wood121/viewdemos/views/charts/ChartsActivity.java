@@ -5,6 +5,8 @@ import android.view.View;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
+import com.example.wood121.viewdemos.views.charts.bing.BingActivity;
+import com.example.wood121.viewdemos.views.charts.line.ZheActivity;
 
 public class ChartsActivity extends BaseActivity implements View.OnClickListener {
 

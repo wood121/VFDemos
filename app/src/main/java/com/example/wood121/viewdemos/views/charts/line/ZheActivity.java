@@ -1,10 +1,10 @@
-package com.example.wood121.viewdemos.views.charts;
+package com.example.wood121.viewdemos.views.charts.line;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.views.charts.widget.SimpleLineChart;
+import com.example.wood121.viewdemos.views.charts.line.SimpleLineChart;
 
 import java.util.HashMap;
 

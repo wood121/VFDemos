@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.views.widgets_self;
+package com.example.wood121.viewdemos.views.widgets_self.danmu;
 
 import android.text.Editable;
 import android.text.TextWatcher;

@@ -7,10 +7,6 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.apis.database_.sqlite_book.SqliteActivity;
 import com.example.wood121.viewdemos.apis.database_.sqlite_device.SqliteDeviceActivity;
 import com.example.wood121.viewdemos.base.BaseActivity;
-import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.Okhttp3Activity;
-import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.RetrofitActivity;
-import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.RxjavaActivity;
-import com.example.wood121.viewdemos.views.charts.ZheActivity;
 
 public class DBActivity extends BaseActivity implements View.OnClickListener {
 

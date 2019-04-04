@@ -66,11 +66,6 @@ public class BitmapUtil {
      * @param activity            打开裁剪页面的环境
      * @param uri                 传入的图片的位置
      * @param cropPhotoStorageUri 裁剪处理后图片存储位置  --
-     * @param savePath            裁剪后图片的保存路径，如果不想保存的话传null或者“”
-     * @param aspectX             裁剪时X轴的比例
-     * @param aspectY             裁剪时Y轴的比例
-     * @param outX                裁剪图片输出的X轴的长度
-     *                            <p>
      *                            如果savePath为null或者“”，在onActivityResult中接收系统默认返回的是裁剪的缩略图，使用data.getExtras().get("data");接收。
      *                            该方法以startActivityForResult的方式启动系统的裁剪工具，requestCode为GET_CROP_IMAGE，（值自己设置）
      *                            <p>

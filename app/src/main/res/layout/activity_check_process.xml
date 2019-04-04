@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.views.widgets_self.CheckProcessActivity">
+    android:layout_height="match_parent">
 
-    <com.example.wood121.viewdemos.views.widgets_self.widget.DrawHookView
-        android:id="@+id/step1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="50dp"
-        app:cicleSize="big"
-        app:circleColor="#330000" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <com.example.wood121.viewdemos.views.widgets_self.widget.CheckProcessView
-        android:id="@+id/step2"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.DrawHookView
+            android:id="@+id/step1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cicleSize="big"
+            app:circleColor="#330000" />
 
-    <com.example.wood121.viewdemos.views.widgets_self.widget.CheckProcessView
-        android:id="@+id/step3"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.CheckProcessView
+            android:id="@+id/step2"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
 
-    <com.example.wood121.viewdemos.views.widgets_self.widget.CheckProcessView
-        android:id="@+id/step4"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.ShiningTextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_20" />
 
-    <com.example.wood121.viewdemos.views.widgets_self.widget.CheckProcessView
-        android:id="@+id/step5"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.ArcPercentView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_20" />
 
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.BackgroudTextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_20" />
 
-</LinearLayout>
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.CheckProcessViewWhole
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_20" />
+
+        <com.example.wood121.viewdemos.views.widgets_self.circlecheck.VolueView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_20" />
+    </LinearLayout>
+</ScrollView>
