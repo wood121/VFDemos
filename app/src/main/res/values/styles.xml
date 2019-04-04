@@ -34,4 +34,25 @@
         <item name="android:layout_height">1px</item>
     </style>
 
+    <!-- 对话框样式 -->
+    <style name="DanmuContent_Dialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@color/transparent</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:stateNotNeeded">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
+    </style>
+
+    <!--对话框弹出动画-->
+    <style name="CustomDialog">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+
 </resources>

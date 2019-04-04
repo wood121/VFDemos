@@ -44,5 +44,11 @@
             android:layout_height="wrap_content"
             android:text="VP_Banner_频道分类" />
 
+        <Button
+            android:id="@+id/btn_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ConstraintLayout" />
+
     </LinearLayout>
 </ScrollView>

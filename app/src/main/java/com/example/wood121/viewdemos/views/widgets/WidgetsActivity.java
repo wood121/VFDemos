@@ -11,6 +11,8 @@ import com.example.wood121.viewdemos.views.widgets.tablayout.TablayoutActivity;
 import com.example.wood121.viewdemos.views.widgets.viewpager.GuideNewActivity;
 import com.example.wood121.viewdemos.views.widgets.viewpager.ViewPagerActivity;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 public class WidgetsActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
@@ -35,6 +37,7 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
         findViewById(R.id.btn_tab).setOnClickListener(this);
         findViewById(R.id.btn_guide).setOnClickListener(this);
         findViewById(R.id.btn_banner).setOnClickListener(this);
+        findViewById(R.id.btn_constraint).setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +60,9 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.btn_banner:
                 readyGo(ViewPagerActivity.class);
+                break;
+            case R.id.btn_constraint:
+                readyGo(ConstraintActivity.class);
                 break;
         }
     }

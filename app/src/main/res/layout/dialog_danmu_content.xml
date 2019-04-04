@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimens54"
+    android:background="@color/color_f6">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:background="@drawable/bg_danmu_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/send"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="发弹幕一起聊"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:maxLength="25"
+            android:singleLine="false"
+            android:textColor="@color/color_30_tran_60"
+            android:textColorHint="@color/color_30_tran_30"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:text="25"
+            android:textColor="@color/color_30_tran_60"
+            android:textSize="@dimen/text_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/send"
+        android:layout_width="@dimen/margin_58"
+        android:layout_height="@dimen/margin_36"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="@drawable/bg_danmu_send_gray"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="发送"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerVertical="true"
+        android:background="@color/blue"
+        android:scaleType="fitXY"
+        android:src="@drawable/fei"
+        android:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.example.wood121.viewdemos.views.widgets_self.widget.RevealAnimationLayout
+            android:id="@+id/reveal_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:alpha="0.9"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="@dimen/margin_20"
+                        android:layout_height="@dimen/margin_20"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_9"
+                        android:src="@mipmap/iv_close_white" />
+
+                    <master.flame.danmaku.ui.widget.DanmakuView
+                        android:id="@+id/danmaku_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_108"
+                        android:paddingTop="@dimen/margin_14" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_input"
+                    android:layout_width="@dimen/margin_36"
+                    android:layout_height="@dimen/margin_36"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:src="@mipmap/ic_input" />
+            </RelativeLayout>
+        </com.example.wood121.viewdemos.views.widgets_self.widget.RevealAnimationLayout>
+
+        <TextView
+            android:id="@+id/tv_danmu"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:background="@drawable/bg_danmu_black"
+            android:gravity="center"
+            android:text="弹"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

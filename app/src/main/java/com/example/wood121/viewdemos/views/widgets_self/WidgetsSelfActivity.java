@@ -32,6 +32,7 @@ public class WidgetsSelfActivity extends BaseActivity implements View.OnClickLis
         findViewById(R.id.btn_checkprocess).setOnClickListener(this);
         findViewById(R.id.btn_topbar).setOnClickListener(this);
         findViewById(R.id.btn_viewaction).setOnClickListener(this);
+        findViewById(R.id.btn_danmu).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +49,9 @@ public class WidgetsSelfActivity extends BaseActivity implements View.OnClickLis
                 break;
             case R.id.btn_viewaction:
                 readyGo(ViewActionsActivity.class);
+                break;
+            case R.id.btn_danmu:
+                readyGo(DanMuActivity.class);
                 break;
         }
     }

@@ -12,9 +12,17 @@
     <color name="tab_text_color_light">#707479</color>
 
     <!--textcolor-->
+    <color name="up_text_color">#AAAAAA</color>
+    <color name="color_f6">#F6F6F6</color>
+    <color name="color_30_tran_30">#4C303030</color>
+    <color name="color_30_tran_60">#99303030</color>
+    <color name="color_30_tran_95">#F2303030</color>
+    <color name="blue_bg_color">#3888FF</color>
+    <color name="blue_text_color_press">#66347FF0</color>
 
     <!--bgcolor-->
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="white_gray">#f3f3f3</color>
     <color name="green_6f3">#66ff33</color>
 

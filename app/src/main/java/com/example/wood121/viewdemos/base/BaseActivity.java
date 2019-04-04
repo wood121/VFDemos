@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 
-import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.StyleManager;
 import com.umeng.analytics.MobclickAgent;
 
@@ -58,8 +57,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //statusBar设置
-        styleManager = StyleManager.getInstance(this);
-        styleManager.setStatusBarStyle(this, getResources().getColor(R.color.green_6f3));
+//        styleManager = StyleManager.getInstance(this);
+//        styleManager.setStatusBarStyle(this, getResources().getColor(R.color.green_6f3));
 
         checkPermissions(mNeedPermissions);
 
