@@ -34,7 +34,7 @@ public class ThreadsActivity extends BaseActivity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_asyntask:
-                readyGo(AsynTaskDemoActivity.class);
+                readyGo(AsynTaskActivity.class);
                 break;
             case R.id.btn_exector:
                 readyGo(ExecutorActivity.class);

@@ -31,7 +31,7 @@ public class ViewFragment extends BaseTabContentFragment {
     protected void getFragDatas() {
         mData.add(new ModelRecyclerBean("基础控件", R.mipmap.circle_zip, WidgetsActivity.class));
         mData.add(new ModelRecyclerBean("WebView", R.mipmap.circle_zip, WebViewActivity.class));
-        mData.add(new ModelRecyclerBean("图表控件", R.mipmap.circle_zip, ChartsActivity.class));
         mData.add(new ModelRecyclerBean("自定义控件", R.mipmap.circle_zip, WidgetsSelfActivity.class));
+        mData.add(new ModelRecyclerBean("图表控件", R.mipmap.circle_zip, ChartsActivity.class));
     }
 }

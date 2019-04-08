@@ -26,7 +26,6 @@ public class SecondModuleActivity extends AppCompatActivity implements View.OnCl
         findViewById(R.id.btn_skip).setOnClickListener(this);
     }
 
-
     @Override
     public void onClick(View v) {
         int i = v.getId();

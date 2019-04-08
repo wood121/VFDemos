@@ -114,7 +114,7 @@
         <activity android:name=".frames.net.rxjava_retrofit_okhttp.RetrofitActivity" />
         <activity android:name=".frames.net.rxjava_retrofit_okhttp.RxjavaActivity" />
         <activity android:name=".frames.net.rxjava_retrofit_okhttp.RxjavaRetrofitTotalActivity" />
-        <activity android:name=".apis.threads.AsynTaskDemoActivity" />
+        <activity android:name=".apis.threads.AsynTaskActivity" />
         <activity android:name=".apis.threads.ExecutorActivity" />
         <activity android:name=".apis.LamadaActivity" />
         <activity android:name=".views.widgets.recaction.RecItemClickConflictActivity" />

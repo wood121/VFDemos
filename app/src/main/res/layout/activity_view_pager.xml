@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".views.widgets.viewpager.ViewPagerActivity">
 
+    <com.example.gridviewpager.GridViewPager
+        android:id="@+id/mGridViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

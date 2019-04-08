@@ -7,17 +7,25 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.util.ToastUtil;
 
 import java.net.URL;
+import java.util.TimerTask;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AsynTaskDemoActivity extends AppCompatActivity {
+public class AsynTaskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asyn_task_demo);
 
-//        new DownLoadFilesTask().execute(...);
+//        TimerTask
+        
+        new DownLoadFilesTask().execute(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
     }
 
     private class DownLoadFilesTask extends AsyncTask<URL, Integer, Long> {
@@ -47,7 +55,7 @@ public class AsynTaskDemoActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long aLong) {
-            ToastUtil.showToast(AsynTaskDemoActivity.this, "result:" + aLong);
+            ToastUtil.showToast(AsynTaskActivity.this, "result:" + aLong);
         }
     }
 

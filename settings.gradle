@@ -1,1 +1,1 @@
-include ':app', ':buildsrc', ':locamavenbase', ':secondlibrary', ':annotation_processor', ':annotations'
+include ':app', ':buildsrc', ':locamavenbase', ':secondlibrary', ':annotation_processor', ':annotations', ':gridviewpager'

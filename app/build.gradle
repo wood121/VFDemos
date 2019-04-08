@@ -152,6 +152,7 @@ dependencies {
     //引用module中的类库
     implementation project(':locamavenbase')
     implementation project(':secondlibrary')
+    implementation project(':gridviewpager')
     implementation project(':annotations')
     implementation project(':annotation_processor')
 
