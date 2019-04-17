@@ -95,6 +95,9 @@ public class DanmuContentDialog extends Dialog implements View.OnClickListener {
 
     private void initView() {
         mEditText = findViewById(R.id.edit_text);
+        mEditText.setHorizontallyScrolling(false);
+        mEditText.setMaxLines(Integer.MAX_VALUE);
+
         mTvNumber = findViewById(R.id.tv_number);
         mTv_send = findViewById(R.id.send);
     }

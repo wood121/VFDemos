@@ -18,11 +18,10 @@ import com.example.wood121.viewdemos.R;
  * 封装的标题栏
  */
 public class TopBar extends RelativeLayout {
-
-    private topbarClickListener mClickListener;
     private TextView tv_title;
     private Button btn_right;
     private Button btn_left;
+    private topbarClickListener mClickListener;
 
     public TopBar(Context context) {
         super(context);
@@ -32,22 +31,12 @@ public class TopBar extends RelativeLayout {
         super(context, attrs);
         //获取view：xml方式，new TextView(context)代码添加控件
         View topBar = LayoutInflater.from(context).inflate(R.layout.topbar, this, true);
-        btn_left = (Button) topBar.findViewById(R.id.btn_left);
-        btn_right = (Button) topBar.findViewById(R.id.btn_right);
-        tv_title = (TextView) topBar.findViewById(R.id.tv_title);
+        btn_left = topBar.findViewById(R.id.btn_left);
+        btn_right = topBar.findViewById(R.id.btn_right);
+        tv_title = topBar.findViewById(R.id.tv_title);
 
-        btn_left.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mClickListener.leftClick();
-            }
-        });
-        btn_right.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mClickListener.rightClick();
-            }
-        });
+        btn_left.setOnClickListener(view -> mClickListener.leftClick());
+        btn_right.setOnClickListener(view -> mClickListener.rightClick());
 
         //获取属性，与view进行绑定操作
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TopBar);

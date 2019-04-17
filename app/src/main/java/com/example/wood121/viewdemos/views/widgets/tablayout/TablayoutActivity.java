@@ -17,6 +17,8 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 /**
@@ -35,7 +37,31 @@ public class TablayoutActivity extends BaseActivity implements View.OnClickListe
         //拿到数据、有tab、tab页对应的list集合
         deviceList.add(new DeviceBean(15, "icon", "电视机", 1, "客厅"));
         deviceList.add(new DeviceBean(25, "icon", "空调", 1, "客厅"));
-        deviceList.add(new DeviceBean(45, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(0, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(1, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(3, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(4, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(5, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(6, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(7, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(8, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(9, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(10, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(11, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(12, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(13, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(14, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(15, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(16, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(17, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(18, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(19, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(20, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(21, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(22, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(23, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(24, "icon", "洗衣机", 2, "卫生间"));
+        deviceList.add(new DeviceBean(25, "icon", "洗衣机", 2, "卫生间"));
         deviceList.add(new DeviceBean(80, "icon", "电饭煲", 3, "厨房"));
 
         //根据roomId,roomName分类：客厅 --list，卫生间 --list，厨房 --list
@@ -50,6 +76,7 @@ public class TablayoutActivity extends BaseActivity implements View.OnClickListe
         }
         mTabViewPagerAdapter.setData(this, mTabs, mFragments);
     };
+    private RecyclerView mRecyclerView;
 
     private List<String> getMapKeyList(Map<String, List<DeviceBean>> deviceMap) {
         ArrayList<String> list = new ArrayList<>();
@@ -115,6 +142,30 @@ public class TablayoutActivity extends BaseActivity implements View.OnClickListe
     @Override
     protected void initPageViewListener() {
         findViewById(R.id.btn_popwindow).setOnClickListener(this);
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        list.add("1111111");
+        mRecyclerView = findViewById(R.id.recyclerview);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        BarRecAdapter adapter = new BarRecAdapter(list);
+        mRecyclerView.setAdapter(adapter);
+
         //TabLayout 与 viewPager绑定
         mTabLayout = findViewById(R.id.tabLayout);
         mViewPager = findViewById(R.id.viewPager);

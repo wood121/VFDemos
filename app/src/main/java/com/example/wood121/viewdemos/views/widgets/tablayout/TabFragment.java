@@ -1,18 +1,15 @@
 package com.example.wood121.viewdemos.views.widgets.tablayout;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseFragment;
-import com.example.wood121.viewdemos.views.widgets.RecyclerView.DividerGridItemDecoration;
 import com.example.wood121.viewdemos.views.widgets.tablayout.entity.DeviceBean;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
@@ -62,10 +59,12 @@ public class TabFragment extends BaseFragment {
 
         mRecyclerView = findViewById(R.id.recyclerview);
         //布局样式
-        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3));
+//        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3));
         //GridLayoutManager的时候，分割线不一样。
-        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(mContext));
-        TabRecAdapter  adapter=  new TabRecAdapter(mDeviceList);
+//        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(mContext));
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        TabRecAdapter adapter = new TabRecAdapter(mDeviceList);
         mRecyclerView.setAdapter(adapter);
 
     }

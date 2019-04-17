@@ -14,7 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Banner轮播图、Vp频道分类
+ * Banner轮播图、
+ * <p>
+ * Vp频道分类:viewPager,gridview
  */
 public class ViewPagerActivity extends BaseActivity {
     private String[] titles = {"美食", "电影", "酒店住宿", "休闲娱乐", "外卖", "自助餐", "KTV", "机票/火车票", "周边游", "美甲美睫",

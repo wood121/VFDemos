@@ -64,7 +64,9 @@ public class TabRecAdapter extends RecyclerView.Adapter<TabRecAdapter.MyViewHold
             itemView.setOnClickListener(view -> {
                 //hahha
                 DeviceBean deviceBean = mDeviceList.get(getLayoutPosition());
-                listener.onItemClick(view, deviceBean);
+                if (listener != null) {
+                    listener.onItemClick(view, deviceBean);
+                }
             });
 
             tv_model.setOnClickListener(v -> {
