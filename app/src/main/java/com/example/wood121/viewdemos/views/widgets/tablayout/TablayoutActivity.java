@@ -1,7 +1,10 @@
 package com.example.wood121.viewdemos.views.widgets.tablayout;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.view.View;
 
 import com.example.wood121.viewdemos.R;
@@ -132,6 +135,10 @@ public class TablayoutActivity extends BaseActivity implements View.OnClickListe
 //        tfHaHa.setData(this, mTabs.get(0));
 //        tfHeHe.setData(this, mTabs.get(1));
 //        tfHei.setData(this, mTabs.get(2));
+
+//        Window
+//        WindowManager
+        
     }
 
     @Override
@@ -185,4 +192,5 @@ public class TablayoutActivity extends BaseActivity implements View.OnClickListe
                 break;
         }
     }
+
 }

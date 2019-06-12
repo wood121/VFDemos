@@ -1,8 +1,11 @@
 package com.example.wood121.viewdemos.views.widgets_self.danmu;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -351,4 +354,5 @@ public class DanMuActivity extends BaseActivity implements View.OnClickListener 
         }
         mDanmakuView.addDanmaku(danmaku);
     }
+
 }

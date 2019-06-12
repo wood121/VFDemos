@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.widgets.viewpager.ViewPagerActivity">
+    tools:context=".jnis.JNIDemoActivity">
 
-    <com.example.wood121.viewdemos.views.widgets.gridviewpager.GridViewPager
-        android:id="@+id/mGridViewPager"
+
+    <TextView
+        android:id="@+id/tv_content"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="#FFFFFF"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="hah" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

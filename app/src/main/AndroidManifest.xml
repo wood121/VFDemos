@@ -48,7 +48,8 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory,icon,label,theme,allowBackup"
         tools:targetApi="p">
-        <activity android:name=".views.widgets.CoordinatorLayout.CoordinatorLayoutActivity"></activity>
+        <activity android:name=".jnis.JNIDemoActivity"/>
+        <!--<activity android:name=".views.widgets.CoordinatorLayout.CoordinatorLayoutActivity" />-->
         <activity android:name=".views.widgets.ConstraintActivity" />
         <activity android:name=".views.widgets_self.danmu.DanMuActivity" />
         <activity android:name=".views.widgets.viewpager.GuideNewActivity" />

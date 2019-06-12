@@ -12,7 +12,6 @@ import com.umeng.socialize.PlatformConfig;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import androidx.core.content.FileProvider;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 import cn.jpush.android.api.JPushInterface;

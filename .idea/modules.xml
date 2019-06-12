@@ -7,9 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/annotations/annotations.iml" filepath="$PROJECT_DIR$/annotations/annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/buildSrc/buildsrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildsrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gridviewpager/gridviewpager.iml" filepath="$PROJECT_DIR$/gridviewpager/gridviewpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/locamavenbase/locamavenbase.iml" filepath="$PROJECT_DIR$/locamavenbase/locamavenbase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/secondlibrary/secondlibrary.iml" filepath="$PROJECT_DIR$/secondlibrary/secondlibrary.iml" />
     </modules>
   </component>
 </project>

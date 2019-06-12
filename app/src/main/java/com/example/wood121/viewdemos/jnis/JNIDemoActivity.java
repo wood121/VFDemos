@@ -1,0 +1,37 @@
+package com.example.wood121.viewdemos.jnis;
+
+import android.content.ComponentName;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.widget.TextView;
+
+import com.example.wood121.viewdemos.R;
+import com.example.wood121.viewdemos.base.BaseActivity;
+
+public class JNIDemoActivity extends BaseActivity {
+
+    private TextView tvContent;
+
+    static {
+        System.loadLibrary("myNativeLib");
+    }
+
+    @Override
+    protected void initData(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected int initPageLayoutId() {
+        return R.layout.activity_jnidemo;
+    }
+
+    @Override
+    protected void initPageViewListener() {
+        tvContent = findViewById(R.id.tv_content);
+    }
+
+
+    private native String getStringFromNative();
+}

@@ -4,7 +4,7 @@ import android.util.Log;
 
 import com.example.wood121.viewdemos.apis.APIFragment;
 import com.example.wood121.viewdemos.frames.FrameFragment;
-import com.example.wood121.viewdemos.base.fragments.JNIFragment;
+import com.example.wood121.viewdemos.jnis.JNIFragment;
 import com.example.wood121.viewdemos.math.MathFragment;
 import com.example.wood121.viewdemos.sdk_thirdparty.SDKFragment;
 import com.example.wood121.viewdemos.views.ViewFragment;
