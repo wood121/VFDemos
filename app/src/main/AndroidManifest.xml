@@ -48,7 +48,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory,icon,label,theme,allowBackup"
         tools:targetApi="p">
-        <activity android:name=".jnis.JNIDemoActivity"/>
+        <activity android:name=".jnis.JNIDemoActivity" />
         <!--<activity android:name=".views.widgets.CoordinatorLayout.CoordinatorLayoutActivity" />-->
         <activity android:name=".views.widgets.ConstraintActivity" />
         <activity android:name=".views.widgets_self.danmu.DanMuActivity" />
@@ -110,6 +110,7 @@
         <activity android:name=".sdk_thirdparty.map.MapActivity" />
         <activity android:name=".math.ProxyActivity" />
         <activity android:name=".frames.LeakCanaryActivity" />
+        <activity android:name=".frames.net.multicast.ChatActivity" />
         <activity android:name=".apis.ipc.MessengerActivity" />
         <activity android:name=".sdk_thirdparty.map.AddressActivity" />
         <activity android:name=".apis.data_storage.DataStorageActivity" />

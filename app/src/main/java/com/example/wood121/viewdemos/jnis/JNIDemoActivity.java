@@ -1,9 +1,6 @@
 package com.example.wood121.viewdemos.jnis;
 
-import android.content.ComponentName;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
@@ -14,7 +11,7 @@ public class JNIDemoActivity extends BaseActivity {
     private TextView tvContent;
 
     static {
-        System.loadLibrary("myNativeLib");
+//        System.loadLibrary("myNativeLib");
     }
 
     @Override

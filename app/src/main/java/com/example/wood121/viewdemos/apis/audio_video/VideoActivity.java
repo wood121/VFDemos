@@ -11,8 +11,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 
@@ -31,8 +29,6 @@ public class VideoActivity extends AppCompatActivity {
     ProgressBar progressBar;
     @BindView(R.id.numText)
     TextView numText;
-    @BindView(R.id.fab)
-    FloatingActionButton fab;
     private MediaPlayer mediaPlayer;
 
     @Override
@@ -42,15 +38,6 @@ public class VideoActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         setMediaData();    //MediaPlayer的使用
     }

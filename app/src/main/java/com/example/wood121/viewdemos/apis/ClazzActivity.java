@@ -7,8 +7,10 @@ import com.example.wood121.viewdemos.base.BaseActivity;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 
+/**
+ * 反射的训练
+ */
 public class ClazzActivity extends BaseActivity {
 
     @Override
