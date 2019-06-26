@@ -48,8 +48,16 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory,icon,label,theme,allowBackup"
         tools:targetApi="p">
-        <activity android:name=".jnis.JNIDemoActivity" />
-        <!--<activity android:name=".views.widgets.CoordinatorLayout.CoordinatorLayoutActivity" />-->
+        <activity android:name=".apis.startmode.ModeSingleInstanceActivity"></activity>
+        <activity android:name=".apis.startmode.ModeSingleTaskActivity" />
+        <activity android:name=".apis.startmode.ModeSingleTopActivity" />
+        <activity android:name=".apis.startmode.ModeActivity" />
+        <activity
+            android:name=".apis.startmode.ModeStandardActivity"
+            android:launchMode="standard" />
+        <activity android:name=".apis.startmode.ModeBaseActivity" />
+        <activity android:name=".frames.net.HttpUrlConnection.HttpUrlConncetionActivity" />
+        <activity android:name=".jnis.JNIDemoActivity" /> <!-- <activity android:name=".views.widgets.CoordinatorLayout.CoordinatorLayoutActivity" /> -->
         <activity android:name=".views.widgets.ConstraintActivity" />
         <activity android:name=".views.widgets_self.danmu.DanMuActivity" />
         <activity android:name=".views.widgets.viewpager.GuideNewActivity" />
@@ -242,7 +250,7 @@
         <activity android:name=".views.widgets_self.WidgetsSelfActivity" />
         <activity android:name=".sdk_thirdparty.login_share.LoginActivity" />
         <activity android:name=".frames.wireless_iot.WirelessIotActivity" />
-        <activity android:name=".frames.net.rxjava_retrofit_okhttp.HttpRequestActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.OkhttRequestActivity" />
         <activity android:name=".apis.database_.DBActivity" />
         <activity android:name=".apis.threads.ThreadsActivity" />
         <activity android:name=".apis.ipc.IpcActivity" />

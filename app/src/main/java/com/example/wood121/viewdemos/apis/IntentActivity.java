@@ -27,7 +27,7 @@ public class IntentActivity extends BaseActivity implements View.OnClickListener
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_open).setOnClickListener(this);
         findViewById(R.id.btn_action).setOnClickListener(this);
         findViewById(R.id.btn_object).setOnClickListener(this);

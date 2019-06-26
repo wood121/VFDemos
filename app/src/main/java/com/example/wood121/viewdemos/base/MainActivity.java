@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         tabRbHome.setChecked(true);
         FragmentTabManager.getInstance(this).slectFragment(FragmentTabManager.API_VIEW_FRAGMENT);
         tbView.setTitle("APIView");

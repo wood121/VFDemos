@@ -25,7 +25,7 @@ public class ChartsActivity extends BaseActivity implements View.OnClickListener
      * mData.add(new ModelRecyclerBean("折线图2", R.mipmap.circle_zip, ZheActivity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_bing).setOnClickListener(this);
         findViewById(R.id.btn_zhe).setOnClickListener(this);
     }

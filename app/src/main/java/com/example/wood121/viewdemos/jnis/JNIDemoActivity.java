@@ -25,7 +25,7 @@ public class JNIDemoActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         tvContent = findViewById(R.id.tv_content);
     }
 

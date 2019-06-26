@@ -91,7 +91,7 @@ public class AddressActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         baiduMap = mapview.getMap();
 
         //设置Tab

@@ -16,7 +16,6 @@ public class MathPractice {
 //        bytestransfer();
 
         double a = 3.6000000000000227;
-
     }
 
     private void bytestransfer() {

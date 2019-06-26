@@ -20,6 +20,7 @@ import androidx.viewpager.widget.ViewPager;
  * ViewPager + GridView的频道分页实现
  * ViewPager + Dot点位显示的封装
  * 2019-04-08：类似封装效果处理弹幕？ 数据输入，点击事件接口
+ * 20190612：这就是传说中的组合控件，封装view、给输入输入入口；给view提供attr；给view的点击事件提供回调接口。
  */
 
 public class GridViewPager extends RelativeLayout {

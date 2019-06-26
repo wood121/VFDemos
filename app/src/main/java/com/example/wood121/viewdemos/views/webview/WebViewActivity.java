@@ -24,7 +24,7 @@ public class WebViewActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         mWebView = findViewById(R.id.webview);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             mWebView.setWebContentsDebuggingEnabled(true);

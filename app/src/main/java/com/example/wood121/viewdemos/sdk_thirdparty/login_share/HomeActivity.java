@@ -32,7 +32,7 @@ public class HomeActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         Intent intent = getIntent();
         mPlatform = (SHARE_MEDIA) intent.getSerializableExtra("platform");
         findViewById(R.id.exit).setOnClickListener(new View.OnClickListener() {

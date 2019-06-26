@@ -38,7 +38,7 @@ public class AnnotationActivity extends BaseActivity implements View.OnClickList
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         getAllAnnotationView();
         mBtn.setOnClickListener(this);
     }

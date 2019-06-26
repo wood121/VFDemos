@@ -147,7 +147,7 @@ public class TablayoutActivity extends BaseActivity implements View.OnClickListe
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_popwindow).setOnClickListener(this);
 
         ArrayList<String> list = new ArrayList<>();

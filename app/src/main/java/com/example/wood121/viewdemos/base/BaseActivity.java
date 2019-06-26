@@ -67,7 +67,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         // 设置layout布局
         setContentView(initPageLayoutId());
         // 初始化页面控件点击
-        initPageViewListener();
+        initEvent();
     }
 
     //检测所需权限是否满足
@@ -185,7 +185,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract int initPageLayoutId();
 
-    protected abstract void initPageViewListener();
+    protected abstract void initEvent();
 
     /**
      * 界面跳转

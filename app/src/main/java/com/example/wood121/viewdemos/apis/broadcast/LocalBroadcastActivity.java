@@ -25,7 +25,7 @@ public class LocalBroadcastActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
         BroadcastReceiver receiver = new BroadcastReceiver() {
             @Override

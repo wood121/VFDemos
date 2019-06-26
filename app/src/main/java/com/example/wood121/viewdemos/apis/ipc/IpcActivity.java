@@ -21,7 +21,7 @@ public class IpcActivity extends BaseActivity implements View.OnClickListener {
      * mData.add(new ModelRecyclerBean("messenger", R.mipmap.circle_captcha, MessengerActivity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_messager).setOnClickListener(this);
     }
 

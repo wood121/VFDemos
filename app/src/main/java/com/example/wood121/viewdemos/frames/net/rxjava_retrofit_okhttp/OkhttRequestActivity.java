@@ -7,7 +7,7 @@ import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
 import com.example.wood121.viewdemos.views.charts.line.ZheActivity;
 
-public class HttpRequestActivity extends BaseActivity implements View.OnClickListener {
+public class OkhttRequestActivity extends BaseActivity implements View.OnClickListener {
 
 
     @Override
@@ -27,7 +27,7 @@ public class HttpRequestActivity extends BaseActivity implements View.OnClickLis
      * mData.add(new ModelRecyclerBean("Okhttp3", R.mipmap.circle_captcha, Okhttp3Activity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_rxjava).setOnClickListener(this);
         findViewById(R.id.btn_retrofit).setOnClickListener(this);
         findViewById(R.id.btn_okhttp).setOnClickListener(this);

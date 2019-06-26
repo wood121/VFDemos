@@ -25,7 +25,7 @@ public class WirelessIotActivity extends BaseActivity implements View.OnClickLis
      * mData.add(new ModelRecyclerBean("udp_chat", R.mipmap.circle_captcha, ChatActivity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_bt_scan).setOnClickListener(this);
     }
 

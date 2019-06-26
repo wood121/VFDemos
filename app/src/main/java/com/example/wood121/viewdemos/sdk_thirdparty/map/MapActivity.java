@@ -22,7 +22,7 @@ public class MapActivity extends BaseActivity implements View.OnClickListener {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.tv_getAddress).setOnClickListener(this);
         findViewById(R.id.tv_baidu_api).setOnClickListener(this);
     }

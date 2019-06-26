@@ -19,7 +19,7 @@ public class BitmapsActivity extends BaseActivity implements View.OnClickListene
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_take_photo).setOnClickListener(this);
 
     }

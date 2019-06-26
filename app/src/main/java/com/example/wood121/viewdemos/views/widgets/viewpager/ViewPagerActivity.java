@@ -25,7 +25,7 @@ public class ViewPagerActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
 
     }
 //    private List<Model> mMData;
@@ -46,7 +46,7 @@ public class ViewPagerActivity extends BaseActivity {
 //    }
 //
 //    @Override
-//    protected void initPageViewListener() {
+//    protected void initEvent() {
 //        GridViewPager mGridViewPager = findViewById(R.id.mGridViewPager);
 //        //初始化数据源
 //        mGridViewPager

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".apis.startmode.ModeActivity">
+
+    <Button
+        android:id="@+id/btn_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="standard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_singleTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="singleTop"
+        app:layout_constraintTop_toBottomOf="@+id/btn_standard" />
+
+    <Button
+        android:id="@+id/btn_singleInstance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="singleInstance"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singleTop" />
+
+    <Button
+        android:id="@+id/btn_singleTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="singleTask"
+        app:layout_constraintTop_toBottomOf="@+id/btn_singleInstance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

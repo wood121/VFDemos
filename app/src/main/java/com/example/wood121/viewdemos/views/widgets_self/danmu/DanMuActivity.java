@@ -89,7 +89,7 @@ public class DanMuActivity extends BaseActivity implements View.OnClickListener 
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         mRlContainer = findViewById(R.id.rl_container);
         mRevealLayout = findViewById(R.id.reveal_layout);
         LinearLayout llContent = findViewById(R.id.ll_content);

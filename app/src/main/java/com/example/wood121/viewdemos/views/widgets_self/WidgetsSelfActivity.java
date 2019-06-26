@@ -26,7 +26,7 @@ public class WidgetsSelfActivity extends BaseActivity implements View.OnClickLis
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_arcview).setOnClickListener(this);
         findViewById(R.id.btn_checkprocess).setOnClickListener(this);
         findViewById(R.id.btn_topbar).setOnClickListener(this);

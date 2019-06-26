@@ -30,7 +30,7 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
      * mData.add(new ModelRecyclerBean("RecView", R.mipmap.circle_zip, RecActivity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_dialog_context).setOnClickListener(this);
         findViewById(R.id.btn_rec).setOnClickListener(this);
         findViewById(R.id.btn_viewaction).setOnClickListener(this);

@@ -36,7 +36,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         QQ = findViewById(R.id.iv_qq_login);
         WeiXin = findViewById(R.id.iv_weixin_login);
         Sina = findViewById(R.id.iv_sina_login);

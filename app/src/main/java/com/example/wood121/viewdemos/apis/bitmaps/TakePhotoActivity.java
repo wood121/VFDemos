@@ -41,7 +41,7 @@ public class TakePhotoActivity extends BaseActivity implements View.OnClickListe
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         mIvIcon = findViewById(R.id.iv_icon);
         findViewById(R.id.btn_camera).setOnClickListener(this);
         findViewById(R.id.btn_gallery).setOnClickListener(this);

@@ -39,7 +39,7 @@ public class ExcelContentActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
 
     }
 

@@ -37,6 +37,7 @@ public class APIFragment extends BaseTabContentFragment {
 
     @Override
     protected void getFragDatas() {
+        mData.add(new ModelRecyclerBean("启动模式", R.mipmap.circle_seek, DataStorageActivity.class));
         mData.add(new ModelRecyclerBean("数据存储", R.mipmap.circle_seek, DataStorageActivity.class));
         mData.add(new ModelRecyclerBean("数据库", R.mipmap.circle_seek, DBActivity.class));
         mData.add(new ModelRecyclerBean("进程通信", R.mipmap.circle_seek, IpcActivity.class));

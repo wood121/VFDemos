@@ -43,7 +43,7 @@ public class View3StepActivity extends BaseActivity implements View.OnClickListe
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         mFlContainer = findViewById(R.id.fl_container);
 //        mFlContainer.addView(new GeometryView(this));
 

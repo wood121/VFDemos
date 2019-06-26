@@ -24,7 +24,7 @@ public class ClazzActivity extends BaseActivity {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
 //        getTheClass();
     }
 

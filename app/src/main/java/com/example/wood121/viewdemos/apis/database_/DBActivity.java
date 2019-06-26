@@ -26,7 +26,7 @@ public class DBActivity extends BaseActivity implements View.OnClickListener {
      * mData.add(new ModelRecyclerBean("TableVirtualidDeviceBean_DBManager", R.mipmap.circle_captcha, SqliteDeviceActivity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_sq_book).setOnClickListener(this);
         findViewById(R.id.btn_sq_device).setOnClickListener(this);
     }

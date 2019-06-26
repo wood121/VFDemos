@@ -224,8 +224,16 @@ public class Okhttp3Activity extends AppCompatActivity {
      * 异步Get请求
      */
     private void getAsy() {
-        Request request = new Request.Builder().url("http://www.baidu.com").method("GET", null).build();
+        Request request = new Request.Builder()
+                .url("http://www.baidu.com")
+                .method("GET", null)
+                .build();
         Call call = okHttpClient.newCall(request);
+        try {
+            Response response = call.execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {

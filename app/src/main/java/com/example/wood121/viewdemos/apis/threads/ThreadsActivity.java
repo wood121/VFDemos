@@ -24,7 +24,7 @@ public class ThreadsActivity extends BaseActivity implements View.OnClickListene
      * mData.add(new ModelRecyclerBean("ThreadPoolExecutor", R.mipmap.circle_captcha, ExecutorActivity.class));
      */
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_asyntask).setOnClickListener(this);
         findViewById(R.id.btn_exector).setOnClickListener(this);
     }

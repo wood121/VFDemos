@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.wood121.viewdemos.R;
-import com.example.wood121.viewdemos.frames.MyHttpService;
 import com.example.wood121.viewdemos.frames.bean.Reception;
 import com.example.wood121.viewdemos.frames.bean.Reception2;
 

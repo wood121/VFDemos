@@ -21,7 +21,7 @@ public class AVActivity extends BaseActivity implements View.OnClickListener {
     }
 
     @Override
-    protected void initPageViewListener() {
+    protected void initEvent() {
         findViewById(R.id.btn_video).setOnClickListener(this);
 
     }
