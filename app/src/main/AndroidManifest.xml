@@ -48,7 +48,8 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory,icon,label,theme,allowBackup"
         tools:targetApi="p">
-        <activity android:name=".apis.startmode.ModeSingleInstanceActivity"></activity>
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.okhttp.OkhtttpOfficalDemoActivity"></activity>
+        <activity android:name=".apis.startmode.ModeSingleInstanceActivity" />
         <activity android:name=".apis.startmode.ModeSingleTaskActivity" />
         <activity android:name=".apis.startmode.ModeSingleTopActivity" />
         <activity android:name=".apis.startmode.ModeActivity" />
@@ -101,7 +102,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".frames.wireless_iot.BlueToothActivity" />
         <activity android:name=".sdk_thirdparty.ExcelContentActivity" />
-        <activity android:name=".frames.net.rxjava_retrofit_okhttp.Okhttp3Activity" />
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -123,9 +123,9 @@
         <activity android:name=".sdk_thirdparty.map.AddressActivity" />
         <activity android:name=".apis.data_storage.DataStorageActivity" />
         <activity android:name=".apis.data_storage.FileStorageActivity" />
-        <activity android:name=".frames.net.rxjava_retrofit_okhttp.RetrofitActivity" />
-        <activity android:name=".frames.net.rxjava_retrofit_okhttp.RxjavaActivity" />
-        <activity android:name=".frames.net.rxjava_retrofit_okhttp.RxjavaRetrofitTotalActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.retrofit.RetrofitActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.rxjava.RxjavaActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.okhttplib.RxjavaRetrofitTotalActivity" />
         <activity android:name=".apis.threads.AsynTaskActivity" />
         <activity android:name=".apis.threads.ExecutorActivity" />
         <activity android:name=".apis.LamadaActivity" />
@@ -250,7 +250,7 @@
         <activity android:name=".views.widgets_self.WidgetsSelfActivity" />
         <activity android:name=".sdk_thirdparty.login_share.LoginActivity" />
         <activity android:name=".frames.wireless_iot.WirelessIotActivity" />
-        <activity android:name=".frames.net.rxjava_retrofit_okhttp.OkhttRequestActivity" />
+        <activity android:name=".frames.net.rxjava_retrofit_okhttp.EntryActivity" />
         <activity android:name=".apis.database_.DBActivity" />
         <activity android:name=".apis.threads.ThreadsActivity" />
         <activity android:name=".apis.ipc.IpcActivity" />

@@ -18,10 +18,16 @@
         android:scrollbars="vertical" />
 
     <Button
-        android:id="@+id/btn_get_ways"
+        android:id="@+id/btn_get_app_ways"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="获取存储路径" />
+        android:text="获取app常用路径" />
+
+    <Button
+        android:id="@+id/btn_get_external_ways"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取external常用路径" />
 
     <LinearLayout
         android:layout_width="match_parent"

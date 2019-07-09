@@ -94,7 +94,6 @@ public abstract class CallBack<T> {
         }
     }
 
-
     public static abstract class CallBackBitmap extends CallBack<Bitmap> {
         private int mTargetWidth;
         private int mTargetHeight;

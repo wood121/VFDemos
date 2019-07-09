@@ -24,10 +24,29 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static android.os.Environment.DIRECTORY_ALARMS;
+import static android.os.Environment.DIRECTORY_DCIM;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+import static android.os.Environment.DIRECTORY_MOVIES;
+import static android.os.Environment.DIRECTORY_MUSIC;
+import static android.os.Environment.DIRECTORY_NOTIFICATIONS;
+import static android.os.Environment.DIRECTORY_PICTURES;
+import static android.os.Environment.DIRECTORY_PODCASTS;
+import static android.os.Environment.DIRECTORY_RINGTONES;
+
+/**
+ * 1.内部存储空间中的应用私有目录
+ * getFilesDir(),getCacheDir()
+ * 2.外部存储空间中的应用私有目录
+ * getExternalFilesDir(),getExternalCacheDir()
+ * 3.
+ */
 public class FileStorageActivity extends AppCompatActivity {
 
-    @BindView(R.id.btn_get_ways)
-    Button btnGetWays;
+    @BindView(R.id.btn_get_app_ways)
+    Button btnGetAppWays;
+    @BindView(R.id.btn_get_external_ways)
+    Button btnGetExternalWays;
     @BindView(R.id.btn_input)
     Button btnInput;
     @BindView(R.id.btn_output)
@@ -54,31 +73,26 @@ public class FileStorageActivity extends AppCompatActivity {
 
         file_data = "input";
         state = Environment.getExternalStorageState();
+
         //内部扩展 缓存目录
-        File externalCacheDir = getExternalCacheDir();
-        File dir = new File(externalCacheDir.toString() + "/lzl");
+        String absolutePath = getExternalCacheDir().getAbsolutePath();
+        File dir = new File(absolutePath + "/lzl");
         if (!dir.exists()) {
             dir.mkdir();
         }
-
         file_storage = new File(dir, "wood.txt");
+        //可以在小米手机文件管理--搜索com.example.wood121--cache--lzl--wood.txt
         Log.e("url", "file_storage: " + file_storage.toString());
-        //内部扩展 文件目录
-//        file_storage = new File(getExternalFilesDir(null), "wood.txt");
-
-        //外部 公共存储目录
-//        File externalStorageDirectory = Environment.getExternalStorageDirectory();
-//        file_storage = new File(externalStorageDirectory, "lzllmh.txt");
-
-//        File publicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
-//        file_storage = new File(publicDirectory, "lzllmh.txt");
     }
 
-    @OnClick({R.id.btn_get_ways, R.id.btn_input, R.id.btn_output, R.id.btn_output_storage, R.id.btn_input_storage})
+    @OnClick({R.id.btn_get_app_ways, R.id.btn_get_external_ways, R.id.btn_input, R.id.btn_output, R.id.btn_output_storage, R.id.btn_input_storage})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btn_get_ways:
+            case R.id.btn_get_app_ways:
                 getInputWays();
+                break;
+            case R.id.btn_get_external_ways:
+                getEnviromentStorage();
                 break;
             case R.id.btn_input:
                 input();
@@ -167,18 +181,19 @@ public class FileStorageActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * app中常见的存储路径
+     * 使用应用私有目录保存应用相关数据，使用公共目录保存应用无关数据（共享数据）。
+     */
     private void getInputWays() {
-        /**
-         * 内部存储路径
-         */
-        //应用程序私有存储空间
+        //内部存储空间中的应用私有目录
         String fileDir = getFilesDir().toString();
         Log.e("url", "fileDir: " + fileDir);
-
+    
         String cacheDir = getCacheDir().toString();
         Log.e("url", "cacheDir: " + cacheDir);
 
-        //应用程序扩展存储空间
+        //外部存储空间中的应用私有目录
         String externalFileDir = getExternalFilesDir(null).toString();
         Log.e("url", "externalFileDir: " + externalFileDir);
 
@@ -189,12 +204,49 @@ public class FileStorageActivity extends AppCompatActivity {
         String packageResourcePath = getPackageResourcePath();
         Log.e("url", "packageResourcePath: " + packageResourcePath);
 
-        //默认数据库路径
-//        getDatabasePath()
+        //外部存储空间中的公共目录
+        String directory_alarms = Environment.getExternalStoragePublicDirectory(DIRECTORY_ALARMS).getAbsolutePath();
+        Log.e("url", "directory_alarms : " + directory_alarms);
 
-        /**
-         * 外部存储数据
-         */
+        String directory_dcim = Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM).getAbsolutePath();
+        Log.e("url", "directory_dcim : " + directory_dcim);
+
+        String directory_downloads = Environment.getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS).getAbsolutePath();
+        Log.e("url", "directory_downloads: " + directory_downloads);
+
+        String directory_movies = Environment.getExternalStoragePublicDirectory(DIRECTORY_MOVIES).getAbsolutePath();
+        Log.e("url", "directory_movies: " + directory_movies);
+
+        String directory_music = Environment.getExternalStoragePublicDirectory(DIRECTORY_MUSIC).getAbsolutePath();
+        Log.e("url", "directory_music: " + directory_music);
+
+        String directory_notifications = Environment.getExternalStoragePublicDirectory(DIRECTORY_NOTIFICATIONS).getAbsolutePath();
+        Log.e("url", "directory_notifications: " + directory_notifications);
+
+        String directory_pictures = Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES).getAbsolutePath();
+        Log.e("url", "directory_pictures: " + directory_pictures);
+
+        String directory_podcasts = Environment.getExternalStoragePublicDirectory(DIRECTORY_PODCASTS).getAbsolutePath();
+        Log.e("url", "directory_podcasts: " + directory_podcasts);
+
+        String directory_ringtones = Environment.getExternalStoragePublicDirectory(DIRECTORY_RINGTONES).getAbsolutePath();
+        Log.e("url", "directory_ringtones: " + directory_ringtones);
+
+        //外部存储空间中的其它目录
+        String getExternalStorageDirectory = Environment.getExternalStorageDirectory().getAbsolutePath();
+        File music = new File(getExternalStorageDirectory, "music");
+        if (!music.exists()) {
+            Log.e("url", "不存在");
+        } else {
+            Log.e("url", "存在");
+        }
+        Log.e("url", "getExternalStorageDirectory: " + getExternalStorageDirectory);
+    }
+
+    /**
+     * 外部存储空间
+     */
+    private void getEnviromentStorage() {
         String rootDir = Environment.getRootDirectory().toString();
         Log.e("url", "rootDir: " + rootDir);
 
@@ -207,10 +259,10 @@ public class FileStorageActivity extends AppCompatActivity {
         String externaleStorageDir = Environment.getExternalStorageDirectory().toString();
         Log.e("url", "externaleStorageDir: " + externaleStorageDir);
 
-        String getExternalStoragePublicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString();
+        String getExternalStoragePublicDirectory = Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES).toString();
         Log.e("url", "getExternalStoragePublicDirectory: " + getExternalStoragePublicDirectory);
 
-        String externalStorageState = Environment.getExternalStorageState().toString();
+        String externalStorageState = Environment.getExternalStorageState();
         Log.e("url", "externalStorageState: " + externalStorageState);
 
         boolean emulated = Environment.isExternalStorageEmulated();

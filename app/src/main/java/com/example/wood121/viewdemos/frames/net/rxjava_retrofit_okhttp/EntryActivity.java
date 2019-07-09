@@ -5,9 +5,12 @@ import android.view.View;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
-import com.example.wood121.viewdemos.views.charts.line.ZheActivity;
+import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.okhttp.OkhtttpOfficalDemoActivity;
+import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.okhttplib.RxjavaRetrofitTotalActivity;
+import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.retrofit.RetrofitActivity;
+import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.rxjava.RxjavaActivity;
 
-public class OkhttRequestActivity extends BaseActivity implements View.OnClickListener {
+public class EntryActivity extends BaseActivity implements View.OnClickListener {
 
 
     @Override
@@ -30,24 +33,24 @@ public class OkhttRequestActivity extends BaseActivity implements View.OnClickLi
     protected void initEvent() {
         findViewById(R.id.btn_rxjava).setOnClickListener(this);
         findViewById(R.id.btn_retrofit).setOnClickListener(this);
-        findViewById(R.id.btn_okhttp).setOnClickListener(this);
+        findViewById(R.id.btn_okhttp_offical).setOnClickListener(this);
         findViewById(R.id.btn_rx_retrofit).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_rxjava:
-                readyGo(RxjavaActivity.class);
+            case R.id.btn_okhttp_offical:
+                readyGo(OkhtttpOfficalDemoActivity.class);
                 break;
             case R.id.btn_retrofit:
                 readyGo(RetrofitActivity.class);
                 break;
-            case R.id.btn_okhttp:
-                readyGo(Okhttp3Activity.class);
+            case R.id.btn_rxjava:
+                readyGo(RxjavaActivity.class);
                 break;
             case R.id.btn_rx_retrofit:
-                readyGo(ZheActivity.class);
+                readyGo(RxjavaRetrofitTotalActivity.class);
                 break;
         }
     }

@@ -5,7 +5,7 @@ import com.example.wood121.viewdemos.base.bean.ModelRecyclerBean;
 import com.example.wood121.viewdemos.base.fragments.BaseTabContentFragment;
 import com.example.wood121.viewdemos.frames.net.HttpUrlConnection.HttpUrlConncetionActivity;
 import com.example.wood121.viewdemos.frames.net.multicast.ChatActivity;
-import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.OkhttRequestActivity;
+import com.example.wood121.viewdemos.frames.net.rxjava_retrofit_okhttp.EntryActivity;
 import com.example.wood121.viewdemos.frames.wireless_iot.WirelessIotActivity;
 
 /**
@@ -32,7 +32,7 @@ public class FrameFragment extends BaseTabContentFragment {
     protected void getFragDatas() {
         mData.add(new ModelRecyclerBean("multicast", R.mipmap.circle_captcha, ChatActivity.class));
         mData.add(new ModelRecyclerBean("HttpUrlConnection", R.mipmap.circle_captcha, HttpUrlConncetionActivity.class));
-        mData.add(new ModelRecyclerBean("Okhttp+Retrofit+Rxjava", R.mipmap.circle_captcha, OkhttRequestActivity.class));
+        mData.add(new ModelRecyclerBean("Okhttp+Retrofit+Rxjava", R.mipmap.circle_captcha, EntryActivity.class));
         mData.add(new ModelRecyclerBean("无线网络-IoT", R.mipmap.circle_captcha, WirelessIotActivity.class));
         mData.add(new ModelRecyclerBean("LeakCanary", R.mipmap.circle_captcha, LeakCanaryActivity.class));
     }

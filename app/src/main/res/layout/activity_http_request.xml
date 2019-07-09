@@ -12,10 +12,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_rxjava"
+            android:id="@+id/btn_okhttp_offical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rxjava" />
+            android:text="Okhttp_offical" />
 
         <Button
             android:id="@+id/btn_retrofit"
@@ -24,10 +24,10 @@
             android:text="Retrofit" />
 
         <Button
-            android:id="@+id/btn_okhttp"
+            android:id="@+id/btn_rxjava"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Okhttp" />
+            android:text="Rxjava" />
 
         <Button
             android:id="@+id/btn_rx_retrofit"

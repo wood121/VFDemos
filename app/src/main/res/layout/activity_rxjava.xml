@@ -9,36 +9,42 @@
         android:id="@+id/btn_init"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn_flowable" />
+        android:text="flowable" />
 
     <Button
         android:id="@+id/btn_printarray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn_observable" />
+        android:text="observable" />
 
     <Button
         android:id="@+id/btn_getpictures"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn_single" />
+        android:text="single" />
 
     <Button
         android:id="@+id/btn_complete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn_complete" />
+        android:text="complete" />
 
     <Button
         android:id="@+id/btn_Maybe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn_Maybe" />
+        android:text="Maybe" />
 
     <Button
         android:id="@+id/btn_Rxbus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn_Rxbus" />
+        android:text="Rxbus" />
+
+    <Button
+        android:id="@+id/btn_threads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="线程切换" />
 
 </LinearLayout>

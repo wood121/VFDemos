@@ -34,11 +34,10 @@ buildscript {
 //而allprojects中是项目依赖库的仓库配置
 allprojects {
     repositories {
-//        jcenter()
-
-        google()
-        maven { url "https://jitpack.io" }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
         // 添加本地maven地址配置
 //        maven {
 ////            url uri("${rootProject.projectDir}/repo")
