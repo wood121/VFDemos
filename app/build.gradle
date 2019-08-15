@@ -131,6 +131,7 @@ dependencies {
     api 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+    implementation 'com.zhouyou:segmentedbar:1.0.9'
     //引用module中的类库
     implementation project(':locamavenbase')
     implementation project(':annotations')

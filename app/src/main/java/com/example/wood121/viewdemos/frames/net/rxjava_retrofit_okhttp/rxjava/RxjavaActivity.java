@@ -29,10 +29,12 @@ import io.reactivex.ObservableSource;
 import io.reactivex.Scheduler;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Rxjva-demo
@@ -222,13 +224,15 @@ public class RxjavaActivity extends AppCompatActivity {
             e.onNext("test1");
             e.onNext("test2");
             e.onComplete();
-        }).subscribe(s -> Log.e("wood121", "链式调用:" + s), throwable -> {
+        }).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(s -> Log.e("wood121", "链式调用:" + s), throwable -> {
 
-        }, () -> {
+                }, () -> {
 
-        }, disposable -> {
+                }, disposable -> {
 
-        });
+                });
 
         /**
          * * * * * * * * * 创建操作符* * * * * * * * * * * * * * * * * * * * * * * * *

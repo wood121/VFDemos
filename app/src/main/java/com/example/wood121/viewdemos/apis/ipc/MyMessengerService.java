@@ -1,10 +1,8 @@
 package com.example.wood121.viewdemos.apis.ipc;
 
 import android.app.Service;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.IBinder;
-import android.os.UserHandle;
 
 public class MyMessengerService extends Service {
 
@@ -39,6 +37,7 @@ public class MyMessengerService extends Service {
 //    private Messenger messenger = new Messenger(mHandler);
 
     public MyMessengerService() {
+
     }
 
 

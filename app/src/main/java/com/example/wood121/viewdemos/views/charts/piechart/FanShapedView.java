@@ -1,4 +1,4 @@
-package com.example.wood121.viewdemos.views.charts.bing;
+package com.example.wood121.viewdemos.views.charts.piechart;
 
 import android.content.Context;
 import android.graphics.Canvas;

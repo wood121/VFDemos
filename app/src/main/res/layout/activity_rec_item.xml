@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.views.charts.piechart.PieChartActivity">
+    tools:context=".views.widgets.RecyclerView.recitem.RecItemActivity">
 
-    <com.example.wood121.viewdemos.views.charts.piechart.FanShapedView
-        android:id="@+id/shapeview"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

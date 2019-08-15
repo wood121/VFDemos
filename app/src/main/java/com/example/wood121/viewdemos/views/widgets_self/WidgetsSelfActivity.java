@@ -5,7 +5,6 @@ import android.view.View;
 
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
-import com.example.wood121.viewdemos.util.ToastUtil;
 import com.example.wood121.viewdemos.views.widgets_self.base.View3StepActivity;
 import com.example.wood121.viewdemos.views.widgets_self.circlecheck.CheckProcessActivity;
 import com.example.wood121.viewdemos.views.widgets_self.danmu.DanMuActivity;
@@ -31,6 +30,7 @@ public class WidgetsSelfActivity extends BaseActivity implements View.OnClickLis
         findViewById(R.id.btn_checkprocess).setOnClickListener(this);
         findViewById(R.id.btn_topbar).setOnClickListener(this);
         findViewById(R.id.btn_danmu).setOnClickListener(this);
+
     }
 
     @Override
@@ -48,6 +48,7 @@ public class WidgetsSelfActivity extends BaseActivity implements View.OnClickLis
             case R.id.btn_danmu:    //弹幕
                 readyGo(DanMuActivity.class);
                 break;
+
         }
     }
 }

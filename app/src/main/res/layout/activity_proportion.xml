@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.charts.proportion.ProportionActivity">
+
+    <com.zhouyou.view.segmentedbar.SegmentedBarView
+        android:id="@+id/barView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_empty_segment_text="No segments"
+        app:sbv_segment_gap_width="5dp"
+        app:sbv_segment_rule="average"
+        app:sbv_segment_text_size="15sp"
+        app:sbv_show_description_text="true"
+        app:sbv_side_style="rounded"
+        app:sbv_side_text_style="twoSided"
+        app:sbv_value_sign_height="30dp"
+        app:sbv_value_sign_round="8dp"
+        app:sbv_value_sign_width="100dp" />
+
+    <com.example.wood121.viewdemos.views.charts.proportion.ProportionView
+        android:id="@+id/proportion_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        app:bg_color="@color/khaki"
+        app:layout_constraintTop_toBottomOf="@+id/barView"
+        app:line_width="@dimen/margin_50"
+        app:number_color="@color/crimson" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:layout_marginRight="@dimen/margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/barView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,18 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wood121.viewdemos.views.charts.line.ZheActivity">
-    <LinearLayout
-        android:padding="40dp"
-        android:gravity="center"
-        android:background="#f3f3f3"
+    android:orientation="vertical"
+    tools:context="com.example.wood121.viewdemos.views.charts.linechart.LineChartActivity">
+
+    <com.example.wood121.viewdemos.views.charts.linechart.LineChart
+        android:id="@+id/line_chart"
         android:layout_width="match_parent"
-        android:layout_height="400dp">
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
 
-        <com.example.wood121.viewdemos.views.charts.line.SimpleLineChart
-            android:id="@+id/linechart"
-            android:layout_width="300dp"
-            android:layout_height="200dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btn_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10" />
+
+        <Button
+            android:id="@+id/btn_20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="20" />
+
+        <Button
+            android:id="@+id/btn_30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="30" />
+
+        <Button
+            android:id="@+id/btn_50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="50" />
+
+        <Button
+            android:id="@+id/btn_100"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="100" />
     </LinearLayout>
+
 </LinearLayout>

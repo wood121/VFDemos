@@ -5,16 +5,13 @@ import android.os.Bundle;
 import com.example.wood121.viewdemos.R;
 
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.ButterKnife;
 
 public class TopbarActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topbar);
-        ButterKnife.bind(this);
 
 //        tbView.setOnTopbarClickListener(new TopBar.topbarClickListener() {
 //            @Override

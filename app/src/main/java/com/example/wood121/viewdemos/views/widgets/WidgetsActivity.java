@@ -6,12 +6,11 @@ import android.view.View;
 import com.example.wood121.viewdemos.R;
 import com.example.wood121.viewdemos.base.BaseActivity;
 import com.example.wood121.viewdemos.views.widgets.RecyclerView.RecActivity;
+import com.example.wood121.viewdemos.views.widgets.RecyclerView.recitem.RecItemActivity;
 import com.example.wood121.viewdemos.views.widgets.recaction.RecItemClickConflictActivity;
 import com.example.wood121.viewdemos.views.widgets.tablayout.TablayoutActivity;
 import com.example.wood121.viewdemos.views.widgets.viewpager.GuideNewActivity;
 import com.example.wood121.viewdemos.views.widgets.viewpager.ViewPagerActivity;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class WidgetsActivity extends BaseActivity implements View.OnClickListener {
 
@@ -38,6 +37,7 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
         findViewById(R.id.btn_guide).setOnClickListener(this);
         findViewById(R.id.btn_banner).setOnClickListener(this);
         findViewById(R.id.btn_constraint).setOnClickListener(this);
+        findViewById(R.id.btn_rec_item).setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +63,9 @@ public class WidgetsActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.btn_constraint:
                 readyGo(ConstraintActivity.class);
+                break;
+            case R.id.btn_rec_item:
+                readyGo(RecItemActivity.class);
                 break;
         }
     }

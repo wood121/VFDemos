@@ -22,5 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="折线图" />
+
+        <Button
+            android:id="@+id/btn_proportion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="条形进度比例" />
     </LinearLayout>
 </ScrollView>

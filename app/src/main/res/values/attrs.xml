@@ -28,10 +28,53 @@
         <attr name="rightTextDrawable" format="reference|integer" />
     </declare-styleable>
 
+    <declare-styleable name="ProportionView">
+        <attr name="line_width" format="dimension" />
+        <attr name="bg_color" format="color|reference" />
+        <attr name="number_color" format="color|reference" />
+    </declare-styleable>
+
     <!--侧滑菜单-->
     <declare-styleable name="SwipeMenuLayout">
         <attr name="swipeEnable" format="boolean" />
         <attr name="ios" format="boolean" />
         <attr name="leftSwipe" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="RotateCircleView">
+        <!-- 圆环进度条的宽度 -->
+        <attr name="circle_progress_width" format="dimension" />
+        <!-- 圆环进度条的 起始颜色  -->
+        <attr name="circle_progress_color_start" format="color" />
+        <!-- 圆环进度条的 结束颜色 -->
+        <attr name="circle_progress_color_end" format="color" />
+        <!-- 圆环进度条的中心的颜色 -->
+        <attr name="circle_progress_color_centre" format="color" />
+        <!-- 圆环进度条的旋转周期 -->
+        <attr name="circle_progress_cycle" format="integer" />
+        <!-- 动画时, 线条的颜色 -->
+        <attr name="circle_ani_line_color" format="color" />
+        <!-- 动画时, 线条的颜色 -->
+        <attr name="circle_ani_line_width" format="dimension" />
+        <!-- 动画时, 线条的数目 -->
+        <attr name="circle_ani_line_num" format="integer" />
+        <!-- 动画时, 线条的缩放周期 -->
+        <attr name="circle_ani_line_cycle" format="integer" />
+        <!-- 动画时, 线条的振幅, 最小的时候半径是原来的多少倍(0.0-1.0, 1.0的时候没有变化, 0.0的时候振幅最大) -->
+        <attr name="circle_ani_line_min_ratio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectCondtionItemView">
+        <attr name="conditionViewSrc" format="reference" />
+        <attr name="conditionNameTvContent" format="string" />
+        <attr name="conditionNameTvSize" format="dimension" />
+        <attr name="conditionNameTvColor" format="color|reference" />
+        <attr name="conditionExampleTvContent" format="string" />
+        <attr name="conditionExampleTvSize" format="dimension" />
+        <attr name="conditionExampleTvColor" format="color|reference" />
+        <attr name="conditionForbiddenTvContent" format="string" />
+        <attr name="conditionForbiddenTvColor" format="color|reference" />
+        <attr name="conditionForbiddenTvSize" format="dimension" />
+    </declare-styleable>
+
 </resources>
